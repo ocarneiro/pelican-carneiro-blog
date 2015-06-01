@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  <title>Como instalar e usar o sudo no Debian 8 (Jessie)</title>
+<link href="http://carneiro.blog.br/um/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="http://carneiro.blog.br/um/" type="application/atom+xml" rel="alternate" title="Só mais um Carneiro ATOM Feed" />
+  
+  <!--[if IE]>
+  <style type="text/css"> 
+  .twoColFixRtHdr #mainContent { zoom: 1; }
+  </style>
+  <![endif]-->
+
+</head>
+
+<body>
+
+<div id="container">
+
+  <div id="header">
+  <h1><a href="http://carneiro.blog.br/um">Só mais um Carneiro</h1>
+  
+  </div><!-- end #header -->
+  
+  <div id="topMenu">
+  
+    <ul>
+    	<li><a href="http://carneiro.blog.br/um">Home</a></li>
+        <li>&ndash;</li>
+        <li><a href="http://carneiro.blog.br/um/archives.html">Archives</a></li>
+        
+    </ul>
+  
+  </div><!-- end #topMenu -->
+
+  <div id="sidebar">
+	<h3>Pages</h3>
+	<ul>
+	</ul>
+    <h3>Categories</h3>
+    <ul>
+		 <li class="active"><a href="http://carneiro.blog.br/um/category/misc.html">misc</a></li>
+	</ul>
+	<li>
+		<h3>Blogroll</h3>
+		<ul>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="http://python.org/">Python.org</a></li>
+                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                    <li><a href="#">You can modify those links in your config file</a></li>
+		</ul>
+	</li>
+        <li>
+                <h3>Social</h3>
+                <ul>
+                    <li><a href="http://carneiro.blog.br/um/" rel="alternate">Flux Atom</a></li>
+                    <li><a href="#">You can add links in your config file</a></li>
+                    <li><a href="#">Another social link</a></li>
+                </ul>
+        </li><!-- /.social -->
+<li>
+        <h3>Tags</h3>
+        <ul>
+        </ul>
+</li>
+    
+  
+  </div><!-- end #sidebar -->
+
+  <div id="mainContent">
+  	
+ 
+
+
+<div class="blogItem">
+    
+      <h2><a href="http://carneiro.blog.br/um/Como-instalar-e-usar-o-sudo-no-Debian-8-(Jessie).html">Como instalar e usar o sudo no Debian 8 (Jessie)</a></h2>
+      <h3>Le Dom 01 fevereiro 2015</h3>
+      
+  <p>Se você resolveu experimentar o Debian 8 e se deparou com a falta do
+comando sudo, este post é para você. </p>
+<p>Eu já tinha <a href="http://umcarneiro.blogspot.com/2014/11/deixando-o-debian-xfce-bonito.html">instalado o Debian Jessie e deixado ele mais com a minha
+cara</a>
+e no meio do caminho instalei o sudo e várias outras coisas.</p>
+<p>Hoje reinstalei o sistema e fiquei de novo abismado com a ausência do
+comando sudo.</p>
+<p>Se você é iniciante em linux e prefere fazer o máximo de tarefas na
+interface gráfica, recomendo o meu artigo anterior (link acima). Neste
+aqui eu vou usar mais o console, por ser mais rápido.</p>
+<p>Ao instalar o Debian 8, você certamente definiu uma senha de root e
+outra para seu usuário. Vamos precisar das duas.</p>
+<p>1) Abra um terminal;<br />
+2) Digite "su"<br />
+3) O sistema vai pedir uma senha. Esta é a senha de root.<br />
+4) Digite "vi /etc/apt/sources.list"<br />
+5) Procure uma linha começada com "deb cdrom: ". No começo desta linha,
+digite "i" (para inserir) e coloque uma cerquilha: "#" para que o
+sistema ignore esta linha.<br />
+6) Aperte ESC (para parar de escrever), ":" (dois pontos, para digitar
+comandos), "wq" (salvar e sair) e Enter. Pronto, você atualizou seus
+repositórios do apt e tirou o CD-Rom do Debian de lá. Se achar que fez
+bobagem e quiser sair do vi sem salvar, aperte ESC, ":" "q!" e Enter.
+Isso vai te tirar do modo de digitação (ESC), te colocar no modo de
+comandos ":" e fechar o vi ("q") sem salvar ("!"). O vi é um editor de
+texto bem peculiar, vale a pena aprender!</p>
+<p>Feito isso, aproveite que está em modo root (o comando su do passo 2) e
+instale o sudo:<br />
+8) Digite "apt-get install sudo"<br />
+9) Dê permissão ao seu usuário para usar o sudo. Digite "usermod -a -G
+sudo seu_usuario".<br />
+10) Faça um logoff ou reinicie o computador para poder usar o sudo com
+seu usuário.</p>
+<p>A questão toda de usar "sudo" ou "su" é meio controversa. O Ubuntu
+adiciona todo usuário aos sudoers, já o Debian sequer instala o sudo. Se
+você tem uma opinião sobre qual das abordagens é melhor, deixe nos
+comentários, por favor.</p>
+<p>Se quiser ler mais posts sobre o
+"<a href="http://umcarneiro.blogspot.com.br/search/label/debian">Debian</a>" use
+<a href="http://umcarneiro.blogspot.com.br/search/label/debian">este link</a> ou os
+marcadores do blog.</p>
+<p>Abs!<br />
+Otávio</p>	
+      
+      <h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<h3 class="blogMeta">Tags : </h3>
+    
+    </div><!-- end #blogItem -->
+				
+				<!-- end #content -->
+  
+  </div><!-- end #mainContent -->
+
+<div class="clearfloat"></div>
+
+  <div id="footer">
+  
+    <p><a href="http://css4free.com/" title="free CSS web site designs">Free CSS Gallery</a></p>
+    <p>Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+  </div><!-- end #footer -->
+
+</div><!-- end #container -->
+</body>
+</html>

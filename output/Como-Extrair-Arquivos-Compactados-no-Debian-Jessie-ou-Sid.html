@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  <title>Como Extrair Arquivos Compactados no Debian Jessie ou Sid</title>
+<link href="http://carneiro.blog.br/um/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="http://carneiro.blog.br/um/" type="application/atom+xml" rel="alternate" title="Só mais um Carneiro ATOM Feed" />
+  
+  <!--[if IE]>
+  <style type="text/css"> 
+  .twoColFixRtHdr #mainContent { zoom: 1; }
+  </style>
+  <![endif]-->
+
+</head>
+
+<body>
+
+<div id="container">
+
+  <div id="header">
+  <h1><a href="http://carneiro.blog.br/um">Só mais um Carneiro</h1>
+  
+  </div><!-- end #header -->
+  
+  <div id="topMenu">
+  
+    <ul>
+    	<li><a href="http://carneiro.blog.br/um">Home</a></li>
+        <li>&ndash;</li>
+        <li><a href="http://carneiro.blog.br/um/archives.html">Archives</a></li>
+        
+    </ul>
+  
+  </div><!-- end #topMenu -->
+
+  <div id="sidebar">
+	<h3>Pages</h3>
+	<ul>
+	</ul>
+    <h3>Categories</h3>
+    <ul>
+		 <li class="active"><a href="http://carneiro.blog.br/um/category/misc.html">misc</a></li>
+	</ul>
+	<li>
+		<h3>Blogroll</h3>
+		<ul>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="http://python.org/">Python.org</a></li>
+                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                    <li><a href="#">You can modify those links in your config file</a></li>
+		</ul>
+	</li>
+        <li>
+                <h3>Social</h3>
+                <ul>
+                    <li><a href="http://carneiro.blog.br/um/" rel="alternate">Flux Atom</a></li>
+                    <li><a href="#">You can add links in your config file</a></li>
+                    <li><a href="#">Another social link</a></li>
+                </ul>
+        </li><!-- /.social -->
+<li>
+        <h3>Tags</h3>
+        <ul>
+        </ul>
+</li>
+    
+  
+  </div><!-- end #sidebar -->
+
+  <div id="mainContent">
+  	
+ 
+
+
+<div class="blogItem">
+    
+      <h2><a href="http://carneiro.blog.br/um/Como-Extrair-Arquivos-Compactados-no-Debian-Jessie-ou-Sid.html">Como Extrair Arquivos Compactados no Debian Jessie ou Sid</a></h2>
+      <h3>Le Qui 01 janeiro 2015</h3>
+      
+  <div class="separator" style="clear: both; text-align: center;">
+
+</div>
+
+<div class="separator" style="clear: both; text-align: center;">
+
+[![](http://4.bp.blogspot.com/-QQgYfSAvxow/VKWcjXF8KEI/AAAAAAAACck/vrFV4RSvdwM/s400/erro_nenhum_gerenciador_de_arquivos_compactados_localizado.png) ](http://4.bp.blogspot.com/-QQgYfSAvxow/VKWcjXF8KEI/AAAAAAAACck/vrFV4RSvdwM/s1600/erro_nenhum_gerenciador_de_arquivos_compactados_localizado.png)
+
+</div>
+
+<div class="separator" style="clear: both; text-align: center;">
+
+</div>
+
+<p><a href="http://3.bp.blogspot.com/-4KgGoCLHu0g/VKWcVVji1bI/AAAAAAAACcc/g7UgyXRA31s/s1600/thunar_extrair_aqui.png"><img alt="" src="http://3.bp.blogspot.com/-4KgGoCLHu0g/VKWcVVji1bI/AAAAAAAACcc/g7UgyXRA31s/s320/thunar_extrair_aqui.png" /></a></p>
+<p>Hoje baixei um arquivo zip da internet e fiz o que seria natural, fui lá
+na pasta, cliquei no arquivo com o botão direito e depois em "Extrair
+aqui".</p>
+<p>O que aconteceu? Nada! Uma mensagem de erro: "Falha ao extrair os
+arquivos. Nenhum gerenciador de arquivos compactados localizado". Então
+dei uma procurada na internet e encontrei esta solução.</p>
+<p>Como vocês sabem, estou utilizando o Debian Jessie (que um dia será o
+Debian 8), que eu <span id="goog_2116862161"></span><a href="http://umcarneiro.blogspot.com/2014/11/deixando-o-debian-xfce-bonito.html">deixei mais
+"bonitinho"<span
+id="goog_2116862162"></span></a>.
+Se você estiver utilizando o Debian 7 (wheezy) na versão XFCE ou outra
+distribuição que utilize o Thunar como gerenciador de arquivos (o
+equivalente ao Windows Explorer), estas dicas também devem funcionar
+para você.</p>
+<p>Aparentemente, o tal "gerenciador de arquivos compactados" que eu
+preciso é o pacote "file-roller". A dica para isso você encontra
+procurando "thunar archive" no Gerenciador de Pacotes (synaptic).</p>
+<div class="separator" style="clear: both; text-align: center;">
+
+[![](http://1.bp.blogspot.com/-tURYg8IPtUE/VKWfVaP9jKI/AAAAAAAACcs/wDtH7-BKb2I/s1600/thunar-archive-plugin.png)](http://1.bp.blogspot.com/-tURYg8IPtUE/VKWfVaP9jKI/AAAAAAAACcs/wDtH7-BKb2I/s1600/thunar-archive-plugin.png)
+
+</div>
+
+<p>A descrição do thunar-archive-plugin diz claramente: "Este plugin
+permite a extração e criação de arquivamentos de dentro do gerenciador
+de arquivos Thunar. No momento ele usa o file-roller mas vai usar o
+xarchiver no futuro."</p>
+<p>Por alguma razão o file-roller não estava instalado no meu Linux. Eu
+fuço tanto os pacotes que devo tê-lo desinstalado em algum momento.</p>
+<p>Então, se você estiver tendo problemas para descompactar seus arquivos,
+verifique se o pacote file-roller está instalado.</p>
+<p>O pacote file-roller também explica bem claramente sua função:</p>
+<p><a href="http://3.bp.blogspot.com/-R7wzF9P01IU/VKWf_6UAGCI/AAAAAAAACc0/dy41Wcl67T8/s1600/file_roller-descricao.png"><img alt="" src="http://3.bp.blogspot.com/-R7wzF9P01IU/VKWf_6UAGCI/AAAAAAAACc0/dy41Wcl67T8/s1600/file_roller-descricao.png" /></a>"File-roller
+é um gerenciador de arquivos para o ambiente GNOME. Com ele você pode:</p>
+<p>* Criar e modificar conjuntos de arquivamentos.<br />
+ * Ver o conteúdo de um conjunto de arquivamentos.<br />
+ * Ver um arquivo contido em um conjunto de arquivamentos.<br />
+ * Extrair arquivos do conjunto de arquivamentos.</p>
+<p>O file-roller suporta os seguintes formatos:<br />
+ * arquivamentos tar (.tar), incluindo aqueles comprimidos com gzip<br />
+   (.tar.gz, .tgz), bzip (.tar.bz, .tbz), bzip2 (.tar.bz2, .tbz2),<br />
+   compress (.tar.Z, .taz), lzip (.tar.lz, .tlz), lzop (.tar.lzo,
+.tzo),<br />
+   lzma (.tar.lzma) e xz (.tar.xz)<br />
+ * arquivamentos zip (.zip)<br />
+ * arquivamentos jar (.jar, .ear, .war)<br />
+ * arquivamentos 7z (.7z)<br />
+ * imagens de CD iso9660 (.iso)<br />
+ * arquivamentos lha (.lzh)<br />
+ * arquivamentos Archiver (.ar)<br />
+ * arquivamentos Comic book ("gibi") (.cbz)<br />
+ * arquivos individuais compactados com gzip (.gz), bzip (.bz), bzip2<br />
+   (.bz2), compress (.Z), lzip (.lz), lzop (.lzo), lzma (.lzma) and xz<br />
+   (.xz)</p>
+<p>File-roller pode extrair os seguintes formatos:<br />
+ * arquivamentos Cabinet (.cab)<br />
+ * pacotes binários Debian (.deb)<br />
+ * arquivamentos Xar (.xar)</p>
+<p>File-roller não realiza operações de compactação por si só, confiando em
+ferramentas padrão para isto."</p>
+<p>Esta última informação é importante. O file-roller descompacta todos
+estes tipos de arquivo, desde que você tenha o descompactador apropriado
+para eles. Então, se quiser descompactar um arquivo .zip, você tem que
+ter o unzip, se quiser um .rar, tem que ter o unrar e por aí vai.</p>
+<p>Se tiverem problemas de descompactação não mencionadas aqui, deixem um
+comentário que tento complementar o post.</p>
+<p>Abs!<br />
+Otávio</p>	
+      
+      <h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<h3 class="blogMeta">Tags : </h3>
+    
+    </div><!-- end #blogItem -->
+				
+				<!-- end #content -->
+  
+  </div><!-- end #mainContent -->
+
+<div class="clearfloat"></div>
+
+  <div id="footer">
+  
+    <p><a href="http://css4free.com/" title="free CSS web site designs">Free CSS Gallery</a></p>
+    <p>Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+  </div><!-- end #footer -->
+
+</div><!-- end #container -->
+</body>
+</html>

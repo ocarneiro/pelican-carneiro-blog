@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  <title>Criando um bitmap para LCD Gráfico</title>
+<link href="http://carneiro.blog.br/um/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="http://carneiro.blog.br/um/" type="application/atom+xml" rel="alternate" title="Só mais um Carneiro ATOM Feed" />
+  
+  <!--[if IE]>
+  <style type="text/css"> 
+  .twoColFixRtHdr #mainContent { zoom: 1; }
+  </style>
+  <![endif]-->
+
+</head>
+
+<body>
+
+<div id="container">
+
+  <div id="header">
+  <h1><a href="http://carneiro.blog.br/um">Só mais um Carneiro</h1>
+  
+  </div><!-- end #header -->
+  
+  <div id="topMenu">
+  
+    <ul>
+    	<li><a href="http://carneiro.blog.br/um">Home</a></li>
+        <li>&ndash;</li>
+        <li><a href="http://carneiro.blog.br/um/archives.html">Archives</a></li>
+        
+    </ul>
+  
+  </div><!-- end #topMenu -->
+
+  <div id="sidebar">
+	<h3>Pages</h3>
+	<ul>
+	</ul>
+    <h3>Categories</h3>
+    <ul>
+		 <li class="active"><a href="http://carneiro.blog.br/um/category/misc.html">misc</a></li>
+	</ul>
+	<li>
+		<h3>Blogroll</h3>
+		<ul>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="http://python.org/">Python.org</a></li>
+                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                    <li><a href="#">You can modify those links in your config file</a></li>
+		</ul>
+	</li>
+        <li>
+                <h3>Social</h3>
+                <ul>
+                    <li><a href="http://carneiro.blog.br/um/" rel="alternate">Flux Atom</a></li>
+                    <li><a href="#">You can add links in your config file</a></li>
+                    <li><a href="#">Another social link</a></li>
+                </ul>
+        </li><!-- /.social -->
+<li>
+        <h3>Tags</h3>
+        <ul>
+        </ul>
+</li>
+    
+  
+  </div><!-- end #sidebar -->
+
+  <div id="mainContent">
+  	
+ 
+
+
+<div class="blogItem">
+    
+      <h2><a href="http://carneiro.blog.br/um/Criando-um-bitmap-para-LCD-Gráfico.html">Criando um bitmap para LCD Gráfico</a></h2>
+      <h3>Le Seg 27 janeiro 2014</h3>
+      
+  <p>Há algum tempo comecei um projeto para fazer um olho de brinquedo usando
+um LCD Gráfico Nokia 5110. A <a href="http://umcarneiro.blogspot.com/2014/01/olho-de-lcd-com-arduino-e-nokia-5110.html">primeira tentativa
+falhou</a>,
+mas depois entendi <a href="http://umcarneiro.blogspot.com/2014/01/lcd-nokia-5110-com-arduino-sucesso.html">como o display
+funciona</a>.
+Resta agora colocar o meu desenho nele.</p>
+<p>Mas que desenho?</p>
+<p>Pois bem, como é que você desenha algo para ficar bem em determinada
+resolução? Eu tive que testar imprimindo uma grade na resolução do
+display (84x48) para rabiscar em cima.<br />
+<a href="http://1.bp.blogspot.com/-AsaJ1qAC_00/Uub8STeCdFI/AAAAAAAABrs/mdvL7u1Z82g/s1600/shihtzu.jpg"><img alt="" src="http://1.bp.blogspot.com/-AsaJ1qAC_00/Uub8STeCdFI/AAAAAAAABrs/mdvL7u1Z82g/s1600/shihtzu.jpg" /></a><br />
+Claro que eu poderia criar uma imagem de 84 por 48 pixels e rabiscar no
+computador, mas de que jeito minha filha e nossa cachorrinha
+participariam do projeto?</p>
+<div align="center">
+
+<iframe allowfullscreen frameborder="0" height="315" src="//www.youtube.com/embed/4Qzy9h_f8uA" width="560"></iframe>
+
+</div>
+
+<p>Então, para permitir mais participação, criei a grade no computador e
+imprimi para desenhar. Minha primeira escolha de software seria o
+Inkscape, mas achei mais fácil fazer no Gimp.</p>
+<p>A primeira coisa que descobri é que uma grade de 24 por 24 pixels
+permite você numerar os quadrados numa boa, então usei esse tamanho.
+Assim, minha imagem tinha que ter 24 vezes 84 de altura e 24 vezes 48 de
+largura, o que dá 1152 x 2016 pixels.</p>
+<p><a href="http://4.bp.blogspot.com/-Kghm5pJBtAM/Uub1o7kPkKI/AAAAAAAABrU/ip2fFhLVjic/s1600/gimp_filtro.png"><img alt="" src="http://4.bp.blogspot.com/-Kghm5pJBtAM/Uub1o7kPkKI/AAAAAAAABrU/ip2fFhLVjic/s1600/gimp_filtro.png" /></a>Com
+a imagem no tamanho certo, basta criar a grade. Vá em:<br />
+Filtros -> Renderizar -> Padrão -> Grade</p>
+<p>Achou o caminho estranho? Pois é, eu também achei...</p>
+<p>Nas opções da grade você só precisa alterar os campos  de "Espaçamento".
+O padrão é 16x16, mas eu usei 24x24, como mencionei acima.</p>
+<p><a href="http://2.bp.blogspot.com/-X87hFol-uMI/Uub2YrrgIUI/AAAAAAAABrc/PkYxEae8k6I/s1600/foto_olho_grid.jpg"><img alt="" src="http://2.bp.blogspot.com/-X87hFol-uMI/Uub2YrrgIUI/AAAAAAAABrc/PkYxEae8k6I/s1600/foto_olho_grid.jpg" /></a>Salvei
+um arquivo PNG e mandei imprimir a partir do visualizador de imagens.
+Não sei se dava para imprimir direto do Gimp. Estou tão acostumado a
+fazer desse jeito que nem tentei...</p>
+<p>O resultado final está aí do lado. Talvez, se eu tivesse usado um
+scanner, daria para pegar a imagem direto e redimensionar para 48x84 e
+já jogar em um conversor de bitmap para bytes e partir para o abraço,
+mas...</p>
+<p>Não tenho um scanner e o <a href="https://learn.sparkfun.com/tutorials/graphic-lcd-hookup-guide/example-code-2-drawing-bitmaps">conversor de bitmaps indicado pela
+Sparkfun</a>
+está fora do ar... Isso quer dizer que ainda terei mais algum trabalho
+com esse projeto e que teremos mais posts no blog sobre o assunto.</p>
+<p>Nos vemos em breve!</p>
+<p>Você pode ver todas as etapas deste projeto usando <a href="http://umcarneiro.blogspot.com.br/search/label/olho_de_lcd">este
+link</a>, ou
+clicando no marcador
+"<a href="http://umcarneiro.blogspot.com.br/search/label/olho_de_lcd">olho_de_lcd</a>",
+abaixo.</p>	
+      
+      <h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<h3 class="blogMeta">Tags : </h3>
+    
+    </div><!-- end #blogItem -->
+				
+				<!-- end #content -->
+  
+  </div><!-- end #mainContent -->
+
+<div class="clearfloat"></div>
+
+  <div id="footer">
+  
+    <p><a href="http://css4free.com/" title="free CSS web site designs">Free CSS Gallery</a></p>
+    <p>Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+  </div><!-- end #footer -->
+
+</div><!-- end #container -->
+</body>
+</html>

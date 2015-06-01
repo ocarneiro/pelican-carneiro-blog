@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  <title>Como se faz um robô</title>
+<link href="http://carneiro.blog.br/um/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="http://carneiro.blog.br/um/" type="application/atom+xml" rel="alternate" title="Só mais um Carneiro ATOM Feed" />
+  
+  <!--[if IE]>
+  <style type="text/css"> 
+  .twoColFixRtHdr #mainContent { zoom: 1; }
+  </style>
+  <![endif]-->
+
+</head>
+
+<body>
+
+<div id="container">
+
+  <div id="header">
+  <h1><a href="http://carneiro.blog.br/um">Só mais um Carneiro</h1>
+  
+  </div><!-- end #header -->
+  
+  <div id="topMenu">
+  
+    <ul>
+    	<li><a href="http://carneiro.blog.br/um">Home</a></li>
+        <li>&ndash;</li>
+        <li><a href="http://carneiro.blog.br/um/archives.html">Archives</a></li>
+        
+    </ul>
+  
+  </div><!-- end #topMenu -->
+
+  <div id="sidebar">
+	<h3>Pages</h3>
+	<ul>
+	</ul>
+    <h3>Categories</h3>
+    <ul>
+		 <li class="active"><a href="http://carneiro.blog.br/um/category/misc.html">misc</a></li>
+	</ul>
+	<li>
+		<h3>Blogroll</h3>
+		<ul>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="http://python.org/">Python.org</a></li>
+                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                    <li><a href="#">You can modify those links in your config file</a></li>
+		</ul>
+	</li>
+        <li>
+                <h3>Social</h3>
+                <ul>
+                    <li><a href="http://carneiro.blog.br/um/" rel="alternate">Flux Atom</a></li>
+                    <li><a href="#">You can add links in your config file</a></li>
+                    <li><a href="#">Another social link</a></li>
+                </ul>
+        </li><!-- /.social -->
+<li>
+        <h3>Tags</h3>
+        <ul>
+        </ul>
+</li>
+    
+  
+  </div><!-- end #sidebar -->
+
+  <div id="mainContent">
+  	
+ 
+
+
+<div class="blogItem">
+    
+      <h2><a href="http://carneiro.blog.br/um/Como-se-faz-um-robô.html">Como se faz um robô</a></h2>
+      <h3>Le Ter 07 maio 2013</h3>
+      
+  <div class="separator" style="clear: both; text-align: center;">
+
+[![](http://2.bp.blogspot.com/-RY06qMRE1ko/UtWZqSYO6dI/AAAAAAAABpo/PG6LMOZM9TI/s320/WalkingBreadboard_bb.png)](http://2.bp.blogspot.com/-RY06qMRE1ko/UtWZqSYO6dI/AAAAAAAABpo/PG6LMOZM9TI/s1600/WalkingBreadboard_bb.png)
+
+</div>
+
+<p>Você sabe o que é uma protoboard? Pois é, até uns dez dias atrás, eu
+também não sabia. Quando descobri, achei que era algo tão legal que quis
+arrumar um jeito de fazê-la andar... Esse post explica como eu consegui.</p>
+<p>Uma protoboard é uma plaquinha de plástico, cheia de furinhos. O que a
+torna importante é o que ela tem por dentro. Filosófico, não?</p>
+<p>Dentro da protoboard, há ligações elétricas entre os buraquinhos do
+meio, na vertical, e entre os buraquinhos das extremidades, na
+horizontal, como nesse desenho:</p>
+<hr />
+<p><a href="http://4.bp.blogspot.com/-YMAdysNyEZs/UYm3sqrHcrI/AAAAAAAABQg/ZQ9faW1tn8o/s1600/breadboard_bb.png"><img alt="" src="http://4.bp.blogspot.com/-YMAdysNyEZs/UYm3sqrHcrI/AAAAAAAABQg/ZQ9faW1tn8o/s320/breadboard_bb.png" /></a></p>
+<hr />
+<p>A vantagem disso é que, quando você quer fazer testes com componentes
+eletrônicos ("<strong>protó</strong>tipos"), você não precisa ficar soldando ou
+enroscando um fio no outro, basta plugá-los na sua placa ("<strong>board</strong>").</p>
+<p>Ficou claro, então, que a protoboard, sozinha, não faz nada. Você
+precisa ter um monte de componentes eletrônicos para fazer coisas
+interessantes, como isso aqui:  </p>
+<hr />
+<p><a href="http://3.bp.blogspot.com/-oqlwfnejzwY/UYm42Z3Ce-I/AAAAAAAABQs/5HOwCOzD02s/s1600/DSC00688.JPG"><img alt="" src="http://3.bp.blogspot.com/-oqlwfnejzwY/UYm42Z3Ce-I/AAAAAAAABQs/5HOwCOzD02s/s320/DSC00688.JPG" /></a></p>
+<hr />
+<p>Neste meu robozinho, eu usei:</p>
+<ol>
+<li>Uma protoboard;</li>
+<li>Um Arduino Uno (uma plaquinha programável);</li>
+<li>Quatro (4) servo motores de 9g;</li>
+<li>Dois suportes para duas pilhas AA;</li>
+<li>Três pilhas AA;</li>
+<li>Vários jumpers (fios com conectores) coloridos;</li>
+<li>Vários pedaços de fio flexível;</li>
+<li>Fita isolante;</li>
+<li>Fita crepe.</li>
+</ol>
+<div>
+
+</div>
+
+<div>
+
+Se vocês quiserem ver o robô em movimento, aqui está um vídeo:
+
+</div>
+
+<iframe allowfullscreen frameborder="0" height="315" src="http://www.youtube.com/embed/l9yK9NJLLkg" width="560"></iframe>
+
+<div>
+
+</div>
+
+<p>Para fazer isso tudo funcionar, vocês precisam conectar todos os
+componentes de forma que o controlador do Arduino consiga dizer a todos
+os motores como e quando se mexer. Eu usei servo motores, que são
+motores muito usados em aeromodelismo. Em um motor comum, enquanto
+houver energia, haverá movimento. Um servo motor pode ser controlado
+para se mover de forma mais específica. Você pode dizer em que posição
+ele deve ficar. No caso do meu robô, eu digo para cada perna ficar 90°
+em relação ao chão e depois vou dizendo para cada uma delas ficar
+paralela ao chão e depois perpendicular de novo, movimentando o robô.</p>
+<p>Os servo motores que eu usei, no entanto, só giram 180°. Ou seja, cada
+perna não pode dar uma volta completa, então cada perna tem que ir e
+voltar. Para o robô não ficar indo e voltando sem sair do lugar, eu tive
+que fazer um pé para ele. Cortei uma embalagem de plástico e dobrei para
+ficar como um joelho. Ela dobra para trás para sair do caminho, mas fica
+firme na frente para dar propulsão ao robô quando o motor desce. Prendi
+essa pecinha com um arame que acabou ajudando mais ainda na propulsão. É
+como se o robô estivesse de salto alto, tocando o salto primeiro no
+chão. As analogias que eu tinha em mente eram muito mais másculas.
+Pensei num elefante, ficou uma galinha. Funcionou melhor, na verdade.</p>
+<p>Eu pluguei os servos de trás nos pinos 9 (esquerda) e 10 (direita) e os
+da frente nos pinos 6 (esquerda) e 5 (direita). Estes pinos transmitem
+um sinal modularizado. Eu ainda não sei bem o que é isso, mas o fato é
+que esse sinal não é suficiente para energizar os motores. O arduino tem
+saídas de 5V e 3,3V que até poderiam energizar os motores, mas são só
+duas. Além disso, os motores usam muito energia e, ligados nessas
+portas, fazem o arduino que ficar desligando por falta de força. Então
+tive que colocar uma fonte extra de energia.</p>
+<hr />
+<p><a href="http://3.bp.blogspot.com/-vwrHWAAKV4I/UYnBAjjtSII/AAAAAAAABQ4/68z5QjORQ-A/s1600/DSC00692.JPG"><img alt="" src="http://3.bp.blogspot.com/-vwrHWAAKV4I/UYnBAjjtSII/AAAAAAAABQ4/68z5QjORQ-A/s320/DSC00692.JPG" /></a></p>
+<hr />
+<p>Eu tinha aqui 3 pilhas novas e dois suportes para 2 pilhas AA cada. Até
+pensei em sair para comprar mais pilhas, mas resolvi usar só as três
+mesmo. Se até 3,3V já movem o motor, 4,5V devia funcionar, pensei. E
+funcionou. Um dos suportes ficou capenga, com uma pilha só, então
+enrolei um fio no negativo dessa ~~filha~~ pilha única e liguei direto
+na protoboard.</p>
+<p>De forma bem esquemática, as ligações ficaram assim:  </p>
+<hr />
+<p><a href="http://2.bp.blogspot.com/-RY06qMRE1ko/UtWZqSYO6dI/AAAAAAAABpo/PG6LMOZM9TI/s1600/WalkingBreadboard_bb.png"><img alt="" src="http://2.bp.blogspot.com/-RY06qMRE1ko/UtWZqSYO6dI/AAAAAAAABpo/PG6LMOZM9TI/s320/WalkingBreadboard_bb.png" /></a></p>
+<hr />
+<p>O Fritzing, programa que usei para desenhar, não tem um desenhinho de
+suporte de pilha capenga, mas você pode usar três ou quatro pilhas.</p>
+<p>Uma coisa importante a se notar é que, mesmo não usando o Arduino como
+fonte de energia, você precisa conectar o negativo das suas pilhas ao
+negativo dele, pois só assim a corrente elétrica pode sair dele e chegar
+até os motores.</p>
+<p>Espero ter conseguido explicar em linhas gerais como conectar múltiplos
+servo motores ao Arduino. Se tiverem mais dúvidas, deixem nos
+comentários que eu vou tentando explicar.</p>
+<p>Quem leu até aqui pode se interessar em saber que não precisava ter lido
+nada, pois eu fiz um segundo vídeo explicando essas mesmas coisas...</p>
+<iframe allowfullscreen frameborder="0" height="315" src="http://www.youtube.com/embed/lPyDKXwFK4U" width="560"></iframe>
+
+<p>E quem resolver tentar fazer em casa, vai precisar do código para rodar
+no Arduino, então vou colá-lo aqui embaixo. Fiquem à vontade para usar o
+código, os desenhos, os vídeos e as fotos desse post como quiserem, só
+não me responsabilizem pelo que vier a dar errado.</p>
+<p>Abraços,</p>
+<p>Otávio</p>
+<p><code>{style="background-color: #eeeeee; border: 1px dashed #999999; color: black; font-family: Andale Mono, Lucida Console, Monaco, fixed, monospace; font-size: 12px; line-height: 14px; overflow: auto; padding: 5px; width: 100%;"}
+// Walking Breadboard / Protoboard Ambulante// by Otavio Carneiro dos Santos // based on Sweep, by BARRAGAN (example in Arduino)// This code is in the public domain.#include   Servo pataEsquerdaTras;Servo pataEsquerdaFrente;Servo pataDireitaTras;Servo pataDireitaFrente;int pos = 0;    //variavel temporaria                //guarda a posicao atual do servo void setup() {   pataEsquerdaTras.attach(9);  pataDireitaTras.attach(10);  pataEsquerdaFrente.attach(6);  pataDireitaFrente.attach(5);}   void loop() {   movePataEsquerdaParaFrente(pataEsquerdaTras);  movePataEsquerdaParaTras(pataEsquerdaTras);  delay(1000);  movePataDireitaParaFrente(pataDireitaFrente);  movePataDireitaParaTras(pataDireitaFrente);  delay(1000);  movePataEsquerdaParaFrente(pataEsquerdaFrente);  movePataEsquerdaParaTras(pataEsquerdaFrente);  delay(1000);  movePataDireitaParaFrente(pataDireitaTras);  movePataDireitaParaTras(pataDireitaTras);  delay(1000);} //move o servo esquerdo informado para frente//nota: os servos do lado esquerdo ficam espelhados em relacao//      aos do lado direito, por isso ha metodos distintos//      para cada lado.void movePataEsquerdaParaTras(Servo servoToMove){  int posInicial = 1;  int posFinal = 90;   for(pos = posInicial; pos &lt; posFinal; pos += 1)   {                                      servoToMove.write(pos);              delay(15);  } }void movePataEsquerdaParaFrente(Servo servoToMove){  int posInicial = 1;  int posFinal = 90;   for(pos = posFinal; pos&gt;=posInicial; pos-=1)   {                                    servoToMove.write(pos);    delay(15);  } }void movePataDireitaParaTras(Servo servoToMove){  int posInicial = 90;  int posFinal = 180;   for(pos = posFinal; pos&gt;=posInicial; pos-=1)  {                                    servoToMove.write(pos);    delay(15);  } }void movePataDireitaParaFrente(Servo servoToMove){  int posInicial = 90;  int posFinal = 180;   for(pos = posInicial; pos &lt; posFinal; pos += 1)  {                                      servoToMove.write(pos);    delay(15);  } }</code></p>
+<div class="separator" style="clear: both; text-align: center;">
+
+</div>	
+      
+      <h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<h3 class="blogMeta">Tags : </h3>
+    
+    </div><!-- end #blogItem -->
+				
+				<!-- end #content -->
+  
+  </div><!-- end #mainContent -->
+
+<div class="clearfloat"></div>
+
+  <div id="footer">
+  
+    <p><a href="http://css4free.com/" title="free CSS web site designs">Free CSS Gallery</a></p>
+    <p>Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+  </div><!-- end #footer -->
+
+</div><!-- end #container -->
+</body>
+</html>

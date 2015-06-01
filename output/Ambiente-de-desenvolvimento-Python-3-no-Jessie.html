@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  <title>Ambiente de desenvolvimento Python 3 no Jessie</title>
+<link href="http://carneiro.blog.br/um/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="http://carneiro.blog.br/um/" type="application/atom+xml" rel="alternate" title="Só mais um Carneiro ATOM Feed" />
+  
+  <!--[if IE]>
+  <style type="text/css"> 
+  .twoColFixRtHdr #mainContent { zoom: 1; }
+  </style>
+  <![endif]-->
+
+</head>
+
+<body>
+
+<div id="container">
+
+  <div id="header">
+  <h1><a href="http://carneiro.blog.br/um">Só mais um Carneiro</h1>
+  
+  </div><!-- end #header -->
+  
+  <div id="topMenu">
+  
+    <ul>
+    	<li><a href="http://carneiro.blog.br/um">Home</a></li>
+        <li>&ndash;</li>
+        <li><a href="http://carneiro.blog.br/um/archives.html">Archives</a></li>
+        
+    </ul>
+  
+  </div><!-- end #topMenu -->
+
+  <div id="sidebar">
+	<h3>Pages</h3>
+	<ul>
+	</ul>
+    <h3>Categories</h3>
+    <ul>
+		 <li class="active"><a href="http://carneiro.blog.br/um/category/misc.html">misc</a></li>
+	</ul>
+	<li>
+		<h3>Blogroll</h3>
+		<ul>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="http://python.org/">Python.org</a></li>
+                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                    <li><a href="#">You can modify those links in your config file</a></li>
+		</ul>
+	</li>
+        <li>
+                <h3>Social</h3>
+                <ul>
+                    <li><a href="http://carneiro.blog.br/um/" rel="alternate">Flux Atom</a></li>
+                    <li><a href="#">You can add links in your config file</a></li>
+                    <li><a href="#">Another social link</a></li>
+                </ul>
+        </li><!-- /.social -->
+<li>
+        <h3>Tags</h3>
+        <ul>
+        </ul>
+</li>
+    
+  
+  </div><!-- end #sidebar -->
+
+  <div id="mainContent">
+  	
+ 
+
+
+<div class="blogItem">
+    
+      <h2><a href="http://carneiro.blog.br/um/Ambiente-de-desenvolvimento-Python-3-no-Jessie.html">Ambiente de desenvolvimento Python 3 no Jessie</a></h2>
+      <h3>Le Dom 17 maio 2015</h3>
+      
+  <p>Eu já tinha escrito sobre isso, mas o jeito que eu tinha criado o
+ambiente de desenvolvimento na minha máquina era muito trabalhoso e as
+versões atuais do Python (estou escrevendo em maio de 2015) tornaram a
+vida mais fácil.</p>
+<p>1) Veja que versão de Python você tem instalada.<br />
+    Se for a versão 3.4 ou superior, está tudo certo.<br />
+    Se não for, instale o pacote python3.<br />
+         Digite: sudo apt-get install python3</p>
+<p>2) Instale o pip do Python 3:<br />
+     sudo apt-get install python3-pip</p>
+<p>3) Utilize o comando pip3 (e não pip) para instalar o virtualenv:<br />
+    Digite: sudo pip3 install virtualenv<br />
+    Repare no sudo! Queremos o virtualenv instalado para o computador
+como um todo e não só para nosso projeto, então temos que ter permissões
+para mexer na configuração geral do Python.</p>
+<p>4) No diretório do seu projeto, crie o ambiente virtual (virtualenv):<br />
+     Digite: virtualenv env<br />
+     Chamei o diretório de env, então sua pasta ficaria algo assim:<br />
+                /qqcoisa/seuprojeto/env</p>
+<p>5) Ative o seu ambiente virtual:<br />
+     Digite: . env/bin/activate<br />
+     Repare o ponto (.) e o espaço. Eles são importantes! Você pode
+trocar o ponto por source para ficar mais claro, se quiser.<br />
+     (Alternativa): source env/bin/activate<br />
+     Estou assumindo que você está na pasta do seu projeto, que chamei
+antes de /qqcoisa/seuprojeto/.</p>
+<p>6) Pronto! Agora você já pode instalar módulos de python. Estou usando
+Python 3, então usarei também o pip3. Faço assim:<br />
+     Digite: pip3 install ipython<br />
+     Esse ipython é o primeiro módulo que gosto de instalar. Ele deixa o
+console do python mais amigável. Aí, ao invés de rodar "python" para
+iniciar a console, uso "ipython". Teste aí!</p>
+<p>Abraços,<br />
+Otávio</p>	
+      
+      <h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<h3 class="blogMeta">Tags : </h3>
+    
+    </div><!-- end #blogItem -->
+				
+				<!-- end #content -->
+  
+  </div><!-- end #mainContent -->
+
+<div class="clearfloat"></div>
+
+  <div id="footer">
+  
+    <p><a href="http://css4free.com/" title="free CSS web site designs">Free CSS Gallery</a></p>
+    <p>Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+  </div><!-- end #footer -->
+
+</div><!-- end #container -->
+</body>
+</html>

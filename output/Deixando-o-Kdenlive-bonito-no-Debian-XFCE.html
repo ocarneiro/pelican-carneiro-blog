@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  <title>Deixando o Kdenlive bonito no Debian XFCE</title>
+<link href="http://carneiro.blog.br/um/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="http://carneiro.blog.br/um/" type="application/atom+xml" rel="alternate" title="Só mais um Carneiro ATOM Feed" />
+  
+  <!--[if IE]>
+  <style type="text/css"> 
+  .twoColFixRtHdr #mainContent { zoom: 1; }
+  </style>
+  <![endif]-->
+
+</head>
+
+<body>
+
+<div id="container">
+
+  <div id="header">
+  <h1><a href="http://carneiro.blog.br/um">Só mais um Carneiro</h1>
+  
+  </div><!-- end #header -->
+  
+  <div id="topMenu">
+  
+    <ul>
+    	<li><a href="http://carneiro.blog.br/um">Home</a></li>
+        <li>&ndash;</li>
+        <li><a href="http://carneiro.blog.br/um/archives.html">Archives</a></li>
+        
+    </ul>
+  
+  </div><!-- end #topMenu -->
+
+  <div id="sidebar">
+	<h3>Pages</h3>
+	<ul>
+	</ul>
+    <h3>Categories</h3>
+    <ul>
+		 <li class="active"><a href="http://carneiro.blog.br/um/category/misc.html">misc</a></li>
+	</ul>
+	<li>
+		<h3>Blogroll</h3>
+		<ul>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="http://python.org/">Python.org</a></li>
+                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                    <li><a href="#">You can modify those links in your config file</a></li>
+		</ul>
+	</li>
+        <li>
+                <h3>Social</h3>
+                <ul>
+                    <li><a href="http://carneiro.blog.br/um/" rel="alternate">Flux Atom</a></li>
+                    <li><a href="#">You can add links in your config file</a></li>
+                    <li><a href="#">Another social link</a></li>
+                </ul>
+        </li><!-- /.social -->
+<li>
+        <h3>Tags</h3>
+        <ul>
+        </ul>
+</li>
+    
+  
+  </div><!-- end #sidebar -->
+
+  <div id="mainContent">
+  	
+ 
+
+
+<div class="blogItem">
+    
+      <h2><a href="http://carneiro.blog.br/um/Deixando-o-Kdenlive-bonito-no-Debian-XFCE.html">Deixando o Kdenlive bonito no Debian XFCE</a></h2>
+      <h3>Le Dom 14 dezembro 2014</h3>
+      
+  <p>Quem acompanha <a href="https://www.youtube.com/user/UmCarneiro">meu canal no
+YouTube</a>sabe que eu tenho usado
+o Openshot para editar vídeos (no final de cada vídeo sempre indico os
+softwares utilizados).</p>
+<p>O <a href="http://www.openshot.org/">Openshot</a> é um software fácil e bonito, mas
+tem uns <a href="http://cweiske.de/tagebuch/avoid-openshot.htm">bugs muito
+irritantes</a>.</p>
+<div class="separator" style="clear: both; text-align: center;">
+
+[![](http://4.bp.blogspot.com/-0GWA79xcPYc/VI19Nn6QyOI/AAAAAAAACaY/Ztf4U8QtWxo/s1600/openshot.png)](http://4.bp.blogspot.com/-0GWA79xcPYc/VI19Nn6QyOI/AAAAAAAACaY/Ztf4U8QtWxo/s1600/openshot.png)
+
+</div>
+
+<p>Fui procurar alternativas e encontrei o
+<a href="https://kdenlive.org/">Kdenlive</a>.</p>
+<div class="separator" style="clear: both; text-align: center;">
+
+[![](http://2.bp.blogspot.com/-3XynxYkHH84/VI1-FbnARPI/AAAAAAAACao/dbTdTpfY31M/s1600/kdenlive-depois.png)](http://2.bp.blogspot.com/-3XynxYkHH84/VI1-FbnARPI/AAAAAAAACao/dbTdTpfY31M/s1600/kdenlive-depois.png)
+
+</div>
+
+<p>O Kdenlive parece muito promissor, mas na instalação inicial ele é
+feioso demais. É frescura, eu sei, mas você ficar usando todos os dias
+um programa feio desmotiva qualquer um. Ainda mais depois de ter se
+esforçado para <a href="http://umcarneiro.blogspot.com.br/2014/11/deixando-o-debian-xfce-bonito.html">deixar o restante do sistema operacional
+bonito</a>.</p>
+<div class="separator" style="clear: both; text-align: center;">
+
+[![](http://3.bp.blogspot.com/-l87Ut_YgYyQ/VI1951uctwI/AAAAAAAACag/D2hRGBCHgZk/s1600/kdenlive-antes.png) ](http://3.bp.blogspot.com/-l87Ut_YgYyQ/VI1951uctwI/AAAAAAAACag/D2hRGBCHgZk/s1600/kdenlive-antes.png)
+
+</div>
+
+<div class="separator" style="clear: both; text-align: center;">
+
+</div>
+
+<p>Lá fui eu, então, procurar um jeito de embelezar o Kdenlive. Tem um
+artigo bem completo e em português no <a href="http://grita.ricolandia.com/2014/04/04/gtk-e-qt-mesma-aparencia-e-icones/">blog "Grita!
+(Ricolândia)"</a>,
+mas vou dar algumas dicas aqui também.</p>
+<p>O que você tem que fazer é instalar alguns pacotes de configuração
+visual do KDE. Alguns deixam bem claro na descrição a que se destinam:</p>
+<div class="separator" style="clear: both; text-align: center;">
+
+[![](http://1.bp.blogspot.com/-FY1__XWQUio/VI1_MswdVXI/AAAAAAAACa0/0Q_yhMkY6Do/s1600/synaptic.png)](http://1.bp.blogspot.com/-FY1__XWQUio/VI1_MswdVXI/AAAAAAAACa0/0Q_yhMkY6Do/s1600/synaptic.png)
+
+</div>
+
+<p><strong>gtk2-engines-oxygen</strong><br />
+"Garante consistência visual entre GTK+ e aplicações baseadas em Qt sob
+o KDE". Traduzi do inglês e ainda não dá para entender nada, né? Instale
+e confie!</p>
+<div class="separator" style="clear: both; text-align: center;">
+
+[![](http://4.bp.blogspot.com/-dYp16lRebr8/VI1_uRlBI7I/AAAAAAAACa8/RyoHavI-uv0/s1600/kde-config-gtk-synaptic.png)](http://4.bp.blogspot.com/-dYp16lRebr8/VI1_uRlBI7I/AAAAAAAACa8/RyoHavI-uv0/s1600/kde-config-gtk-synaptic.png)
+
+</div>
+
+<p><strong>kde-config-gtk-style</strong><br />
+"Janela para adaptar a aparência de aplicações GTK+ ao seu gosto sob o
+KDE". Ficou claro? Pois é.</p>
+<div class="separator" style="clear: both; text-align: center;">
+
+[![](http://2.bp.blogspot.com/-TGnZCf4Ogjw/VI2ANTVcWLI/AAAAAAAACbI/R5WkGsfS8qg/s1600/synaptic-qtconfig.png)](http://2.bp.blogspot.com/-TGnZCf4Ogjw/VI2ANTVcWLI/AAAAAAAACbI/R5WkGsfS8qg/s1600/synaptic-qtconfig.png)
+
+</div>
+
+<p><strong>qt4-qtconfig</strong><br />
+"Qt é uma infraestrutura interplataforma de aplicações C++. O principal<br />
+recurso da Qt é o seu rico conjunto de widgets que fornecem
+funcionalidades padrões para a interface gráfica do usuário (GUI).</p>
+<p>O programa de configuração da Qt permite que os usuários configurem a<br />
+aparência e o comportamento de qualquer aplicativo desenvolvido em Qt
+4."</p>
+<p>Taí uma explicação interessante! Na verdade, todo programa que roda no
+ambiente gráfico precisa saber como desenhar na tela. Ao invés do
+programador escrever que o computador deve desenhar um retângulo aqui
+para escrever o título e um círculo ali para ser um botão, ele utiliza
+uma biblioteca. Uma biblioteca é um conjunto de programas com uma função
+específica. GTK+ e Qt são duas bibliotecas bastante populares que cuidam
+de toda a parafernália necessária para desenhar janelas, botões, ícones
+e afins, permitindo que os programadores cuidem da funcionalidade do seu
+próprio programa ao invés de se preocupar com geometria e pixels.</p>
+<p>Pois bem, com estes programas você já consegue fazer uma configuração
+básica.</p>
+<div class="separator" style="clear: both; text-align: center;">
+
+[![](http://1.bp.blogspot.com/-lXYavVA-PVw/VI2Bscd-OYI/AAAAAAAACbU/5mU0eWSygvE/s1600/qtconfig.png)](http://1.bp.blogspot.com/-lXYavVA-PVw/VI2Bscd-OYI/AAAAAAAACbU/5mU0eWSygvE/s1600/qtconfig.png)
+
+</div>
+
+<p>Indo em "Menu de aplicativos" -> Configurações -> "Configurações do Qt
+4", você já pode dizer que o estilo que você quer utilizar é o mesmo que
+das outras aplicações. Ou seja, você pode mudar o "GUI Style" para
+"GTK+".</p>
+<p>Isso já vai ajudar um bocado, ajustando as cores e os ícones para o tema
+que você tinha configurado para o XFCE. Mas as letras continuam
+minúsculas (fonte 8).</p>
+<p>Para ajustar isso, você tem que instalar mais um pacote.</p>
+<div class="separator" style="clear: both; text-align: center;">
+
+[![](http://4.bp.blogspot.com/-bw2c2omrk7M/VI2CwVmXsvI/AAAAAAAACbg/MdhrAk51HxQ/s1600/systemsettings-kde-synaptic.png)](http://4.bp.blogspot.com/-bw2c2omrk7M/VI2CwVmXsvI/AAAAAAAACbg/MdhrAk51HxQ/s1600/systemsettings-kde-synaptic.png)
+
+</div>
+
+<p><strong>systemsettings</strong><br />
+"System Settings é uma interface de usuário aprimorada para configurar a
+área de trabalho e outros aspectos do sistema."<br />
+<a href="http://4.bp.blogspot.com/-z_ojYFWYJpo/VI2D7KaNBOI/AAAAAAAACbs/Ezu_6skTn6U/s1600/systemsettings-kde.png"><img alt="" src="http://4.bp.blogspot.com/-z_ojYFWYJpo/VI2D7KaNBOI/AAAAAAAACbs/Ezu_6skTn6U/s1600/systemsettings-kde.png" /></a>Na
+verdade, o systemsettings é um configurador do ambiente KDE (uma
+alternativa ao XFCE que estamos utilizando no resto do sistema). Só que
+vamos usá-lo para configurar a aparência de programas do KDE (como o
+Kdenlive) no nosso ambiente XFCE.</p>
+<p>Como o systemsettings não é um programa feito para rodar no Debian XFCE,
+ele não aparece no Menu de Aplicativos, você tem que rodá-lo do
+terminal. Calma, você só executa ele de lá, mas configura numa janela
+normal. Abra um terminal e digite systemsettings.</p>
+<p>Agora, sim!</p>
+<p>Você já pode ir lá e configurar o tamanho das fontes. Você pode até
+deixar o kdenlive aberto. Quando você clicar "Apply" (Aplicar), as
+mudanças já serão visíveis no kdenlive. Eu coloquei letras com tamanho
+12 para tudo.</p>
+<p>No mesmo programa você pode alterar também cores, ícones e outras
+coisas, mas eu só aumentei a fonte.</p>
+<p>Dentro do kdenlive eu ainda fechei a janela "Transição" e aumentei as
+outras arrastando-as pelos cantos. É, ficou mais parecido com o
+Openshot, eu sei, mas o que eu queria era facilitar a minha vida para
+poder publicar mais vídeos para vocês.</p>
+<div class="separator" style="clear: both; text-align: center;">
+
+[![](http://4.bp.blogspot.com/-3XynxYkHH84/VI1-FbnARPI/AAAAAAAACas/owrzAAadaSU/s1600/kdenlive-depois.png)](http://4.bp.blogspot.com/-3XynxYkHH84/VI1-FbnARPI/AAAAAAAACas/owrzAAadaSU/s1600/kdenlive-depois.png)
+
+</div>
+
+<p>Abraços!<br />
+Otávio</p>	
+      
+      <h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<h3 class="blogMeta">Tags : </h3>
+    
+    </div><!-- end #blogItem -->
+				
+				<!-- end #content -->
+  
+  </div><!-- end #mainContent -->
+
+<div class="clearfloat"></div>
+
+  <div id="footer">
+  
+    <p><a href="http://css4free.com/" title="free CSS web site designs">Free CSS Gallery</a></p>
+    <p>Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+  </div><!-- end #footer -->
+
+</div><!-- end #container -->
+</body>
+</html>

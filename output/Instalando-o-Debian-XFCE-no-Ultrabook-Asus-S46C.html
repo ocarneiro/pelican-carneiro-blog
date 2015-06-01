@@ -1,0 +1,320 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  <title>Instalando o Debian XFCE no Ultrabook Asus S46C</title>
+<link href="http://carneiro.blog.br/um/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="http://carneiro.blog.br/um/" type="application/atom+xml" rel="alternate" title="Só mais um Carneiro ATOM Feed" />
+  
+  <!--[if IE]>
+  <style type="text/css"> 
+  .twoColFixRtHdr #mainContent { zoom: 1; }
+  </style>
+  <![endif]-->
+
+</head>
+
+<body>
+
+<div id="container">
+
+  <div id="header">
+  <h1><a href="http://carneiro.blog.br/um">Só mais um Carneiro</h1>
+  
+  </div><!-- end #header -->
+  
+  <div id="topMenu">
+  
+    <ul>
+    	<li><a href="http://carneiro.blog.br/um">Home</a></li>
+        <li>&ndash;</li>
+        <li><a href="http://carneiro.blog.br/um/archives.html">Archives</a></li>
+        
+    </ul>
+  
+  </div><!-- end #topMenu -->
+
+  <div id="sidebar">
+	<h3>Pages</h3>
+	<ul>
+	</ul>
+    <h3>Categories</h3>
+    <ul>
+		 <li class="active"><a href="http://carneiro.blog.br/um/category/misc.html">misc</a></li>
+	</ul>
+	<li>
+		<h3>Blogroll</h3>
+		<ul>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="http://python.org/">Python.org</a></li>
+                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                    <li><a href="#">You can modify those links in your config file</a></li>
+		</ul>
+	</li>
+        <li>
+                <h3>Social</h3>
+                <ul>
+                    <li><a href="http://carneiro.blog.br/um/" rel="alternate">Flux Atom</a></li>
+                    <li><a href="#">You can add links in your config file</a></li>
+                    <li><a href="#">Another social link</a></li>
+                </ul>
+        </li><!-- /.social -->
+<li>
+        <h3>Tags</h3>
+        <ul>
+        </ul>
+</li>
+    
+  
+  </div><!-- end #sidebar -->
+
+  <div id="mainContent">
+  	
+ 
+
+
+<div class="blogItem">
+    
+      <h2><a href="http://carneiro.blog.br/um/Instalando-o-Debian-XFCE-no-Ultrabook-Asus-S46C.html">Instalando o Debian XFCE no Ultrabook Asus S46C</a></h2>
+      <h3>Le Dom 16 novembro 2014</h3>
+      
+  <p>RESUMO PARA QUEM ESTÁ COM PRESSA: Se seu notebook é novo, instale o
+Debian 8 (Jessie). Esqueça o Wheezy (Debian 7) e poupe dores de cabeça.</p>
+<p>Voltamos à programação normal:</p>
+<p>Esta semana comprei um notebook novo para poder fazer atividades de
+edição de vídeo no <a href="http://calango.club/">Calango Hacker Clube</a>.</p>
+<p>O computador, um Ultrabook Asus S46C, é muito bom, mas vem com Windows 8
+e eu queria usar Linux nele.</p>
+<p>Antes de qualquer coisa, liguei a máquina, coloquei ela na rede e deixei
+o Windows 8 de fábrica fazer as mais de 100 atualizações. Só isso levou
+um dia inteiro, reiniciando o computador várias vezes. Acho que foi bom
+dar uma brincada com o notebook antes de detonar o sistema operacional,
+mas dispensaria essas atualizações se fosse fazer tudo de novo hoje.</p>
+<p>Depois de ter certeza de que não queria usar o Windows 8, era hora de
+instalar o Linux. Ainda assim, sou medroso e não gosto de tomar atitudes
+irreversíveis. Assim, resolvi fazer uma cópia de backup das partições de
+recuperação que vieram no notebook, para o caso de um dia eu querer
+reinstalar o Windows 8. Vai que o notebook tinha algum recurso que só
+funciona no Windows?</p>
+<p>Para essa tarefa, usei o <a href="http://clonezilla.org/">Clonezilla</a>.Clonezilla
+é uma distribuição Linux que permite você copiar partições inteiras. É
+como o Norton Ghost e outros programas do gênero. Você dá boot com ele e
+segue as instruções na tela. Tudo muito simples. Para o HD.</p>
+<p>O notebook vem também com um drive SSD de 24GB. Esse eu achei que o
+Clonezilla ia copiar mais facilmente ainda, tão pequeno... Só que não.
+Tive que usar o bom e velho "dd", um comando conhecido como "destruidor
+de dados". O comando exato que usei foi esse aqui embaixo, mas eu
+estudaria bem o que isso faz antes de sair usando:<br />
+<code>sudo dd if=/dev/sdb bs=4096 | gzip &gt; dd-sdb.gz</code></p>
+<p>Agora, sim. Gravei as cópias das partições em um HD externo e fiquei
+livre para começar a destruição!</p>
+<p>Meu netbook está rodando o manjaro e meu desktop roda Ubuntu, mas desta
+vez optei pelo Debian. A versão estável dele é a 7.7 (Wheezy), então fui
+com ela.</p>
+<p>Instalar o Debian 7.7 (Wheezy) foi muito tranquilo. Ele já dá umas
+sugestões de particionamento do disco e tudo. Dei uma estudada e decidi
+colocar as partições que gravam mais no HD, deixando o SSD com as
+partições mais "estáveis". Deixei a /home no HD também. Como nessa
+partição vão morar meus dados, é melhor que ela seja mais fácil de
+recuperar. Dizem que recuperar dados de um SSD beira o impossível.</p>
+<p>Se alguém quiser uma sugestão de partições para usar o linux em um
+computador com HD e SSD, a minha ficou assim:<br />
+/ (root) = SSD = 1 GB (o Debian sugeriu 350MB);<br />
+/var = HD = 3 GB;<br />
+/tmp = HD = 400MB (essa poderia viver na memória RAM. Vou fazer isso um
+dia);<br />
+/swap = HD = 12 GB (essa não pode ficar no SSD de jeito algum);<br />
+/home = HD = todo o resto do HD (quase 1 TB);<br />
+/usr = SSD = 8.4 GB (essa partição é praticamente somente leitura);<br />
+(livre) = SSD = 6,5 GB (dizem que é bom deixar de 7 a 30% do SSD não
+particionado).<br />
+Sobrou um pouco de espaço no SSD, então criei uma partição "/ssd" para o
+caso de eu resolver usar depois.</p>
+<p>O restante da instalação foi bem tranquila. Usei a versão XFCE do
+Debian. Eu ia com a LXDE, que é a mais leve de todas, mas não fui com a
+cara dela. É sempre bom experimentar versões "live" (que rodam direto do
+pendrive) antes de escolher.</p>
+<p>A única coisa que não funcionou após a instalação inicial foi  o suporte
+à placa de vídeo Nvidia. De início, nem notei. Minha filha jogou
+Minecraft um dia inteiro usando só a placa de vídeo intel integrada.</p>
+<p>Ahn?!</p>
+<p>É isso mesmo! O notebook tem, na realidade, duas placas de vídeo: uma
+intel integrada e uma Nvidia GEForce de 2GB. E o que é melhor: usa um
+sistema que permite que a placa da Nvidia só seja utilizada quando é
+necessária (ou solicitada), o que permite uma economia de energia muito
+grande.</p>
+<p>O problema desse recurso, chamado Optimus, é que ele é novo e precisa de
+softwares específicos para funcionar. Descobri que a melhor companhia
+para o Optimus é o Bumblebee. Óbvio! Nos Transformers e no Linux eles
+são os melhores amigos. Então eu fui à luta para tentar instalar o
+bumblebee. Se quiser ler mais sobre isso, pule para o epílogo deste
+post.</p>
+<p>Depois de muito ralar, descobri que o problema não era com os drivers da
+Nvidia, mas sim com o suporte à placa da Intel. O que acontece é que a
+placa mãe do notebook só tem suporte no Debian Jessie (Debian 8) e por
+isso o Bumblebee não funciona no Debian 7 (Wheezy).</p>
+<p>Eu já tinha configurado algumas coisas no notebook. Já tinha colocado um
+tema nas janelas (usei o redmondXP, que parece o Windows XP), tinha
+colocado um controle de volume e várias outras coisas sugeridas para se
+<a href="http://dontsurfinthenude.blogspot.com.br/2013/06/10-things-to-do-after-installing-debian.html">fazer depois de instalar o
+XFCE</a>,
+inclusive <a href="http://www.whaleblubber.ca/install-firefox-debian/">instalar o
+Firefox</a>. Assim,
+preferi atualizar a distribuição ao invés de instalar tudo de novo.</p>
+<p>Atualizar do Wheezy para o Jessie foi bem fácil. Você só precisa editar
+o arquivo "/etc/apt/sources.list" e trocar tudo que diz "wheezy" para
+"jessie". Isso vai trocar os repositórios. Aí é só atualizar o sistema
+com os comandos:</p>
+<p><code>sudo apt-get update</code><br />
+<code>sudo apt-get --download-only dist-upgrade</code><br />
+<code>sudo apt-get dist-upgrade</code></p>
+<p>Achei muito tranquilo. Toda hora que precisava tomar uma decisão, o
+sistema deu explicações muito fáceis sobre o que tinha que ser feito. E
+em dois momentos ele deu erro mas sugeriu o comando a executar para
+consertar. Foi muito fácil.</p>
+<p>Depois de atualizar para o Debian Jessie, o computador ficou muito
+rápido! Eu já tinha achado ele rápido com o Debian Wheezy, mas dei
+crédito ao i7 (meu desktop é um i5). Com o Jessie, ele ficou muito mais
+rápido.</p>
+<p>Ah, sim, para usar a placa de vídeo nvidia, você precisa rodar os
+comandos com um "optirun" antes. Então, para jogar minecraft, meu
+comando agora é:</p>
+<p><code>optirun java -Xmx1024M -Xms512M -cp minecraft.jar net.minecraft.bootstrap.Bootstrap</code></p>
+<p>Parece muita coisa para rodar um joguinho, mas é só colocar <a href="http://askubuntu.com/questions/34408/how-to-add-minecraft-to-the-unity-launcher">tudo isso
+num
+atalho</a>
+ou botão para colocar seu Minecraft no desktop.</p>
+<p>Outra coisa boa a se fazer com o sistema instalado é colocar os
+caracteres "/" e "?" num lugar acessível. Afinal, quem usa linux sem a
+barra? Ou escreve sem interrogação? Para colocar a tecla "/?" entre o
+alt e o ctrl do lado direito (no lugar do botão estranho com uma lista),
+o comando é o seguinte:</p>
+<p><code>xmodmap -e "keycode 135 = slash question"</code></p>
+<p>E para fazer o XFCE rodar isto sempre que iniciar, você <a href="https://wiki.archlinux.org/index.php/xfce">altera o script
+de inicialização dele</a>.
+Basicamente, é copiar o arquivo /etc/xdg/xfce4/xinitrc para
+\~/.config/xfce4/ e colocar esse comando no começo dele.</p>
+<p>Outra coisa que achei útil foi colocar o botão F9 para desligar o
+trackpad. O trackpad desse notebook é grande e fica atrapalhando quando
+digito. Então fui na configuração de teclado e associei um script para
+<a href="https://wiki.archlinux.org/index.php/Touchpad_Synaptics#Software_toggle">ligar e desligar o
+trackpad</a>
+a esta tecla.</p>
+<p>Bom proveito!</p>
+<hr />
+<p>Epilogo</p>
+<p>Se você acha que consegue fazer o bumblebee rodar no wheezy e precisa
+ver mais motivos (com telas e log) para te convencer, continue lendo.</p>
+<p>Esta foi minha odisséia em busca de colocar o bumblebee funcionando no
+wheezy:</p>
+<p>Encontrei referência a um pacote "bumblebee-nvidia" e o google me disse
+que ele estava no repositório "contrib" em wheezy-backports:</p>
+<div class="highlight"><pre>https://packages.debian.org/wheezy-backports/utils/bumblebee-nvidia
+</pre></div>
+
+
+<p>Então adicionei esse repositório no meu synaptic:</p>
+<div class="highlight"><pre><span class="k">deb</span> <span class="s">http://http.debian.net/debian</span> <span class="kp">wheezy-backports</span> <span class="kp">main</span> <span class="kp">contrib</span>
+</pre></div>
+
+
+<p>Depois de recarregar, o pacote bumblebee-nvidia ficou disponível, com
+suas inúmeras dependências:</p>
+<p>Instalei e reiniciei. Para testar, tentei rodar "glxspheres", mas ele
+não existia:</p>
+<div class="highlight"><pre>otavio@otavio-note:~$ glxspheresbash: glxspheres: comando não encontrado
+</pre></div>
+
+
+<p>Li que ele pertencia ao pacote mesa-utils, então instalei, mas não tinha
+também... Tinha um glxgears, no entanto:</p>
+<div class="separator" style="clear: both; text-align: center;">
+
+[![](http://1.bp.blogspot.com/-fAcOFCHnDiI/VGkuoYEnCAI/AAAAAAAACW0/PLTP2Bp6gKE/s1600/glxgears.png)](http://1.bp.blogspot.com/-fAcOFCHnDiI/VGkuoYEnCAI/AAAAAAAACW0/PLTP2Bp6gKE/s1600/glxgears.png)
+
+</div>
+
+<div class="separator" style="clear: both; text-align: center;">
+
+</div>
+
+<p>Então rodei outro teste:</p>
+<div class="highlight"><pre>optirun
+</pre></div>
+
+
+<p>e o resultado foi:</p>
+<div class="highlight"><pre>[ERROR]You&#39;ve no permission to communicate with the Bumblebee daemon.
+
+Try adding yourself to the &#39;bumblebee&#39; group
+</pre></div>
+
+
+<p>Então eu fiz isso: <code>sudo usermod -a -G bumblebee otavio</code><br />
+E confirmei se eu estava mesmo no grupo: <code>groups otavio</code><br />
+E reiniciei o bumblebee:<br />
+<code>sudo service bumblebeed restart</code></p>
+<p>Recebi um ok, mas o resultado do optirun foi o mesmo...</p>
+<p>Na falta de coisa melhor para fazer, reiniciei o computador...</p>
+<p>Depois de reiniciar, consegui algum avanço:</p>
+<div class="highlight"><pre>otavio@otavio-note:~$ optirun glxgears[   28.735500] [ERROR]Cannot access secondary GPU - error:
+
+[XORG] (EE) NVIDIA(0): Failed to initialize the NVIDIA GPU at PCI:1:0:0.  Please[   28.735560] [ERROR]Aborting because fallback start is disabled.
+</pre></div>
+
+
+<p>Depois disso, o notebook ficou louco! Ligou o cooler e ficou mostrando
+mensagens sobre a bateria até desligar, uns dois minutos depois.</p>
+<p>Ligando o computador de novo, fiz o seguinte:</p>
+<div class="highlight"><pre>sudo grep bumblebeed /var/log/syslog Nov 15 17:56:59 otavio-note bumblebeed[2924]: /usr/sbin/bumblebeed 3.2.1 startedNov 15 17:57:18 otavio-note bumblebeed[2932]: [XORG] (EE) NVIDIA(0): Failed to initialize the NVIDIA GPU at PCI:1:0:0.  PleaseNov 15 17:57:18 otavio-note bumblebeed[2932]: [XORG] (EE) NVIDIA(0):     check your system&#39;s kernel log for additional errorNov 15 17:57:18 otavio-note bumblebeed[2932]: [XORG] (EE) NVIDIA(0):     messages and refer to Chapter 8: Common Problems in theNov 15 17:57:18 otavio-note bumblebeed[2932]: [XORG] (EE) NVIDIA(0):     README for additional information.Nov 15 17:57:18 otavio-note bumblebeed[2932]: [XORG] (EE) NVIDIA(0): Failed to initialize the NVIDIA graphics device!Nov 15 17:57:18 otavio-note bumblebeed[2932]: [XORG] (EE) NVIDIA(0): Failing initialization of X screen 0Nov 15 17:57:18 otavio-note bumblebeed[2932]: [XORG] (EE) Screen(s) found, but none have a usable configuration.Nov 15 17:57:18 otavio-note bumblebeed[2932]: X did not start properlyNov 15 18:00:35 otavio-note bumblebeed[2935]: /usr/sbin/bumblebeed 3.2.1 started
+</pre></div>
+
+
+<p>Descobri que o tal capítulo 8 que a mensagem referencia é do seguinte
+arquivo:</p>
+<div class="highlight"><pre>/usr/share/doc/nvidia-kernel-dkms/README.txt.gz
+</pre></div>
+
+
+<p>... mas isso não ajudou muito...</p>
+<p>Tentei procurar mensagens no kernel:</p>
+<div class="highlight"><pre>otavio@otavio-note:~$ sudo grep bumblebeed /var/log/kern.log otavio@otavio-note:~$ sudo grep nvidia /var/log/kern.log Nov 15 17:57:17 otavio-note kernel: [   28.104207] nvidia: module license &#39;NVIDIA&#39; taints kernel.Nov 15 17:57:17 otavio-note kernel: [   28.194483] nvidia 0000:01:00.0: setting latency timer to 64
+</pre></div>
+
+
+<p>Dizem que essa história de "taints kernel" não quer dizer nada...</p>
+<p>Então não obtive nenhuma ajuda aqui.</p>
+<p>Começando a estudar tudo de novo, fui lá na página do Bumblebee e achei
+o seguinte:<br />
+https://wiki.debian.org/Bumblebee</p>
+<p><strong>Note</strong> wheezy-backports does <em>not</em> contain the newer
+<code>xserver-xorg-video-intel</code> package that is needed by newer intel cards.
+If you find yourself stuck with the fbdev or vesa driver then you'll
+need to upgrade to jessie or sid. </p>
+<p>Ou seja, dancei! Tive que trocar a versão do meu debian! Meu notebook
+deve usar uma dessas placas intel mais recentes...</p>
+<p>O resultado eu já disse acima.</p>	
+      
+      <h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<h3 class="blogMeta">Tags : </h3>
+    
+    </div><!-- end #blogItem -->
+				
+				<!-- end #content -->
+  
+  </div><!-- end #mainContent -->
+
+<div class="clearfloat"></div>
+
+  <div id="footer">
+  
+    <p><a href="http://css4free.com/" title="free CSS web site designs">Free CSS Gallery</a></p>
+    <p>Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+  </div><!-- end #footer -->
+
+</div><!-- end #container -->
+</body>
+</html>

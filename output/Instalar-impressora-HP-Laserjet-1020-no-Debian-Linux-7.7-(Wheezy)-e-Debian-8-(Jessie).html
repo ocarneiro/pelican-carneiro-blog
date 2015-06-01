@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  <title>Instalar impressora HP Laserjet 1020 no Debian Linux 7.7 (Wheezy) e Debian 8 (Jessie)</title>
+<link href="http://carneiro.blog.br/um/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="http://carneiro.blog.br/um/" type="application/atom+xml" rel="alternate" title="Só mais um Carneiro ATOM Feed" />
+  
+  <!--[if IE]>
+  <style type="text/css"> 
+  .twoColFixRtHdr #mainContent { zoom: 1; }
+  </style>
+  <![endif]-->
+
+</head>
+
+<body>
+
+<div id="container">
+
+  <div id="header">
+  <h1><a href="http://carneiro.blog.br/um">Só mais um Carneiro</h1>
+  
+  </div><!-- end #header -->
+  
+  <div id="topMenu">
+  
+    <ul>
+    	<li><a href="http://carneiro.blog.br/um">Home</a></li>
+        <li>&ndash;</li>
+        <li><a href="http://carneiro.blog.br/um/archives.html">Archives</a></li>
+        
+    </ul>
+  
+  </div><!-- end #topMenu -->
+
+  <div id="sidebar">
+	<h3>Pages</h3>
+	<ul>
+	</ul>
+    <h3>Categories</h3>
+    <ul>
+		 <li class="active"><a href="http://carneiro.blog.br/um/category/misc.html">misc</a></li>
+	</ul>
+	<li>
+		<h3>Blogroll</h3>
+		<ul>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="http://python.org/">Python.org</a></li>
+                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                    <li><a href="#">You can modify those links in your config file</a></li>
+		</ul>
+	</li>
+        <li>
+                <h3>Social</h3>
+                <ul>
+                    <li><a href="http://carneiro.blog.br/um/" rel="alternate">Flux Atom</a></li>
+                    <li><a href="#">You can add links in your config file</a></li>
+                    <li><a href="#">Another social link</a></li>
+                </ul>
+        </li><!-- /.social -->
+<li>
+        <h3>Tags</h3>
+        <ul>
+        </ul>
+</li>
+    
+  
+  </div><!-- end #sidebar -->
+
+  <div id="mainContent">
+  	
+ 
+
+
+<div class="blogItem">
+    
+      <h2><a href="http://carneiro.blog.br/um/Instalar-impressora-HP-Laserjet-1020-no-Debian-Linux-7.7-(Wheezy)-e-Debian-8-(Jessie).html">Instalar impressora HP Laserjet 1020 no Debian Linux 7.7 (Wheezy) e Debian 8 (Jessie)</a></h2>
+      <h3>Le Qui 27 novembro 2014</h3>
+      
+  <p>(Atualizado em 07/12/2014 para incluir configuração no Jessie)</p>
+<p>Fiquei um tempão apanhando para colocar minha impressora para funcionar.</p>
+<p>No fim, parece que o que funcionou foi instalar o pacote hannah-foo2zjs.</p>
+<p>ATUALIZAÇÃO (em 07/02/2015): Para localizar o pacote, você precisa
+adicionar os repositórios contrib e non-free ao synaptic, como fiz
+<a href="http://umcarneiro.blogspot.com/2015/02/como-adicionar-os-repositorios-contrib.html">neste outro
+post</a>.</p>
+<div class="separator" style="clear: both; text-align: center;">
+
+[![](http://2.bp.blogspot.com/-8L5K6szdh6g/VHfP2QWIV5I/AAAAAAAACZQ/tdeWeFiWcyc/s1600/hannah.png)](http://2.bp.blogspot.com/-8L5K6szdh6g/VHfP2QWIV5I/AAAAAAAACZQ/tdeWeFiWcyc/s1600/hannah.png)
+
+</div>
+
+<p>Com o pacote instalado, rodei em um terminal:  sudo hannah-foo2zjs</p>
+<p>Com isso, pude escolher minha impressora (HP1020) no meio de muitas
+outras HP, Minolta, Samsung e Xerox.</p>
+<div class="separator" style="clear: both; text-align: center;">
+
+[![](http://4.bp.blogspot.com/-Tvx0EnObweg/VHfQQQ4XbvI/AAAAAAAACZY/FAETBy2eldU/s1600/hannah2.png)](http://4.bp.blogspot.com/-Tvx0EnObweg/VHfQQQ4XbvI/AAAAAAAACZY/FAETBy2eldU/s1600/hannah2.png)
+
+</div>
+
+<p>Aí, marquei para fazer o download e pude adicionar a impressora
+normalmente pelo gerenciador de impressão do Debian.</p>
+<p>-- ATUALIZAÇÃO (em 07/12/2014) --<br />
+A impressora parou de funcionar depois de ficar sem papel durante uma
+impressão. Por coincidência, eu tinha também instalado o Debian Jessie
+pouco antes e fiquei sem saber o que causou o problema. Para piorar,
+esta minha dica também deixou de funcionar. Caos! Uma semana sem
+impressora! Mas descobri como resolver:</p>
+<p>1) Desinstalei todos os programas relativos à impressora. Usei a
+desinstalação completa (purge), que inclui as configurações. Nisso foram
+embora: cups, hplip, hpcups, hannah-foo2zjs, foo2zjs e quase tudo que
+tinha hp no nome.</p>
+<p>2) Reiniciei o computador.</p>
+<p>3) Reinstalei o cups e o hannah-foo2zjs.</p>
+<p>4) Criei um link para o arquivo getweb:<br />
+  sudo ln -s /usr/sbin/getweb /usr/bin/getweb<br />
+(parece que esse pacote hannah-foo2zjs está abandonado e usa referência
+ao arquivo errado)</p>
+<p>5) Rodei o hannah-foo2zjs e instalei o driver como ensinei acima:<br />
+  sudo hannah-foo2zjs</p>
+<p>6) Reiniciei o computador</p>
+<p>7) Instalei hplip e hplip-gui</p>
+<p>8) Reiniciei o computador</p>
+<p>9) Cliquei em "Menu de aplicativos" -> Configurações -> "Configurações
+da impressora"</p>
+<p>10) Adicionei minha impressora, como se nada tivesse acontecido.</p>
+<p>Mais uma coisa: quando o configurador de impressora ou o CUPS pedir
+usuário e senha, faça login como root.</p>
+<p>E se for imprimir frente e verso, use essa minha dica do ano passado que
+ainda funciona direitinho:<br />
+<a href="http://umcarneiro.blogspot.com/2013/07/economizando-papel-no-linux.html">Economizando papel no
+Linux</a></p>
+<p>-- Fim da Atualização --</p>
+<p>Espero que isso ajude outros em apuros com o cups, hplip, hpcups e
+outros tantos pacotes destinados a resolver problemas de instalação de
+impressoras no linux.</p>
+<p>Abraços!<br />
+</p>	
+      
+      <h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<h3 class="blogMeta">Tags : </h3>
+    
+    </div><!-- end #blogItem -->
+				
+				<!-- end #content -->
+  
+  </div><!-- end #mainContent -->
+
+<div class="clearfloat"></div>
+
+  <div id="footer">
+  
+    <p><a href="http://css4free.com/" title="free CSS web site designs">Free CSS Gallery</a></p>
+    <p>Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+  </div><!-- end #footer -->
+
+</div><!-- end #container -->
+</body>
+</html>

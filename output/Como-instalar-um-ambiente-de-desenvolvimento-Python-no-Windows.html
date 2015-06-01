@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  <title>Como instalar um ambiente de desenvolvimento Python no Windows</title>
+<link href="http://carneiro.blog.br/um/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="http://carneiro.blog.br/um/" type="application/atom+xml" rel="alternate" title="Só mais um Carneiro ATOM Feed" />
+  
+  <!--[if IE]>
+  <style type="text/css"> 
+  .twoColFixRtHdr #mainContent { zoom: 1; }
+  </style>
+  <![endif]-->
+
+</head>
+
+<body>
+
+<div id="container">
+
+  <div id="header">
+  <h1><a href="http://carneiro.blog.br/um">Só mais um Carneiro</h1>
+  
+  </div><!-- end #header -->
+  
+  <div id="topMenu">
+  
+    <ul>
+    	<li><a href="http://carneiro.blog.br/um">Home</a></li>
+        <li>&ndash;</li>
+        <li><a href="http://carneiro.blog.br/um/archives.html">Archives</a></li>
+        
+    </ul>
+  
+  </div><!-- end #topMenu -->
+
+  <div id="sidebar">
+	<h3>Pages</h3>
+	<ul>
+	</ul>
+    <h3>Categories</h3>
+    <ul>
+		 <li class="active"><a href="http://carneiro.blog.br/um/category/misc.html">misc</a></li>
+	</ul>
+	<li>
+		<h3>Blogroll</h3>
+		<ul>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="http://python.org/">Python.org</a></li>
+                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                    <li><a href="#">You can modify those links in your config file</a></li>
+		</ul>
+	</li>
+        <li>
+                <h3>Social</h3>
+                <ul>
+                    <li><a href="http://carneiro.blog.br/um/" rel="alternate">Flux Atom</a></li>
+                    <li><a href="#">You can add links in your config file</a></li>
+                    <li><a href="#">Another social link</a></li>
+                </ul>
+        </li><!-- /.social -->
+<li>
+        <h3>Tags</h3>
+        <ul>
+        </ul>
+</li>
+    
+  
+  </div><!-- end #sidebar -->
+
+  <div id="mainContent">
+  	
+ 
+
+
+<div class="blogItem">
+    
+      <h2><a href="http://carneiro.blog.br/um/Como-instalar-um-ambiente-de-desenvolvimento-Python-no-Windows.html">Como instalar um ambiente de desenvolvimento Python no Windows</a></h2>
+      <h3>Le Ter 17 junho 2014</h3>
+      
+  <p>Hoje eu fui desenvolver com Python no meu notebook com Windows 8 e
+descobri que não tinha nem pip, nem virtualenv, nem mesmo o setuptools
+instalado... E agora, José? Como é que você prepara uma máquina no
+Windows para trabalhar com Django, Flask, suds e outras tantas coisas
+legais que só o Python pode oferecer?</p>
+<p>Eu tentei várias coisas, baixei scripts .py para rodar diretamente,
+instalei programas e mais programas dentro e fora do Cygwin, versões
+64-bit e 32-bit de uma infinidade de pacotes e nada parecia dar certo.
+Então, resolvi começar de novo, explicando para vocês meu procedimento.</p>
+<p>Primeiro de tudo, você precisa do
+<a href="https://www.python.org/downloads/">Python</a>, lógico. A versão mais atual
+é a 3.3, mas muita gente ainda usa a 2.7. Eu sou uma dessas pessoas.
+Estou fazendo um curso de "<a href="https://www.edx.org/course/mitx/mitx-6-00-1x-introduction-computer-1841">Introdução à Ciência da Computação e
+Programação com
+Python</a>"
+no site <a href="http://edx.org/">edx.org</a> e eles usam a versão 2.7.</p>
+<p>Instalar o Python é fácil. Ele tem um instalador para Windows e tudo
+mais... Ainda assim, você precisa atentar para as variáveis de ambiente.
+Você deve ajustar o seu PATH. Algo assim:</p>
+<p>PATH=%PATH%;C:\Python27;C:\Python27\Scripts<br />
+Agora, sim, você pode instalar o setuptools, que vai te permitir
+instalar o virtualenv, o pip e os demais utilitários do Python que vão
+te permitir instalar as bibliotecas e tudo mais.</p>
+<p>Para instalar o setuptools, segui as <a href="https://pypi.python.org/pypi/setuptools/#windows-8-powershell">orientações do site
+oficial</a>,
+ou seja, usei o PowerShell. Eu nunca tinha usado isso, não sabia nem o
+que era. Aparentemente, é só mais um console, como o cmd e o cygwin.
+Apertei o botão do windows, escrevi "PowerShell", cliquei com o botão
+direito do mouse e pedi para Executar como Administrador. No console que
+se abriu, rodei o comando a seguir:</p>
+<div class="highlight"><pre>(Invoke-WebRequest https://bootstrap.pypa.io/ez_setup.py).Content | python -
+</pre></div>
+
+
+<p>Parece mágica, mas na verdade o que isso faz é baixar o arquivo
+ez_setup.py (tipo um wget ou curl) e depois executa ele com o python.</p>
+<p>Eu já tinha colocado ali em cima a pasta Python27\Scripts no Path, mas
+é agora que isso se torna útil. O instalador do setuptools grava ali o
+arquivo easy_install.exe. Se você não incluiu a pasta no Path, inclua
+agora. Depois, saia do PowerShell e abra um console com permissões de
+administrador. Eu fiz assim: (Windows) cmd (botão direito) Executar como
+Administrador.</p>
+<p>Dentro desse console de administrador é que nós vamos executar o
+easy_install para instalar o pip, assim:</p>
+<p>easy_install pip</p>
+<p>E agora, com o pip, você pode instalar o virtualenv:</p>
+<p>pip install virtualenv</p>
+<p>O virtualenv no Windows funciona um pouco diferente do Linux. Para
+ativar e desativar o ambiente virtual, ele grava arquivos .bat no
+diretório Scripts. Então para usar um novo ambiente virtualenv você
+faria:</p>
+<p>virtualenv venv<br />
+cd venv<br />
+Scripts/activate.bat</p>
+<p>Em algumas de minhas primeiras tentativas, este ambiente não funcionava
+e o erro não era claro, mas quando finalmente consegui uma mensagem
+legível descobri que o problema era de permissões. Bastou executar os
+comandos em um console como administrador que isso resolveu o problema.
+Não é a melhor solução, mas deu certo na falta de algo melhor.</p>
+<p>Se tiverem outras sugestões de boas práticas, sou todo ouvidos. Sempre
+trabalhei com Java e sempre com outras pessoas (ou equipes) que cuidavam
+da infraestrutura, então tudo isso é meio novidade para mim.</p>
+<p>ATUALIZAÇÃO (em 18/06/2014): E o git? Pois é, instalar as ferramentas
+Python sem usar o Cygwin tem essa desvantagem de te deixar fora do
+ambiente Unix-like e sem essa ferramenta essencial... Mas se você
+instalar o <a href="http://git-scm.com/download/win">Git para Windows</a>,  pode
+optar por utilizá-lo no cmd (console normal do Windows) e por permitir
+que ele instale também outros comandos Unix nesse ambiente, como o ls,
+ssh, etc. Aí, sim, você nem vai sentir tanta falta do Cygwin...</p>
+<p>Para instalar alguns pacotes, como o
+<a href="http://pandas.pydata.org/pandas-docs/stable/install.html">pandas</a>, você
+vai precisar instalar no Windows o <a href="http://go.microsoft.com/?linkid=7729279">Visual C++ 2008 Express
+Edition</a>. Há algumas <a href="http://stackoverflow.com/questions/3047542/building-lxml-for-python-2-7-on-windows/5122521#5122521">perguntas
+e respostas no
+StackOverflow</a>
+sobre isso.</p>
+<p>Abs.,<br />
+Otávio</p>	
+      
+      <h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<h3 class="blogMeta">Tags : </h3>
+    
+    </div><!-- end #blogItem -->
+				
+				<!-- end #content -->
+  
+  </div><!-- end #mainContent -->
+
+<div class="clearfloat"></div>
+
+  <div id="footer">
+  
+    <p><a href="http://css4free.com/" title="free CSS web site designs">Free CSS Gallery</a></p>
+    <p>Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+  </div><!-- end #footer -->
+
+</div><!-- end #container -->
+</body>
+</html>
