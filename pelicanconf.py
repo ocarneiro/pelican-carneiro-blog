@@ -27,8 +27,11 @@ LINKS = (('Calango Hacker Clube', 'http://calango.club/'),
          ('Python.org', 'http://python.org/'),)
 
 # Social widget
-#SOCIAL = (('You can add links in your config file', '#'),
-#          ('Another social link', '#'),)
+SOCIAL = (('Github', 'https://github.com/ocarneiro/'),
+          ('Twitter', 'https://twitter.com/so1carneiro'),)
+
+TWITTER_USERNAME = 'so1carneiro'
+GITHUB_URL = 'https://github.com/ocarneiro/'
 
 DEFAULT_PAGINATION = 10
 
