@@ -39,3 +39,6 @@ RELATIVE_URLS = True
 THEME = "themes/carneirospill"
 #theme based on waterspill: 
 #https://github.com/getpelican/pelican-themes/tree/master/waterspill
+
+#Habilitar quando houver páginas a mostrar
+DISPLAY_PAGES_ON_MENU = False
