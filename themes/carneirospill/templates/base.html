@@ -43,14 +43,14 @@
 
   <div id="sidebar">
   	{% if DISPLAY_PAGES_ON_MENU %}
-	<h3>Pages</h3>
+	<h3>Páginas</h3>
 	<ul>
         {% for page in PAGES %}
             <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
         {% endfor %}
 	</ul>
         {% endif %}
-    <h3>Categories</h3>
+    <h3>Categorias</h3>
     <ul>
 	{% for cat, null in categories %}
 		 <li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
@@ -58,7 +58,7 @@
 	</ul>
     {% if LINKS %}
 	<li>
-		<h3>Blogroll</h3>
+		<h3>Diga-me com quem andas...</h3>
 		<ul>
 		{% for name, link in LINKS %}
                     <li><a href="{{ link }}">{{ name }}</a></li>
@@ -104,7 +104,7 @@
   <div id="footer">
   
     <p><a href="http://css4free.com/" title="free CSS web site designs">Free CSS Gallery</a></p>
-    <p>Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+    <p>Orgulhosamente movido a <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, que roda em <a href="http://python.org">python</a>.
   </div><!-- end #footer -->
 
 </div><!-- end #container -->

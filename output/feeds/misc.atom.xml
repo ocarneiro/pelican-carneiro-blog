@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Só mais um Carneiro</title><link href="http://carneiro.blog.br/um/" rel="alternate"></link><link href="http://carneiro.blog.br/um/feeds/misc.atom.xml" rel="self"></link><id>http://carneiro.blog.br/um/</id><updated>2015-05-17T17:39:00-03:00</updated><entry><title>Navegando em diretórios no Python</title><link href="http://carneiro.blog.br/um/Navegando-em-diret%C3%B3rios-no-Python.html" rel="alternate"></link><updated>2015-05-17T17:39:00-03:00</updated><author><name>Otávio Carneiro</name></author><id>tag:carneiro.blog.br,2015-05-17:um/Navegando-em-diretórios-no-Python.html</id><summary type="html">&lt;p&gt;Para identificar o diretório atual (pwd):&lt;br /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Só mais um Carneiro</title><link href="http://carneiro.blog.br/um/" rel="alternate"></link><link href="http://carneiro.blog.br/um/feeds/misc.atom.xml" rel="self"></link><id>http://carneiro.blog.br/um/</id><updated>2015-06-04T17:39:00-03:00</updated><entry><title>Instalando Pelican no Python 3</title><link href="http://carneiro.blog.br/um/Instalando-Pelican-no-Python3.html" rel="alternate"></link><updated>2015-06-04T17:39:00-03:00</updated><author><name>Otávio Carneiro</name></author><id>tag:carneiro.blog.br,2015-06-04:um/Instalando-Pelican-no-Python3.html</id><summary type="html">&lt;p&gt;Montei todo meu ambiente pelican para poder publicar meu blog estáticamente e joguei meu código no github para facilitar a vida.&lt;/p&gt;
+&lt;p&gt;A ideia era poder editar a partir do meu notebook ou do desktop indistintamente, sem nenhum problema. O procedimento seria:
+1) Baixar o projeto do github;
+    git clone https://github.com/ocarneiro/pelican-carneiro-blog.git
+    cd pelican-carneiro-blog&lt;/p&gt;
+&lt;p&gt;2) Montar e ativar um ambiente python3:
+    sudo apt-get install python3-pip
+    sudo pip3 install virtualenv 
+    virtualenv env&lt;/p&gt;
+&lt;p&gt;3) Ativar o ambiente
+    source env/bin/activate&lt;/p&gt;
+&lt;p&gt;4) Instalar as dependências:
+    pip3 install -r requirements.txt&lt;/p&gt;
+&lt;p&gt;Só que neste último passo, o pip falhou...&lt;/p&gt;
+&lt;p&gt;A mensagem de erro era enorme, mas o final era assim:
+    error: command 'x86_64-linux-gnu-gcc' failed with exit status 1&lt;/p&gt;
+&lt;p&gt;A &lt;a href="http://stackoverflow.com/questions/29778715/pip-install-reportlab-error-command-x86-64-linux-gnu-gcc-failed-with-exit-sta"&gt;internet&lt;/a&gt; dizia que o problema poderia ser a falta do pacote python-dev. Então tentei:
+    sudo apt-get install python3-dev
+    sudo apt-get install python-dev&lt;/p&gt;
+&lt;p&gt;Só que ambos estavam instalados. Fui olhar melhor a mensagem de erro e estava, bem claro:&lt;br /&gt;
+** make sure the development packages of &lt;strong&gt;libxml2&lt;/strong&gt; and &lt;strong&gt;libxslt&lt;/strong&gt; are installed **&lt;/p&gt;
+&lt;p&gt;Bingo?!:
+    sudo apt-get install libxml2 libxslt&lt;/p&gt;
+&lt;p&gt;Não... Não achei o libxslt... Mas existe um libxslt1-dev que depende de um libxml2-dev. Parecia promissor:
+    sudo apt-get install libxslt1-dev&lt;/p&gt;
+&lt;p&gt;Pronto! Agora sim:
+    pip3 install -r requirements.txt&lt;/p&gt;
+&lt;p&gt;Já posso publicar este blog de onde eu quiser!&lt;/p&gt;
+&lt;p&gt;Abs.,
+Otávio&lt;/p&gt;</summary></entry><entry><title>Navegando em diretórios no Python</title><link href="http://carneiro.blog.br/um/Navegando-em-diret%C3%B3rios-no-Python.html" rel="alternate"></link><updated>2015-05-17T17:39:00-03:00</updated><author><name>Otávio Carneiro</name></author><id>tag:carneiro.blog.br,2015-05-17:um/Navegando-em-diretórios-no-Python.html</id><summary type="html">&lt;p&gt;Para identificar o diretório atual (pwd):&lt;br /&gt;
     import os&lt;br /&gt;
     os.getcwd() # cwd = current working directory&lt;/p&gt;
 &lt;p&gt;Para mudar de diretório (cd):&lt;br /&gt;

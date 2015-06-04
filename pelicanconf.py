@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Otávio Carneiro'
 SITENAME = 'Só mais um Carneiro'
-SITEURL = ''
+SITEURL = 'http://carneiro.blog.br/um'
 
 PATH = 'content'
 
@@ -20,14 +20,15 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = (('Calango Hacker Clube', 'http://calango.club/'),
+         ('Jerônimo', 'http://www.blogdoje.com.br/'),
+         ('Phil Jones', 'http://tecno-artesanato.tumblr.com/'),
+         ('Pelican', 'http://getpelican.com/'),
+         ('Python.org', 'http://python.org/'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+#SOCIAL = (('You can add links in your config file', '#'),
+#          ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 10
 
@@ -36,8 +37,5 @@ DEFAULT_PAGINATION = 10
 
 # theme conf
 THEME = "themes/carneirospill"
-#theme from https://github.com/lucachr/pelican-mg
-#TAG_SAVE_AS = ''
-#AUTHOR_SAVE_AS = ''
-#DIRECT_TEMPLATES = ('index', 'categories', 'archives', 'search', 'tipue_search')
-#TIPUE_SEARCH_SAVE_AS = 'tipue_search.json'
+#theme based on waterspill: 
+#https://github.com/getpelican/pelican-themes/tree/master/waterspill

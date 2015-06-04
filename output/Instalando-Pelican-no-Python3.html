@@ -5,7 +5,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   
-  <title>Como adicionar os repositórios contrib e non-free ao Debian 8 (Jessie)</title>
+  <title>Instalando Pelican no Python 3</title>
 <link href="http://carneiro.blog.br/um/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="http://carneiro.blog.br/um/" type="application/atom+xml" rel="alternate" title="Só mais um Carneiro ATOM Feed" />
   
@@ -71,30 +71,38 @@
 
 <div class="blogItem">
     
-      <h2><a href="http://carneiro.blog.br/um/Como-adicionar-os-repositórios-contrib-e-non-free-ao-Debian-8-(Jessie).html">Como adicionar os repositórios contrib e non-free ao Debian 8 (Jessie)</a></h2>
-      <h3>Le Sáb 07 fevereiro 2015</h3>
+      <h2><a href="http://carneiro.blog.br/um/Instalando-Pelican-no-Python3.html">Instalando Pelican no Python 3</a></h2>
+      <h3>Le Qui 04 junho 2015</h3>
       
-  <p>Demorei um pouco para me acostumar com o Gerenciador de Pacotes
-(Synaptic) do Debian 8 (Jessie). Minha versão do Synaptic é a 0.81.2.</p>
-<p>Depois de apanhar um bocado, finalmente descobri como adicionar os
-repositórios contrib e non-free, necessários para a instalação do pacote
-hannah-foo2zjs (que usei para <a href="http://umcarneiro.blogspot.com.br/2014/11/instalar-impressora-hp-laserjet-1020-no.html">configurar minha impressora no
-Debian</a>)
-e outros.</p>
-<p>Em versões anteriores, havia um checkbox em que você marcava estes
-repositórios, mas agora você precisa digitar na área "Seção(ões)".</p>
-<p>Fica assim:<br />
-URI: http://ftp.br.debian.org/debian/<br />
-Distribuição: jessie<br />
-Seção(ões): non-free contrib main</p>
-<div class="separator" style="clear: both; text-align: center;">
-
-[![](http://2.bp.blogspot.com/-D2So8FEhgSg/VNaFwI48DZI/AAAAAAAAChg/nt7M62tKdIc/s1600/synaptic-repositorios.jpg)](http://2.bp.blogspot.com/-D2So8FEhgSg/VNaFwI48DZI/AAAAAAAAChg/nt7M62tKdIc/s1600/synaptic-repositorios.jpg)
-
-</div>
-
-<p>Parece bobo, mas achei que merecia um post.</p>
-<p>Abraços,<br />
+  <p>Montei todo meu ambiente pelican para poder publicar meu blog estáticamente e joguei meu código no github para facilitar a vida.</p>
+<p>A ideia era poder editar a partir do meu notebook ou do desktop indistintamente, sem nenhum problema. O procedimento seria:
+1) Baixar o projeto do github;
+    git clone https://github.com/ocarneiro/pelican-carneiro-blog.git
+    cd pelican-carneiro-blog</p>
+<p>2) Montar e ativar um ambiente python3:
+    sudo apt-get install python3-pip
+    sudo pip3 install virtualenv 
+    virtualenv env</p>
+<p>3) Ativar o ambiente
+    source env/bin/activate</p>
+<p>4) Instalar as dependências:
+    pip3 install -r requirements.txt</p>
+<p>Só que neste último passo, o pip falhou...</p>
+<p>A mensagem de erro era enorme, mas o final era assim:
+    error: command 'x86_64-linux-gnu-gcc' failed with exit status 1</p>
+<p>A <a href="http://stackoverflow.com/questions/29778715/pip-install-reportlab-error-command-x86-64-linux-gnu-gcc-failed-with-exit-sta">internet</a> dizia que o problema poderia ser a falta do pacote python-dev. Então tentei:
+    sudo apt-get install python3-dev
+    sudo apt-get install python-dev</p>
+<p>Só que ambos estavam instalados. Fui olhar melhor a mensagem de erro e estava, bem claro:<br />
+** make sure the development packages of <strong>libxml2</strong> and <strong>libxslt</strong> are installed **</p>
+<p>Bingo?!:
+    sudo apt-get install libxml2 libxslt</p>
+<p>Não... Não achei o libxslt... Mas existe um libxslt1-dev que depende de um libxml2-dev. Parecia promissor:
+    sudo apt-get install libxslt1-dev</p>
+<p>Pronto! Agora sim:
+    pip3 install -r requirements.txt</p>
+<p>Já posso publicar este blog de onde eu quiser!</p>
+<p>Abs.,
 Otávio</p>	
       
       <h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>

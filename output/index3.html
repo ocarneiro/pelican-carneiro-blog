@@ -38,30 +38,23 @@
   </div><!-- end #topMenu -->
 
   <div id="sidebar">
-	<h3>Pages</h3>
+	<h3>Páginas</h3>
 	<ul>
 	</ul>
-    <h3>Categories</h3>
+    <h3>Categorias</h3>
     <ul>
 		 <li ><a href="http://carneiro.blog.br/um/category/misc.html">misc</a></li>
 	</ul>
 	<li>
-		<h3>Blogroll</h3>
+		<h3>Diga-me com quem andas...</h3>
 		<ul>
+                    <li><a href="http://calango.club/">Calango Hacker Clube</a></li>
+                    <li><a href="http://www.blogdoje.com.br/">Jerônimo</a></li>
+                    <li><a href="http://tecno-artesanato.tumblr.com/">Phil Jones</a></li>
                     <li><a href="http://getpelican.com/">Pelican</a></li>
                     <li><a href="http://python.org/">Python.org</a></li>
-                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                    <li><a href="#">You can modify those links in your config file</a></li>
 		</ul>
 	</li>
-        <li>
-                <h3>Social</h3>
-                <ul>
-                    <li><a href="http://carneiro.blog.br/um/" rel="alternate">Flux Atom</a></li>
-                    <li><a href="#">You can add links in your config file</a></li>
-                    <li><a href="#">Another social link</a></li>
-                </ul>
-        </li><!-- /.social -->
 <li>
         <h3>Tags</h3>
         <ul>
@@ -78,6 +71,53 @@
   	
     <div class="blogItem">
     
+      <h2><a href="http://carneiro.blog.br/um/Instalando-Pelican-no-Python3.html">Instalando Pelican no Python 3</a></h2>
+      <h3>Le Qui 04 junho 2015</h3>
+      
+      <p>Montei todo meu ambiente pelican para poder publicar meu blog estáticamente e joguei meu código no github para facilitar a vida.</p>
+<p>A ideia era poder editar a partir do meu notebook ou do desktop indistintamente, sem nenhum problema. O procedimento seria:
+1) Baixar o projeto do github;
+    git clone https://github.com/ocarneiro/pelican-carneiro-blog.git
+    cd pelican-carneiro-blog</p>
+<p>2) Montar e ativar um ambiente python3:
+    sudo apt-get install python3-pip
+    sudo pip3 install virtualenv 
+    virtualenv env</p>
+<p>3) Ativar o ambiente
+    source env/bin/activate</p>
+<p>4) Instalar as dependências:
+    pip3 install -r requirements.txt</p>
+<p>Só que neste último passo, o pip falhou...</p>
+<p>A mensagem de erro era enorme, mas o final era assim:
+    error: command 'x86_64-linux-gnu-gcc' failed with exit status 1</p>
+<p>A <a href="http://stackoverflow.com/questions/29778715/pip-install-reportlab-error-command-x86-64-linux-gnu-gcc-failed-with-exit-sta">internet</a> dizia que o problema poderia ser a falta do pacote python-dev. Então tentei:
+    sudo apt-get install python3-dev
+    sudo apt-get install python-dev</p>
+<p>Só que ambos estavam instalados. Fui olhar melhor a mensagem de erro e estava, bem claro:<br />
+** make sure the development packages of <strong>libxml2</strong> and <strong>libxslt</strong> are installed **</p>
+<p>Bingo?!:
+    sudo apt-get install libxml2 libxslt</p>
+<p>Não... Não achei o libxslt... Mas existe um libxslt1-dev que depende de um libxml2-dev. Parecia promissor:
+    sudo apt-get install libxslt1-dev</p>
+<p>Pronto! Agora sim:
+    pip3 install -r requirements.txt</p>
+<p>Já posso publicar este blog de onde eu quiser!</p>
+<p>Abs.,
+Otávio</p>	
+
+      
+      <h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<h3 class="blogMeta">Tags : </h3>
+    
+    </div><!-- end #blogItem -->
+	
+        <div class="blogItem">
+                <h2>Outros artigos</h2>
+        </div>
+        
+    
+    <div class="blogItem">
+    
       <h2><a href="http://carneiro.blog.br/um/Navegando-em-diretórios-no-Python.html">Navegando em diretórios no Python</a></h2>
       <h3>Le Dom 17 maio 2015</h3>
       
@@ -91,16 +131,13 @@
 <p>Para listar o conteúdo (ls):<br />
     import os<br />
     os.listdir() #retorna um objeto do tipo list (lista), claro!</p>	
-
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Navegando-em-diretórios-no-Python.html">Continua…</a>
       
-      <h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<h3 class="blogMeta">Tags : </h3>
+      
+	
     
     </div><!-- end #blogItem -->
-	
-        <div class="blogItem">
-                <h2>Autres articles</h2>
-        </div>
         
     
     <div class="blogItem">
@@ -114,8 +151,8 @@ versões atuais do Python (estou escrevendo em maio de 2015) tornaram a
 vida mais fácil.</p>
 <p>1) Veja que versão de Python você tem instalada.<br />
     Se ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Ambiente-de-desenvolvimento-Python-3-no-Jessie.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Ambiente-de-desenvolvimento-Python-3-no-Jessie.html">Continua…</a>
       
       
 	
@@ -135,8 +172,8 @@ para criar meu ambiente de desenvolvimento Python:</p>
 - Fui aqui: <a href="https://pypi.python.org/pypi/virtualenv#downloads">https://pypi.python.org/pypi/virtualenv#downloads</a><br />
 - Baixei a versão tar.gz<br />
 - A versão foi a 12.0.7, a mais ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Como-criar-um-ambiente-de-desenvolvimento-python-no-Debian.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Como-criar-um-ambiente-de-desenvolvimento-python-no-Debian.html">Continua…</a>
       
       
 	
@@ -154,8 +191,8 @@ para criar meu ambiente de desenvolvimento Python:</p>
 <p>Depois de apanhar um bocado, finalmente descobri como adicionar os
 repositórios contrib e non-free, necessários para a instalação do pacote
 hannah-foo2zjs (que usei para <a href="http://umcarneiro.blogspot.com.br/2014/11/instalar-impressora-hp-laserjet-1020-no.html">configurar ...</a></p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Como-adicionar-os-repositórios-contrib-e-non-free-ao-Debian-8-(Jessie).html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Como-adicionar-os-repositórios-contrib-e-non-free-ao-Debian-8-(Jessie).html">Continua…</a>
       
       
 	
@@ -174,8 +211,8 @@ comando sudo, este post é para você. </p>
 cara</a>
 e no meio do caminho instalei o sudo e várias outras coisas.</p>
 <p>Hoje reinstalei ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Como-instalar-e-usar-o-sudo-no-Debian-8-(Jessie).html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Como-instalar-e-usar-o-sudo-no-Debian-8-(Jessie).html">Continua…</a>
       
       
 	
@@ -195,8 +232,8 @@ e ele foi um dos mais lidos deste blog.</p>
 <p>Agora que estou usando o <a href="http://umcarneiro.blogspot.com/2014/11/deixando-o-debian-xfce-bonito.html">Debian XFCE
 Jessie</a>
 (futuro Debian 8), fui entrar no site do banco e o site ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Instalando-o-Java-e-acessando-o-Banco-do-Brasil-no-Debian-XFCE-Jessie.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Instalando-o-Java-e-acessando-o-Banco-do-Brasil-no-Debian-XFCE-Jessie.html">Continua…</a>
       
       
 	
@@ -226,8 +263,8 @@ Jessie</a>
 <p><a href="http://3.bp.blogspot.com/-4KgGoCLHu0g/VKWcVVji1bI/AAAAAAAACcc/g7UgyXRA31s/s1600/thunar_extrair_aqui.png"><img alt="" src="http://3.bp.blogspot.com/-4KgGoCLHu0g/VKWcVVji1bI/AAAAAAAACcc/g7UgyXRA31s/s320/thunar_extrair_aqui.png" /></a></p>
 <p>Hoje baixei um arquivo zip da internet e fiz o que seria natural, fui lá
 na pasta, cliquei no arquivo com o botão direito e depois ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Como-Extrair-Arquivos-Compactados-no-Debian-Jessie-ou-Sid.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Como-Extrair-Arquivos-Compactados-no-Debian-Jessie-ou-Sid.html">Continua…</a>
       
       
 	
@@ -249,8 +286,8 @@ segurança.</p>
 
 <p>No YouTube: <a href="http://youtu.be/mZW_C9y9VYA?list=UUgP9UJRSxYe687HhHYsBwYA">http://youtu.be/mZW_C9y9VYA?list=UUgP9UJRSxYe687HhHYsBwYA</a></p>
 <p>Para evitar ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Tricarneiro---Ep.-7---Detector-de-bateria-fraca.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Tricarneiro---Ep.-7---Detector-de-bateria-fraca.html">Continua…</a>
       
       
 	
@@ -281,8 +318,8 @@ Gostei muito!</p>
 <p>Abraços,<br />
 Otávio</p>
 <p>Para ver todos os ...</p></!--iframe>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone---Ep.-8---Câmeras.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone---Ep.-8---Câmeras.html">Continua…</a>
       
       
 	
@@ -305,8 +342,8 @@ irritantes</a>.</p>
 <div class="separator" style="clear: both; text-align: center;">
 
 [![](http://4.bp.blogspot.com/-0GWA79xcPYc/VI19Nn6QyOI/AAAAAAAACaY/Ztf4U8QtWxo/s1600 ...</div>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Deixando-o-Kdenlive-bonito-no-Debian-XFCE.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Deixando-o-Kdenlive-bonito-no-Debian-XFCE.html">Continua…</a>
       
       
 	
@@ -324,8 +361,8 @@ irritantes</a>.</p>
 <p>No fim, parece que o que funcionou foi instalar o pacote hannah-foo2zjs.</p>
 <p>ATUALIZAÇÃO (em 07/02/2015): Para localizar o pacote, você precisa
 adicionar os repositórios contrib e non-free ao ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Instalar-impressora-HP-Laserjet-1020-no-Debian-Linux-7.7-(Wheezy)-e-Debian-8-(Jessie).html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Instalar-impressora-HP-Laserjet-1020-no-Debian-Linux-7.7-(Wheezy)-e-Debian-8-(Jessie).html">Continua…</a>
       
       
 	
@@ -343,8 +380,8 @@ você fica com um Linux horroroso que não dá nenhuma vontade de usar.</p>
 <div class="separator" style="clear: both; text-align: center;">
 
 [![](http://1.bp.blogspot.com/-qNvbiufg_2Q/VHenSBbR8AI/AAAAAAAACXQ/9fzYo_Vfrmo/s1600/Captura%2Bde%2Btela%2B-%2B27-11-2014%2B-%2B20%3A32%3A44.png)](http://1 ...</div>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Deixando-o-Debian-XFCE-bonito-e-utilizável.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Deixando-o-Debian-XFCE-bonito-e-utilizável.html">Continua…</a>
       
       
 	
@@ -363,8 +400,8 @@ Debian 8 (Jessie). Esqueça o Wheezy (Debian 7) e poupe dores de cabeça.</p>
 <p>Esta semana comprei um notebook novo para poder fazer atividades de
 edição de vídeo no <a href="http://calango.club/">Calango Hacker Clube</a>.</p>
 <p>O computador ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Instalando-o-Debian-XFCE-no-Ultrabook-Asus-S46C.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Instalando-o-Debian-XFCE-no-Ultrabook-Asus-S46C.html">Continua…</a>
       
       
 	
@@ -388,8 +425,8 @@ tricóptero) voar bem! Vejam aí!</p>
 <div class="separator" style="clear: both; text-align: center;">
 
 [![](http://3.bp.blogspot.com/-CutmNhoK_eI/VFlsGnDxWVI/AAAAAAAACQ8/UlqZUzspjeI/s1600 ...</div>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone---Ep.-6---Primeiros-Vôos.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone---Ep.-6---Primeiros-Vôos.html">Continua…</a>
       
       
 	
@@ -410,8 +447,8 @@ primeira vez.</p>
 <p>O vídeo mostra a conexão da placa controladora ao primeiro ESC (que a
 energiza) e ao receptor (RX do rádio Turnigy 9X).</p>
 <p>Para ver todos os posts deste projeto, você ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone---Ep.-5---Controladora-e-Receptor.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone---Ep.-5---Controladora-e-Receptor.html">Continua…</a>
       
       
 	
@@ -429,8 +466,8 @@ descobri que não tinha nem pip, nem virtualenv, nem mesmo o setuptools
 instalado... E agora, José? Como é que você prepara uma máquina no
 Windows para trabalhar com Django, Flask, suds e outras tantas coisas
 legais que ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Como-instalar-um-ambiente-de-desenvolvimento-Python-no-Windows.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Como-instalar-um-ambiente-de-desenvolvimento-Python-no-Windows.html">Continua…</a>
       
       
 	
@@ -449,8 +486,8 @@ Abertos</a>. A ideia
 sobre a tramitação de propostas de leis. Você não precisa se cadastrar
 nem nada, basta saber montar suas consultas. E foi para ensinar a
 fazê-lo ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Como-acessar-os-Dados-Abertos-da-Câmara-dos-Deputados-usando-Python.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Como-acessar-os-Dados-Abertos-da-Câmara-dos-Deputados-usando-Python.html">Continua…</a>
       
       
 	
@@ -469,8 +506,8 @@ arduino</a>.
 Basicamente, cabia tudo em um único gaveteiro.</p>
 <p>De lá para cá, acumulei um bocado de tralha e as coisas tomaram conta de
 todo um cômodo da minha casa, que ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Bagunça-Organizada-II---Oficina-ou-Laboratório-em-Casa,-versão-2014.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Bagunça-Organizada-II---Oficina-ou-Laboratório-em-Casa,-versão-2014.html">Continua…</a>
       
       
 	
@@ -489,8 +526,8 @@ do drone.</p>
 cabo que serve de hub para distribuição da energia que sai da bateria
 para os ESC's.</p>
 <p>A placa controladora (KK2.1) é alimentada pelos ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone---Ep.-4---Fiação-e-Solda.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone---Ep.-4---Fiação-e-Solda.html">Continua…</a>
       
       
 	
@@ -508,8 +545,8 @@ do drone do que efetivamente falar alguma coisa. Para o vídeo não ficar
 muito chato, fiz alguns "timelapses", vídeos montados a partir de fotos
 tiradas a intervalos regulares.</p>
 <p>O vídeo mostra a marcação dos buracos do tricóptero, a ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone.-Ep.-3---Estrutura.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone.-Ep.-3---Estrutura.html">Continua…</a>
       
       
 	
@@ -531,8 +568,8 @@ tiradas a intervalos regulares.</p>
 <p>Quem acompanha meu blog pode ter acompanhado a minha busca pela melhor
 distribuição Linux para um netbook velho que eu tinha aqui em casa.</p>
 <p>Escolher um ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Como-instalar-o-Manjaro-0.8.9-em-um-netbook.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Como-instalar-o-Manjaro-0.8.9-em-um-netbook.html">Continua…</a>
       
       
 	
@@ -553,8 +590,8 @@ legendas e acho que é verdade...</p>
 <div class="separator" style="clear: both; text-align: center;">
 
 [![](http://4.bp.blogspot.com/-KKhwIIUMyxM/U2gcmJLiY-I/AAAAAAAAB6U/zRFz00IrqRI/s1600/videoComLegenda ...</div>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Como-legendar-seu-vídeo-no-YouTube.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Como-legendar-seu-vídeo-no-YouTube.html">Continua…</a>
       
       
 	
@@ -576,8 +613,8 @@ Speed Controller (ESC) que comprei:  </p>
 <h3><span style="font-weight: normal;"><span style="font-size: x-small;">Specs:</h3>
 <p>Current Draw: 12A Continuous<br />
 Voltage Range: 2-4s ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone.-Ep.-2---Eletrônica-Básica.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone.-Ep.-2---Eletrônica-Básica.html">Continua…</a>
       
       
 	
@@ -596,8 +633,8 @@ helicóptero com três  hélices, por assim dizer.</p>
 <p>Montar um negócio desse exige muito estudo, então vou levar muito tempo
 até tirar ele do chão. Assim, pensei em ir compartilhando com vocês o
 aprendizado que ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone.-Ep.-1---Compras.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone.-Ep.-1---Compras.html">Continua…</a>
       
       
 	
@@ -627,8 +664,8 @@ e o Arduino!!!</p>
 <div class="separator" style="clear: both; text-align: center;">
 
 [![](http://2.bp.blogspot.com/-V05JiDFm7vU/UuxF6t_b0qI/AAAAAAAABsw/2AHaPcQlEvU/s1600 ...</div>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Olho-de-LCD-com-Arduino-e-Nokia-5110---#sucesso.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Olho-de-LCD-com-Arduino-e-Nokia-5110---#sucesso.html">Continua…</a>
       
       
 	
@@ -649,8 +686,8 @@ funciona</a>.
 Resta agora colocar o meu desenho nele.</p>
 <p>Mas que desenho?</p>
 <p>Pois bem, como é que você desenha algo para ficar bem ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Criando-um-bitmap-para-LCD-Gráfico.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Criando-um-bitmap-para-LCD-Gráfico.html">Continua…</a>
       
       
 	
@@ -674,8 +711,8 @@ Bom, aqui estão os detalhes!</p>
 <p><a href="http://3.bp.blogspot.com/-8QUIbj_YyRA/UtWvCIuIZyI/AAAAAAAABp4/KDuj33Txd5k/s1600/datasheet_display.jpg"><img alt="" src="http://3.bp.blogspot.com/-8QUIbj_YyRA/UtWvCIuIZyI/AAAAAAAABp4/KDuj33Txd5k/s320/datasheet_display.jpg" /></a></p>
 <hr />
 <p>Apesar de todo mundo se referir ao display ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/LCD-Nokia-5110-com-Arduino-#sucesso.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/LCD-Nokia-5110-com-Arduino-#sucesso.html">Continua…</a>
       
       
 	
@@ -697,8 +734,8 @@ deste display. E agora? Como fazer para desenhar?</p>
 <p>A <a href="http://fritzing.org/learning/tutorials/creating-custom-parts/providing-part-graphics/">referência oficial do
 Fritzing</a>
 que achei na internet dizia estar desatualizada e mandava ir procurar ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Como-criar-um-componente-para-o-Fritzing.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Como-criar-um-componente-para-o-Fritzing.html">Continua…</a>
       
       
 	
@@ -721,8 +758,8 @@ vejam:</p>
 
 <p>Eu fiquei tão fascinado por estes olhos que quis reproduzí-los com o
 Arduino ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Olho-de-LCD-com-Arduino-e-Nokia-5110---#fail.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Olho-de-LCD-com-Arduino-e-Nokia-5110---#fail.html">Continua…</a>
       
       
 	
@@ -741,8 +778,8 @@ que a ideia nem é nova, a pizzaria Domino's já tinha feito <a href="http://www
 semelhante</a>.</p>
 <p>Como todo mundo parece estar entrando nessa onda, os 2Carneiros
 resolveram lançar seu próprio serviço ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Os-2Carneiros-também-fazem-entrega-com-drones.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Os-2Carneiros-também-fazem-entrega-com-drones.html">Continua…</a>
       
       
 	
@@ -765,8 +802,8 @@ versão <a href="http://umcarneiro.blogspot.com.br/2012/09/como-instalar-o-arch
 versão
 <a href="http://umcarneiro.blogspot.com/2013/02/instalando-arch-linux-20130104.html">2013.01.04</a>),
 muita gente ficou ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Manjaro---Um-Arch-Linux-para-Iniciantes,-com-Interface-Gráfica-de-Fábrica!!.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Manjaro---Um-Arch-Linux-para-Iniciantes,-com-Interface-Gráfica-de-Fábrica!!.html">Continua…</a>
       
       
 	
@@ -787,8 +824,8 @@ muita gente ficou ...</p>
 
 <p>O Só Mais Um Carneiro é um blog sobre qualquer coisa. Quando comecei, eu
 queria chamá-lo de "O Carneiro" para ser o blog do Otávio Carneiro ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Quem-são-os-Dois-Carneiros-(2Carneiros)?.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Quem-são-os-Dois-Carneiros-(2Carneiros)?.html">Continua…</a>
       
       
 	
@@ -808,8 +845,8 @@ Neistat</a> e
 eu fiquei babando...</p>
 <p>Claro que pouca gente tem o espaço e a quantidade de bugigangas que esse
 cara tem, mas muita gente que brinca com arduínos e outros ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Bagunça-Organizada.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Bagunça-Organizada.html">Continua…</a>
       
       
 	
@@ -826,8 +863,8 @@ cara tem, mas muita gente que brinca com arduínos e outros ...</p>
 muito fácil imprimir 4 páginas por folha usando o software padrão da HP,
 que já me dizia até como inserir o papel na impressora entre a impressão
 de um lado e a do outro... E no Ubuntu ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Economizando-papel-no-Linux.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Economizando-papel-no-Linux.html">Continua…</a>
       
       
 	
@@ -848,8 +885,8 @@ de um lado e a do outro... E no Ubuntu ...</p>
 
 <p>Você sabe o que é uma protoboard? Pois é, até uns dez dias atrás, eu
 também não sabia. Quando descobri, achei que era algo tão legal ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Como-se-faz-um-robô.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Como-se-faz-um-robô.html">Continua…</a>
       
       
 	
@@ -871,8 +908,8 @@ XFCE</a></p>
 <p>Estou usando o Ubuntu 12.04 no desktop de casa e, na hora de acessar o
 site (sítio?) do Banco do Brasil, notei que não tinha o Java instalado.
 Procurei na Central de Programas do Ubuntu e ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Como-acessar-o-site-do-Banco-do-Brasil-no-Ubuntu-12.04.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Como-acessar-o-site-do-Banco-do-Brasil-no-Ubuntu-12.04.html">Continua…</a>
       
       
 	
@@ -892,8 +929,8 @@ felizes</a>.
 Minha filha ainda era muito pequena para jogar, mas desde então eu tenho
 ficado de olho em jogos que poderiam ser apropriados para jogar com ela.
 Agora ela tem 5 ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/ilomilo---um-jogo-perfeito-para-jogar-Pai-e-Filha.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/ilomilo---um-jogo-perfeito-para-jogar-Pai-e-Filha.html">Continua…</a>
       
       
 	
@@ -912,8 +949,8 @@ com o Arch Linux e que já vem com uma interface gráfica, olhe meu post
 abaixo:<br />
 <a href="http://umcarneiro.blogspot.com.br/2013/08/manjaro-um-arch-linux-para-iniciantes.html">http://umcarneiro.blogspot.com.br/2013/08/manjaro-um-arch-linux-para-iniciantes.html</a></p>
 <p>Hoje resolvi fazer ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Instalando-Arch-Linux-2013.01.04.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Instalando-Arch-Linux-2013.01.04.html">Continua…</a>
       
       
 	
@@ -933,8 +970,8 @@ máquina fotográfica, ele vai perguntar a sua opinião, não tem como
 escapar.</p>
 <p>Hoje eu resolvi assumir essa responsabilidade e escrever aqui para vocês
 como foi que eu ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Uma-câmera-nova-para-2013.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Uma-câmera-nova-para-2013.html">Continua…</a>
       
       
 	
@@ -951,8 +988,8 @@ como foi que eu ...</p>
 bonitona e resolve acessar uma página. Vai clicar no app do Internet
 Explorer 10 e o que acontece? Ele está com a cara do Internet Explorer
 de Desktop, aquele que nós conhecemos e odiamos há anos! E agora, José ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Meu-aplicativo-do-Internet-Explorer-sumiu!-E-agora?.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Meu-aplicativo-do-Internet-Explorer-sumiu!-E-agora?.html">Continua…</a>
       
       
 	
@@ -976,8 +1013,8 @@ deu:</p>
 <div class="separator" style="clear: both; text-align: center;">
 
 [![](http://4.bp.blogspot.com/-pK1F0f-mJCQ/UF-2KMam3VI/AAAAAAAABBw/3_8ZNzpsqQs/s320/2_Caindo.png ...</div>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Brincar-com-o-pai.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Brincar-com-o-pai.html">Continua…</a>
       
       
 	
@@ -997,8 +1034,8 @@ gráfica, olhe meu post abaixo:<br />
 <a href="http://umcarneiro.blogspot.com.br/2013/08/manjaro-um-arch-linux-para-iniciantes.html">http://umcarneiro.blogspot.com.br/2013/08/manjaro-um-arch-linux-para-iniciantes.html</a><br />
 <strong><br />
 UPDATE:</strong> Escrevi de ...</p>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Como-instalar-o-Arch-Linux-(versão-set.2012)-em-um-ASUS-Eee-PC.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Como-instalar-o-Arch-Linux-(versão-set.2012)-em-um-ASUS-Eee-PC.html">Continua…</a>
       
       
 	
@@ -1047,8 +1084,8 @@ substituir o "MoSCoW" e formar uma boa tradução e cheguei ao seguinte:
 <div>
 
 Vocês podem ler como "Tudo? P\_\_\_ ...</div>	
-<h3 class="blogMeta">Par <a href="#">Otávio Carneiro</a>, Catégorie : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
-	<a href="http://carneiro.blog.br/um/Tudo?-P****-nenhuma!!.html">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Tudo?-P****-nenhuma!!.html">Continua…</a>
       
       
 	
@@ -1062,7 +1099,7 @@ Vocês podem ler como "Tudo? P\_\_\_ ...</div>
   <div id="footer">
   
     <p><a href="http://css4free.com/" title="free CSS web site designs">Free CSS Gallery</a></p>
-    <p>Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, which takes great advantages of <a href="http://python.org">python</a>.
+    <p>Orgulhosamente movido a <a href="http://alexis.notmyidea.org/pelican/">pelican</a>, que roda em <a href="http://python.org">python</a>.
   </div><!-- end #footer -->
 
 </div><!-- end #container -->

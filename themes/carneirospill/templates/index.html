@@ -13,7 +13,7 @@
       {{ article.content }}	
 
       
-      <h3 class="blogMeta">Par <a href="#">{{ article.author }}</a>, Catégorie : <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></h3>
+      <h3 class="blogMeta">Por <a href="#">{{ article.author }}</a>, Categoria : <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></h3>
 	<h3 class="blogMeta">Tags : {% for tag in article.tags %}
 <span><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> / </span>
 {% endfor %}</h3>
@@ -21,7 +21,7 @@
     </div><!-- end #blogItem -->
  {% if loop.length  > 1 %}	
         <div class="blogItem">
-                <h2>Autres articles</h2>
+                <h2>Outros artigos</h2>
         </div>
 {% endif %}
 {% else %}    
@@ -31,8 +31,8 @@
       <h3>Le {{ article.locale_date }}</h3>
       
       {{ article.summary }}	
-<h3 class="blogMeta">Par <a href="#">{{ article.author }}</a>, Catégorie : <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></h3>
-	<a href="{{ SITEURL }}/{{ article.url }}">Lire la suite …</a>
+<h3 class="blogMeta">Por <a href="#">{{ article.author }}</a>, Categoria : <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></h3>
+	<a href="{{ SITEURL }}/{{ article.url }}">Continua…</a>
       
       
 	
