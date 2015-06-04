@@ -46,6 +46,7 @@ ul,
 ol {
 	margin-left: 20px;
 	line-height: 1.6em;
+    list-style-type: none;
 }
 
 /* *** Layout *** */
@@ -93,6 +94,7 @@ ol {
 	font-size: 48px;
 	font-weight: normal;
 	padding: 20px 0 0 170px;
+    text-align: right;
 }
 
 #header h2 {
