@@ -62,10 +62,7 @@
 	{% if SOCIAL %}
                 <h3>Social</h3>
                 <ul>
-                    <li><a href="{{ SITEURL }}/{{ FEED }}" rel="alternate">Flux Atom</a></li>
-                    {% if FEED_RSS %}
-                    <li><a href="{{ SITEURL }}/{{ FEED_RSS }}" rel="alternate">Flux Rss</a></li>
-                    {% endif %}
+                    <li><a href="http://carneiro.blog.br/um/feeds/all.atom.xml" rel="alternate">Atom Feed</a></li>
                 {% for name, link in SOCIAL %}
                     <li><a href="{{ link }}">{{ name }}</a></li>
                 {% endfor %}

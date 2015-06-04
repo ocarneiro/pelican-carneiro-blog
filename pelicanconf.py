@@ -28,7 +28,9 @@ LINKS = (('Calango Hacker Clube', 'http://calango.club/'),
 
 # Social widget
 SOCIAL = (('Github', 'https://github.com/ocarneiro/'),
-          ('Twitter', 'https://twitter.com/so1carneiro'),)
+          ('Twitter', 'https://twitter.com/so1carneiro'),
+          ('YouTube', 'https://www.youtube.com/user/UmCarneiro/feed'),
+         )
 
 TWITTER_USERNAME = 'so1carneiro'
 GITHUB_URL = 'https://github.com/ocarneiro/'
