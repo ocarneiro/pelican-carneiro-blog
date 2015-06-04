@@ -29,9 +29,9 @@
   <div id="topMenu">
   
     <ul>
-    	<li><a href="http://carneiro.blog.br/um">Home</a></li>
+    	<li><a href="http://carneiro.blog.br/um">Início</a></li>
         <li>&ndash;</li>
-        <li><a href="http://carneiro.blog.br/um/archives.html">Archives</a></li>
+        <li><a href="http://carneiro.blog.br/um/archives.html">Arquivo</a></li>
         
     </ul>
   
@@ -58,6 +58,11 @@
 <li>
         <h3>Tags</h3>
         <ul>
+                <li><a href="http://carneiro.blog.br/um/tag/python.html">python</a></li>
+                <li><a href="http://carneiro.blog.br/um/tag/cidadania.html">cidadania</a></li>
+                <li><a href="http://carneiro.blog.br/um/tag/debian.html">debian</a></li>
+                <li><a href="http://carneiro.blog.br/um/tag/linux.html">linux</a></li>
+                <li><a href="http://carneiro.blog.br/um/tag/dados-abertos.html">dados abertos</a></li>
         </ul>
 </li>
     
@@ -71,37 +76,15 @@
   	
     <div class="blogItem">
     
-      <h2><a href="http://carneiro.blog.br/um/Instalando-Pelican-no-Python3.html">Instalando Pelican no Python 3</a></h2>
-      <h3>Le Qui 04 junho 2015</h3>
+      <h2><a href="http://carneiro.blog.br/um/Estamos-de-mudanca.html">Estamos de mudança!!</a></h2>
+      <h3>Qui 04 junho 2015</h3>
       
-      <p>Montei todo meu ambiente pelican para poder publicar meu blog estáticamente e joguei meu código no github para facilitar a vida.</p>
-<p>A ideia era poder editar a partir do meu notebook ou do desktop indistintamente, sem nenhum problema. O procedimento seria:
-1) Baixar o projeto do github;
-    git clone https://github.com/ocarneiro/pelican-carneiro-blog.git
-    cd pelican-carneiro-blog</p>
-<p>2) Montar e ativar um ambiente python3:
-    sudo apt-get install python3-pip
-    sudo pip3 install virtualenv 
-    virtualenv env</p>
-<p>3) Ativar o ambiente
-    source env/bin/activate</p>
-<p>4) Instalar as dependências:
-    pip3 install -r requirements.txt</p>
-<p>Só que neste último passo, o pip falhou...</p>
-<p>A mensagem de erro era enorme, mas o final era assim:
-    error: command 'x86_64-linux-gnu-gcc' failed with exit status 1</p>
-<p>A <a href="http://stackoverflow.com/questions/29778715/pip-install-reportlab-error-command-x86-64-linux-gnu-gcc-failed-with-exit-sta">internet</a> dizia que o problema poderia ser a falta do pacote python-dev. Então tentei:
-    sudo apt-get install python3-dev
-    sudo apt-get install python-dev</p>
-<p>Só que ambos estavam instalados. Fui olhar melhor a mensagem de erro e estava, bem claro:<br />
-** make sure the development packages of <strong>libxml2</strong> and <strong>libxslt</strong> are installed **</p>
-<p>Bingo?!:
-    sudo apt-get install libxml2 libxslt</p>
-<p>Não... Não achei o libxslt... Mas existe um libxslt1-dev que depende de um libxml2-dev. Parecia promissor:
-    sudo apt-get install libxslt1-dev</p>
-<p>Pronto! Agora sim:
-    pip3 install -r requirements.txt</p>
-<p>Já posso publicar este blog de onde eu quiser!</p>
+      <p>Estamos de mudança!!</p>
+<p>Se você chegou aqui e achou este blog muito estranho, com uns links quebrados, um template estranho, umas imagens faltando e uma cara de que ainda não estava pronto para ser publicado, então você acertou!</p>
+<p>Na verdade eu estou migrando do Blogger/Blogspot para uma hospedagem própria utilizando Pelican, baseado em Python como estrutura.</p>
+<p>Ainda estou aprendendo a brincar com isso tudo. Desde manter a minha própria infraestrutura, passando por como formatar os posts usando markdown, operar a geração das páginas usando o Pelican, tudo isso é novidade para mim.</p>
+<p>Se você quer ver uma coisa um pouco mais estruturada, mais pronta, mas meio desatualizada, você pode nos visitar no nosso endereço anterior, enquanto ele existir:</p>
+<p><a href="http://umcarneiro.blogspot.com">http://umcarneiro.blogspot.com</a></p>
 <p>Abs.,
 Otávio</p>	
 
@@ -118,8 +101,26 @@ Otávio</p>
     
     <div class="blogItem">
     
+      <h2><a href="http://carneiro.blog.br/um/Instalando-Pelican-no-Python3.html">Instalando Pelican no Python 3</a></h2>
+      <h3>Qui 04 junho 2015</h3>
+      
+      <p>Montei todo meu ambiente pelican para poder publicar meu blog estáticamente e joguei meu código no github para facilitar a vida.</p>
+<p>A ideia era poder editar a partir do meu notebook ou do desktop indistintamente, sem nenhum problema. O procedimento seria:</p>
+<p>1) Baixar o projeto do github;<br />
+    git clone https ...</p>	
+<h3 class="blogMeta">Por <a href="#">Otávio Carneiro</a>, Categoria : <a href="http://carneiro.blog.br/um/category/misc.html">misc</a></h3>
+	<a href="http://carneiro.blog.br/um/Instalando-Pelican-no-Python3.html">Continua…</a>
+      
+      
+	
+    
+    </div><!-- end #blogItem -->
+        
+    
+    <div class="blogItem">
+    
       <h2><a href="http://carneiro.blog.br/um/Navegando-em-diretórios-no-Python.html">Navegando em diretórios no Python</a></h2>
-      <h3>Le Dom 17 maio 2015</h3>
+      <h3>Dom 17 maio 2015</h3>
       
       <p>Para identificar o diretório atual (pwd):<br />
     import os<br />
@@ -143,7 +144,7 @@ Otávio</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Ambiente-de-desenvolvimento-Python-3-no-Jessie.html">Ambiente de desenvolvimento Python 3 no Jessie</a></h2>
-      <h3>Le Dom 17 maio 2015</h3>
+      <h3>Dom 17 maio 2015</h3>
       
       <p>Eu já tinha escrito sobre isso, mas o jeito que eu tinha criado o
 ambiente de desenvolvimento na minha máquina era muito trabalhoso e as
@@ -163,7 +164,7 @@ vida mais fácil.</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Como-criar-um-ambiente-de-desenvolvimento-python-no-Debian.html">Como criar um ambiente de desenvolvimento python no Debian</a></h2>
-      <h3>Le Sáb 07 fevereiro 2015</h3>
+      <h3>Sáb 07 fevereiro 2015</h3>
       
       <p>Estou me baseando na seguinte pergunta (e respostas) do StackOverflow
 para criar meu ambiente de desenvolvimento Python:</p>
@@ -184,7 +185,7 @@ para criar meu ambiente de desenvolvimento Python:</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Como-adicionar-os-repositórios-contrib-e-non-free-ao-Debian-8-(Jessie).html">Como adicionar os repositórios contrib e non-free ao Debian 8 (Jessie)</a></h2>
-      <h3>Le Sáb 07 fevereiro 2015</h3>
+      <h3>Sáb 07 fevereiro 2015</h3>
       
       <p>Demorei um pouco para me acostumar com o Gerenciador de Pacotes
 (Synaptic) do Debian 8 (Jessie). Minha versão do Synaptic é a 0.81.2.</p>
@@ -203,7 +204,7 @@ hannah-foo2zjs (que usei para <a href="http://umcarneiro.blogspot.com.br/2014/11
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Como-instalar-e-usar-o-sudo-no-Debian-8-(Jessie).html">Como instalar e usar o sudo no Debian 8 (Jessie)</a></h2>
-      <h3>Le Dom 01 fevereiro 2015</h3>
+      <h3>Dom 01 fevereiro 2015</h3>
       
       <p>Se você resolveu experimentar o Debian 8 e se deparou com a falta do
 comando sudo, este post é para você. </p>
@@ -223,7 +224,7 @@ e no meio do caminho instalei o sudo e várias outras coisas.</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Instalando-o-Java-e-acessando-o-Banco-do-Brasil-no-Debian-XFCE-Jessie.html">Instalando o Java e acessando o Banco do Brasil no Debian XFCE Jessie</a></h2>
-      <h3>Le Dom 04 janeiro 2015</h3>
+      <h3>Dom 04 janeiro 2015</h3>
       
       <p>Há algum tempo eu escrevi um post sobre como utilizar o site do <a href="http://umcarneiro.blogspot.com.br/2013/04/como-acessar-o-site-do-banco-do-brasil.html">Banco
 do Brasil (bb.com.br) no
@@ -244,7 +245,7 @@ Jessie</a>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Como-Extrair-Arquivos-Compactados-no-Debian-Jessie-ou-Sid.html">Como Extrair Arquivos Compactados no Debian Jessie ou Sid</a></h2>
-      <h3>Le Qui 01 janeiro 2015</h3>
+      <h3>Qui 01 janeiro 2015</h3>
       
       <div class="separator" style="clear: both; text-align: center;">
 
@@ -275,7 +276,7 @@ na pasta, cliquei no arquivo com o botão direito e depois ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Tricarneiro---Ep.-7---Detector-de-bateria-fraca.html">Tricarneiro - Ep. 7 - Detector de bateria fraca</a></h2>
-      <h3>Le Sáb 20 dezembro 2014</h3>
+      <h3>Sáb 20 dezembro 2014</h3>
       
       <p>Dicas de como configurar o sensor de voltagem (bateria fraca) da
 controladora kk 2.1 para multirotores como o tricóptero Tricarneiro, com
@@ -298,7 +299,7 @@ segurança.</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone---Ep.-8---Câmeras.html">Tricarneiro, o drone - Ep. 8 - Câmeras</a></h2>
-      <h3>Le Dom 14 dezembro 2014</h3>
+      <h3>Dom 14 dezembro 2014</h3>
       
       <p>Último vídeo do Tricarneiro (será?)</p>
 <p>Neste vídeo, mostro as câmeras que já utilizei nele:</p>
@@ -330,7 +331,7 @@ Otávio</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Deixando-o-Kdenlive-bonito-no-Debian-XFCE.html">Deixando o Kdenlive bonito no Debian XFCE</a></h2>
-      <h3>Le Dom 14 dezembro 2014</h3>
+      <h3>Dom 14 dezembro 2014</h3>
       
       <p>Quem acompanha <a href="https://www.youtube.com/user/UmCarneiro">meu canal no
 YouTube</a>sabe que eu tenho usado
@@ -354,7 +355,7 @@ irritantes</a>.</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Instalar-impressora-HP-Laserjet-1020-no-Debian-Linux-7.7-(Wheezy)-e-Debian-8-(Jessie).html">Instalar impressora HP Laserjet 1020 no Debian Linux 7.7 (Wheezy) e Debian 8 (Jessie)</a></h2>
-      <h3>Le Qui 27 novembro 2014</h3>
+      <h3>Qui 27 novembro 2014</h3>
       
       <p>(Atualizado em 07/12/2014 para incluir configuração no Jessie)</p>
 <p>Fiquei um tempão apanhando para colocar minha impressora para funcionar.</p>
@@ -373,7 +374,7 @@ adicionar os repositórios contrib e non-free ao ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Deixando-o-Debian-XFCE-bonito-e-utilizável.html">Deixando o Debian XFCE bonito e utilizável</a></h2>
-      <h3>Le Qui 27 novembro 2014</h3>
+      <h3>Qui 27 novembro 2014</h3>
       
       <p>Logo que você instala o Debian 8 Jessie (ou o Debian 7 Wheezy com XFCE),
 você fica com um Linux horroroso que não dá nenhuma vontade de usar.</p>
@@ -392,7 +393,7 @@ você fica com um Linux horroroso que não dá nenhuma vontade de usar.</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Instalando-o-Debian-XFCE-no-Ultrabook-Asus-S46C.html">Instalando o Debian XFCE no Ultrabook Asus S46C</a></h2>
-      <h3>Le Dom 16 novembro 2014</h3>
+      <h3>Dom 16 novembro 2014</h3>
       
       <p>RESUMO PARA QUEM ESTÁ COM PRESSA: Se seu notebook é novo, instale o
 Debian 8 (Jessie). Esqueça o Wheezy (Debian 7) e poupe dores de cabeça.</p>
@@ -412,7 +413,7 @@ edição de vídeo no <a href="http://calango.club/">Calango Hacker Clube</a>.</
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone---Ep.-6---Primeiros-Vôos.html">Tricarneiro, o drone - Ep. 6 - Primeiros Vôos</a></h2>
-      <h3>Le Ter 04 novembro 2014</h3>
+      <h3>Ter 04 novembro 2014</h3>
       
       <p>Pessoal,</p>
 <p>Depois de muita luta, finalmente consegui fazer o Tricarneiro (meu
@@ -437,7 +438,7 @@ tricóptero) voar bem! Vejam aí!</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone---Ep.-5---Controladora-e-Receptor.html">Tricarneiro, o drone - Ep. 5 - Controladora e Receptor</a></h2>
-      <h3>Le Dom 17 agosto 2014</h3>
+      <h3>Dom 17 agosto 2014</h3>
       
       <p>Vídeo contendo a experiência de ligar a placa controladora (KK2.1) pela
 primeira vez.</p>
@@ -459,7 +460,7 @@ energiza) e ao receptor (RX do rádio Turnigy 9X).</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Como-instalar-um-ambiente-de-desenvolvimento-Python-no-Windows.html">Como instalar um ambiente de desenvolvimento Python no Windows</a></h2>
-      <h3>Le Ter 17 junho 2014</h3>
+      <h3>Ter 17 junho 2014</h3>
       
       <p>Hoje eu fui desenvolver com Python no meu notebook com Windows 8 e
 descobri que não tinha nem pip, nem virtualenv, nem mesmo o setuptools
@@ -478,7 +479,7 @@ legais que ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Como-acessar-os-Dados-Abertos-da-Câmara-dos-Deputados-usando-Python.html">Como acessar os Dados Abertos da Câmara dos Deputados usando Python</a></h2>
-      <h3>Le Seg 16 junho 2014</h3>
+      <h3>Seg 16 junho 2014</h3>
       
       <p>A Câmara dos Deputados tem um serviço muito interessante chamado <a href="http://www2.camara.leg.br/transparencia/dados-abertos">Dados
 Abertos</a>. A ideia
@@ -498,7 +499,7 @@ fazê-lo ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Bagunça-Organizada-II---Oficina-ou-Laboratório-em-Casa,-versão-2014.html">Bagunça Organizada II - Oficina ou Laboratório em Casa, versão 2014</a></h2>
-      <h3>Le Seg 09 junho 2014</h3>
+      <h3>Seg 09 junho 2014</h3>
       
       <p>Há cerca de um ano, num dos primeiros posts neste blog, mostrei <a href="http://umcarneiro.blogspot.com.br/2013/07/bagunca-organizada.html">como eu
 organizava minhas coisas de brincar com
@@ -518,7 +519,7 @@ todo um cômodo da minha casa, que ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone---Ep.-4---Fiação-e-Solda.html">Tricarneiro, o drone - Ep. 4 - Fiação e Solda</a></h2>
-      <h3>Le Ter 03 junho 2014</h3>
+      <h3>Ter 03 junho 2014</h3>
       
       <p>Vídeo sobre a colocação dos componentes eletrônicos e fios na estrutura
 do drone.</p>
@@ -538,7 +539,7 @@ para os ESC's.</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone.-Ep.-3---Estrutura.html">Tricarneiro, o drone. Ep. 3 - Estrutura</a></h2>
-      <h3>Le Ter 03 junho 2014</h3>
+      <h3>Ter 03 junho 2014</h3>
       
       <p>Neste vídeo, eu queria mais mostrar o processo de montagem da estrutura
 do drone do que efetivamente falar alguma coisa. Para o vídeo não ficar
@@ -557,7 +558,7 @@ tiradas a intervalos regulares.</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Como-instalar-o-Manjaro-0.8.9-em-um-netbook.html">Como instalar o Manjaro 0.8.9 em um netbook</a></h2>
-      <h3>Le Ter 03 junho 2014</h3>
+      <h3>Ter 03 junho 2014</h3>
       
       <div class="separator" style="clear: both; text-align: center;">
 
@@ -580,7 +581,7 @@ distribuição Linux para um netbook velho que eu tinha aqui em casa.</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Como-legendar-seu-vídeo-no-YouTube.html">Como legendar seu vídeo no YouTube</a></h2>
-      <h3>Le Seg 05 maio 2014</h3>
+      <h3>Seg 05 maio 2014</h3>
       
       <p>Nos meus vídeos sobre a <a href="http://umcarneiro.blogspot.com.br/search/label/tricarneiro">montagem do
 drone</a>, eu
@@ -602,7 +603,7 @@ legendas e acho que é verdade...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone.-Ep.-2---Eletrônica-Básica.html">Tricarneiro, o drone. Ep. 2 - Eletrônica Básica</a></h2>
-      <h3>Le Sex 02 maio 2014</h3>
+      <h3>Sex 02 maio 2014</h3>
       
       <p>No meu <a href="http://umcarneiro.blogspot.com/2014/04/tricarneiro-o-drone-ep-1-compras_22.html">post
 anterior</a>
@@ -625,7 +626,7 @@ Voltage Range: 2-4s ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Tricarneiro,-o-drone.-Ep.-1---Compras.html">Tricarneiro, o drone. Ep. 1 - Compras</a></h2>
-      <h3>Le Ter 22 abril 2014</h3>
+      <h3>Ter 22 abril 2014</h3>
       
       <p>Comecei um projeto novo!</p>
 <p>Estou montando um drone. É um tricóptero, um multirotor. Algo como um
@@ -645,7 +646,7 @@ aprendizado que ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Olho-de-LCD-com-Arduino-e-Nokia-5110---#sucesso.html">Olho de LCD com Arduino e Nokia 5110 - #sucesso</a></h2>
-      <h3>Le Sex 31 janeiro 2014</h3>
+      <h3>Sex 31 janeiro 2014</h3>
       
       <p>E... voilá!!</p>
 <div class="separator" style="clear: both; text-align: center;">
@@ -676,7 +677,7 @@ e o Arduino!!!</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Criando-um-bitmap-para-LCD-Gráfico.html">Criando um bitmap para LCD Gráfico</a></h2>
-      <h3>Le Seg 27 janeiro 2014</h3>
+      <h3>Seg 27 janeiro 2014</h3>
       
       <p>Há algum tempo comecei um projeto para fazer um olho de brinquedo usando
 um LCD Gráfico Nokia 5110. A <a href="http://umcarneiro.blogspot.com/2014/01/olho-de-lcd-com-arduino-e-nokia-5110.html">primeira tentativa
@@ -698,7 +699,7 @@ Resta agora colocar o meu desenho nele.</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/LCD-Nokia-5110-com-Arduino-#sucesso.html">LCD Nokia 5110 com Arduino #sucesso</a></h2>
-      <h3>Le Qui 16 janeiro 2014</h3>
+      <h3>Qui 16 janeiro 2014</h3>
       
       <p>No meu <a href="http://umcarneiro.blogspot.com.br/2014/01/olho-de-lcd-com-arduino-e-nokia-5110.html">post
 anterior</a>
@@ -723,7 +724,7 @@ Bom, aqui estão os detalhes!</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Como-criar-um-componente-para-o-Fritzing.html">Como criar um componente para o Fritzing</a></h2>
-      <h3>Le Sex 10 janeiro 2014</h3>
+      <h3>Sex 10 janeiro 2014</h3>
       
       <p><a href="http://3.bp.blogspot.com/-AkaLjaS_EQs/UtBwDzNm6jI/AAAAAAAABn8/e8ApStZoBVI/s1600/displayLCDNokia5110_bb.jpg"><img alt="" src="http://3.bp.blogspot.com/-AkaLjaS_EQs/UtBwDzNm6jI/AAAAAAAABn8/e8ApStZoBVI/s1600/displayLCDNokia5110_bb.jpg" /></a>Quando
 fui documentar o meu projeto de <a href="http://umcarneiro.blogspot.com/2014/01/olho-de-lcd-com-arduino-e-nokia-5110.html">criar um olho de brinquedo usando um
@@ -746,7 +747,7 @@ que achei na internet dizia estar desatualizada e mandava ir procurar ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Olho-de-LCD-com-Arduino-e-Nokia-5110---#fail.html">Olho de LCD com Arduino e Nokia 5110 - #fail</a></h2>
-      <h3>Le Ter 07 janeiro 2014</h3>
+      <h3>Ter 07 janeiro 2014</h3>
       
       <p>Minha filha tem um brinquedo com olhos muito expressivos feitos de LCD,
 vejam:</p>
@@ -770,7 +771,7 @@ Arduino ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Os-2Carneiros-também-fazem-entrega-com-drones.html">Os 2Carneiros também fazem entrega com drones</a></h2>
-      <h3>Le Ter 17 dezembro 2013</h3>
+      <h3>Ter 17 dezembro 2013</h3>
       
       <p>A Amazon fez o maior estardalhaço com sua proposta de <a href="http://www.amazon.com/b?node=8037720011">utilizar drones
 nas suas entregas</a>. E o pior é
@@ -790,7 +791,7 @@ resolveram lançar seu próprio serviço ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Manjaro---Um-Arch-Linux-para-Iniciantes,-com-Interface-Gráfica-de-Fábrica!!.html">Manjaro - Um Arch Linux para Iniciantes, com Interface Gráfica de Fábrica!!</a></h2>
-      <h3>Le Sáb 24 agosto 2013</h3>
+      <h3>Sáb 24 agosto 2013</h3>
       
       <p>ATUALIZAÇÃO (em 18/06/2014): sugiro olhar <a href="http://umcarneiro.blogspot.com.br/2014/06/como-instalar-o-manjaro-089-em-um.html">meu post mais recente sobre o
 assunto</a>,
@@ -814,7 +815,7 @@ muita gente ficou ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Quem-são-os-Dois-Carneiros-(2Carneiros)?.html">Quem são os Dois Carneiros (2Carneiros)?</a></h2>
-      <h3>Le Sáb 10 agosto 2013</h3>
+      <h3>Sáb 10 agosto 2013</h3>
       
       <div class="separator" style="clear: both; text-align: center;">
 
@@ -836,7 +837,7 @@ queria chamá-lo de "O Carneiro" para ser o blog do Otávio Carneiro ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Bagunça-Organizada.html">Bagunça Organizada</a></h2>
-      <h3>Le Sáb 20 julho 2013</h3>
+      <h3>Sáb 20 julho 2013</h3>
       
       <p>Meu amigo Jerônimo, do <a href="http://blogdoje.com.br/">Blog do Je</a>,
 compartilhou um <a href="http://www.wired.com/gadgetlab/2013/07/gl_myspace_neistat/?pid=4398&amp;viewall=true">artigo da Revista Wired sobre o espaço de trabalho de
@@ -857,7 +858,7 @@ cara tem, mas muita gente que brinca com arduínos e outros ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Economizando-papel-no-Linux.html">Economizando papel no Linux</a></h2>
-      <h3>Le Seg 15 julho 2013</h3>
+      <h3>Seg 15 julho 2013</h3>
       
       <p>Quem não gosta de preservar a natureza? Pois é, no Windows eu achava
 muito fácil imprimir 4 páginas por folha usando o software padrão da HP,
@@ -875,7 +876,7 @@ de um lado e a do outro... E no Ubuntu ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Como-se-faz-um-robô.html">Como se faz um robô</a></h2>
-      <h3>Le Ter 07 maio 2013</h3>
+      <h3>Ter 07 maio 2013</h3>
       
       <div class="separator" style="clear: both; text-align: center;">
 
@@ -897,7 +898,7 @@ também não sabia. Quando descobri, achei que era algo tão legal ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Como-acessar-o-site-do-Banco-do-Brasil-no-Ubuntu-12.04.html">Como acessar o site do Banco do Brasil no Ubuntu 12.04</a></h2>
-      <h3>Le Ter 30 abril 2013</h3>
+      <h3>Ter 30 abril 2013</h3>
       
       <p><a href="http://1.bp.blogspot.com/-A3l7ePaC4xE/UX_Vd51RITI/AAAAAAAABOw/Qmts016vo2U/s1600/InstalarJava-00-BancoDoBrasilsemJava.png"><br />
 <img alt="" src="http://1.bp.blogspot.com/-A3l7ePaC4xE/UX_Vd51RITI/AAAAAAAABOw/Qmts016vo2U/s320/InstalarJava-00-BancoDoBrasilsemJava.png" /></a><br />
@@ -920,7 +921,7 @@ Procurei na Central de Programas do Ubuntu e ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/ilomilo---um-jogo-perfeito-para-jogar-Pai-e-Filha.html">ilomilo - um jogo perfeito para jogar Pai e Filha</a></h2>
-      <h3>Le Qua 13 fevereiro 2013</h3>
+      <h3>Qua 13 fevereiro 2013</h3>
       
       <p><a href="http://blog.ilomilo.com/http://blog.ilomilo.com/wp-content/uploads/2012/12/news_ilomiloplus02.jpg"><img alt="" src="http://blog.ilomilo.com/http://blog.ilomilo.com/wp-content/uploads/2012/12/news_ilomiloplus02.jpg" /></a><br />
 Há alguns anos saiu uma pesquisa dizendo que <a href="http://noticias.r7.com/tecnologia-e-ciencia/noticias/garotas-que-jogam-videogame-com-o-pai-sao-mais-felizes-20110203.html">garotas que jogam
@@ -941,7 +942,7 @@ Agora ela tem 5 ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Instalando-Arch-Linux-2013.01.04.html">Instalando Arch Linux 2013.01.04</a></h2>
-      <h3>Le Qui 07 fevereiro 2013</h3>
+      <h3>Qui 07 fevereiro 2013</h3>
       
       <p><strong>UPDATE: </strong>Parti para outra. Instalei o Ubuntu no desktop e o Manjaro
 no meu netbook. Se estiver procurando uma distribuição leve, compatível
@@ -961,7 +962,7 @@ abaixo:<br />
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Uma-câmera-nova-para-2013.html">Uma câmera nova para 2013</a></h2>
-      <h3>Le Seg 04 fevereiro 2013</h3>
+      <h3>Seg 04 fevereiro 2013</h3>
       
       <p><a href="http://asset1.cbsistatic.com/cnwk.1d/i/tim/2012/05/15/Sony_Cyber-shot_DSC-HX30V_35153336_07_620x466.jpg"><img alt="" src="http://asset1.cbsistatic.com/cnwk.1d/i/tim/2012/05/15/Sony_Cyber-shot_DSC-HX30V_35153336_07_620x466.jpg" /></a>Quando
 você nasce com os olhos puxados, você assume uma responsabilidade:
@@ -982,7 +983,7 @@ como foi que eu ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Meu-aplicativo-do-Internet-Explorer-sumiu!-E-agora?.html">Meu aplicativo do Internet Explorer sumiu! E agora?</a></h2>
-      <h3>Le Qua 09 janeiro 2013</h3>
+      <h3>Qua 09 janeiro 2013</h3>
       
       <p>Você está usando seu Windows 8 normalmente com a interface Metro
 bonitona e resolve acessar uma página. Vai clicar no app do Internet
@@ -1000,7 +1001,7 @@ de Desktop, aquele que nós conhecemos e odiamos há anos! E agora, José ...</p
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Brincar-com-o-pai.html">Brincar com o pai</a></h2>
-      <h3>Le Dom 23 setembro 2012</h3>
+      <h3>Dom 23 setembro 2012</h3>
       
       <p>Minha filha ganhou uma bicicleta no aniversário de 5 anos. Olha no que
 deu:</p>
@@ -1025,7 +1026,7 @@ deu:</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Como-instalar-o-Arch-Linux-(versão-set.2012)-em-um-ASUS-Eee-PC.html">Como instalar o Arch Linux (versão set.2012) em um ASUS Eee PC</a></h2>
-      <h3>Le Qua 12 setembro 2012</h3>
+      <h3>Qua 12 setembro 2012</h3>
       
       <p><strong>UPDATE2:</strong> Parti para outra. Depois de muita luta consegui instalar o
 Manjaro neste mesmo netbook. Se estiver procurando uma distribuição
@@ -1046,7 +1047,7 @@ UPDATE:</strong> Escrevi de ...</p>
     <div class="blogItem">
     
       <h2><a href="http://carneiro.blog.br/um/Tudo?-P****-nenhuma!!.html">Tudo? P**** nenhuma!!</a></h2>
-      <h3>Le Qui 02 agosto 2012</h3>
+      <h3>Qui 02 agosto 2012</h3>
       
       <p>Hoje conheci uma técnica de priorização chamada
 <a href="http://en.wikipedia.org/wiki/MoSCoW_Method">MoSCoW</a>, que quer dizer:</p>

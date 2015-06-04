@@ -6,12 +6,12 @@
 <div class="blogItem">
     
       <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
-      <h3>Le {{ article.locale_date }}</h3>
+      <h3>{{ article.locale_date }}</h3>
       
   {{ article.content }}	
   {% include 'twitter.html' %}
       
-      <h3 class="blogMeta">Par <a href="#">{{ article.author }}</a>, Catégorie : <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></h3>
+      <h3 class="blogMeta">Por <a href="#">{{ article.author }}</a>, Categoria : <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></h3>
 	<h3 class="blogMeta">Tags : {% for tag in article.tags %}
 <span><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> / </span>
 {% endfor %}</h3>

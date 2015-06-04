@@ -1,6 +1,7 @@
 Title: Ambiente de desenvolvimento Python 3 no Jessie
 Date: 2015-05-17 15:47
 Author: Otávio Carneiro
+Tags: python
 Slug: Ambiente-de-desenvolvimento-Python-3-no-Jessie
 
 Eu já tinha escrito sobre isso, mas o jeito que eu tinha criado o

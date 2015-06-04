@@ -1,30 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Só mais um Carneiro</title><link href="http://carneiro.blog.br/um/" rel="alternate"></link><link href="http://carneiro.blog.br/um/feeds/misc.atom.xml" rel="self"></link><id>http://carneiro.blog.br/um/</id><updated>2015-06-04T17:39:00-03:00</updated><entry><title>Instalando Pelican no Python 3</title><link href="http://carneiro.blog.br/um/Instalando-Pelican-no-Python3.html" rel="alternate"></link><updated>2015-06-04T17:39:00-03:00</updated><author><name>Otávio Carneiro</name></author><id>tag:carneiro.blog.br,2015-06-04:um/Instalando-Pelican-no-Python3.html</id><summary type="html">&lt;p&gt;Montei todo meu ambiente pelican para poder publicar meu blog estáticamente e joguei meu código no github para facilitar a vida.&lt;/p&gt;
-&lt;p&gt;A ideia era poder editar a partir do meu notebook ou do desktop indistintamente, sem nenhum problema. O procedimento seria:
-1) Baixar o projeto do github;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Só mais um Carneiro</title><link href="http://carneiro.blog.br/um/" rel="alternate"></link><link href="http://carneiro.blog.br/um/feeds/misc.atom.xml" rel="self"></link><id>http://carneiro.blog.br/um/</id><updated>2015-06-04T11:56:00-03:00</updated><entry><title>Estamos de mudança!!</title><link href="http://carneiro.blog.br/um/Estamos-de-mudanca.html" rel="alternate"></link><updated>2015-06-04T11:56:00-03:00</updated><author><name>Otávio Carneiro</name></author><id>tag:carneiro.blog.br,2015-06-04:um/Estamos-de-mudanca.html</id><summary type="html">&lt;p&gt;Estamos de mudança!!&lt;/p&gt;
+&lt;p&gt;Se você chegou aqui e achou este blog muito estranho, com uns links quebrados, um template estranho, umas imagens faltando e uma cara de que ainda não estava pronto para ser publicado, então você acertou!&lt;/p&gt;
+&lt;p&gt;Na verdade eu estou migrando do Blogger/Blogspot para uma hospedagem própria utilizando Pelican, baseado em Python como estrutura.&lt;/p&gt;
+&lt;p&gt;Ainda estou aprendendo a brincar com isso tudo. Desde manter a minha própria infraestrutura, passando por como formatar os posts usando markdown, operar a geração das páginas usando o Pelican, tudo isso é novidade para mim.&lt;/p&gt;
+&lt;p&gt;Se você quer ver uma coisa um pouco mais estruturada, mais pronta, mas meio desatualizada, você pode nos visitar no nosso endereço anterior, enquanto ele existir:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://umcarneiro.blogspot.com"&gt;http://umcarneiro.blogspot.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Abs.,
+Otávio&lt;/p&gt;</summary></entry><entry><title>Instalando Pelican no Python 3</title><link href="http://carneiro.blog.br/um/Instalando-Pelican-no-Python3.html" rel="alternate"></link><updated>2015-06-04T10:30:00-03:00</updated><author><name>Otávio Carneiro</name></author><id>tag:carneiro.blog.br,2015-06-04:um/Instalando-Pelican-no-Python3.html</id><summary type="html">&lt;p&gt;Montei todo meu ambiente pelican para poder publicar meu blog estáticamente e joguei meu código no github para facilitar a vida.&lt;/p&gt;
+&lt;p&gt;A ideia era poder editar a partir do meu notebook ou do desktop indistintamente, sem nenhum problema. O procedimento seria:&lt;/p&gt;
+&lt;p&gt;1) Baixar o projeto do github;&lt;br /&gt;
     git clone https://github.com/ocarneiro/pelican-carneiro-blog.git
     cd pelican-carneiro-blog&lt;/p&gt;
-&lt;p&gt;2) Montar e ativar um ambiente python3:
+&lt;p&gt;2) Montar e ativar um ambiente python3:&lt;br /&gt;
     sudo apt-get install python3-pip
     sudo pip3 install virtualenv 
     virtualenv env&lt;/p&gt;
-&lt;p&gt;3) Ativar o ambiente
+&lt;p&gt;3) Ativar o ambiente&lt;br /&gt;
     source env/bin/activate&lt;/p&gt;
-&lt;p&gt;4) Instalar as dependências:
+&lt;p&gt;4) Instalar as dependências:&lt;br /&gt;
     pip3 install -r requirements.txt&lt;/p&gt;
 &lt;p&gt;Só que neste último passo, o pip falhou...&lt;/p&gt;
-&lt;p&gt;A mensagem de erro era enorme, mas o final era assim:
+&lt;p&gt;A mensagem de erro era enorme, mas o final era assim:&lt;br /&gt;
     error: command 'x86_64-linux-gnu-gcc' failed with exit status 1&lt;/p&gt;
-&lt;p&gt;A &lt;a href="http://stackoverflow.com/questions/29778715/pip-install-reportlab-error-command-x86-64-linux-gnu-gcc-failed-with-exit-sta"&gt;internet&lt;/a&gt; dizia que o problema poderia ser a falta do pacote python-dev. Então tentei:
+&lt;p&gt;A &lt;a href="http://stackoverflow.com/questions/29778715/pip-install-reportlab-error-command-x86-64-linux-gnu-gcc-failed-with-exit-sta"&gt;internet&lt;/a&gt; dizia que o problema poderia ser a falta do pacote python-dev. Então tentei:&lt;br /&gt;
     sudo apt-get install python3-dev
     sudo apt-get install python-dev&lt;/p&gt;
 &lt;p&gt;Só que ambos estavam instalados. Fui olhar melhor a mensagem de erro e estava, bem claro:&lt;br /&gt;
 ** make sure the development packages of &lt;strong&gt;libxml2&lt;/strong&gt; and &lt;strong&gt;libxslt&lt;/strong&gt; are installed **&lt;/p&gt;
-&lt;p&gt;Bingo?!:
+&lt;p&gt;Bingo?!:&lt;br /&gt;
     sudo apt-get install libxml2 libxslt&lt;/p&gt;
-&lt;p&gt;Não... Não achei o libxslt... Mas existe um libxslt1-dev que depende de um libxml2-dev. Parecia promissor:
+&lt;p&gt;Não... Não achei o libxslt... Mas existe um libxslt1-dev que depende de um libxml2-dev. Parecia promissor:&lt;br /&gt;
     sudo apt-get install libxslt1-dev&lt;/p&gt;
-&lt;p&gt;Pronto! Agora sim:
+&lt;p&gt;Pronto! Agora sim:&lt;br /&gt;
     pip3 install -r requirements.txt&lt;/p&gt;
 &lt;p&gt;Já posso publicar este blog de onde eu quiser!&lt;/p&gt;
 &lt;p&gt;Abs.,
@@ -37,7 +44,7 @@ Otávio&lt;/p&gt;</summary></entry><entry><title>Navegando em diretórios no Pyt
     os.chdir(path)&lt;/p&gt;
 &lt;p&gt;Para listar o conteúdo (ls):&lt;br /&gt;
     import os&lt;br /&gt;
-    os.listdir() #retorna um objeto do tipo list (lista), claro!&lt;/p&gt;</summary></entry><entry><title>Ambiente de desenvolvimento Python 3 no Jessie</title><link href="http://carneiro.blog.br/um/Ambiente-de-desenvolvimento-Python-3-no-Jessie.html" rel="alternate"></link><updated>2015-05-17T15:47:00-03:00</updated><author><name>Otávio Carneiro</name></author><id>tag:carneiro.blog.br,2015-05-17:um/Ambiente-de-desenvolvimento-Python-3-no-Jessie.html</id><summary type="html">&lt;p&gt;Eu já tinha escrito sobre isso, mas o jeito que eu tinha criado o
+    os.listdir() #retorna um objeto do tipo list (lista), claro!&lt;/p&gt;</summary><category term="python"></category></entry><entry><title>Ambiente de desenvolvimento Python 3 no Jessie</title><link href="http://carneiro.blog.br/um/Ambiente-de-desenvolvimento-Python-3-no-Jessie.html" rel="alternate"></link><updated>2015-05-17T15:47:00-03:00</updated><author><name>Otávio Carneiro</name></author><id>tag:carneiro.blog.br,2015-05-17:um/Ambiente-de-desenvolvimento-Python-3-no-Jessie.html</id><summary type="html">&lt;p&gt;Eu já tinha escrito sobre isso, mas o jeito que eu tinha criado o
 ambiente de desenvolvimento na minha máquina era muito trabalhoso e as
 versões atuais do Python (estou escrevendo em maio de 2015) tornaram a
 vida mais fácil.&lt;/p&gt;
@@ -70,7 +77,7 @@ Python 3, então usarei também o pip3. Faço assim:&lt;br /&gt;
 console do python mais amigável. Aí, ao invés de rodar "python" para
 iniciar a console, uso "ipython". Teste aí!&lt;/p&gt;
 &lt;p&gt;Abraços,&lt;br /&gt;
-Otávio&lt;/p&gt;</summary></entry><entry><title>Como criar um ambiente de desenvolvimento python no Debian</title><link href="http://carneiro.blog.br/um/Como-criar-um-ambiente-de-desenvolvimento-python-no-Debian.html" rel="alternate"></link><updated>2015-02-07T19:55:00-02:00</updated><author><name>Otávio Carneiro</name></author><id>tag:carneiro.blog.br,2015-02-07:um/Como-criar-um-ambiente-de-desenvolvimento-python-no-Debian.html</id><summary type="html">&lt;p&gt;Estou me baseando na seguinte pergunta (e respostas) do StackOverflow
+Otávio&lt;/p&gt;</summary><category term="python"></category></entry><entry><title>Como criar um ambiente de desenvolvimento python no Debian</title><link href="http://carneiro.blog.br/um/Como-criar-um-ambiente-de-desenvolvimento-python-no-Debian.html" rel="alternate"></link><updated>2015-02-07T19:55:00-02:00</updated><author><name>Otávio Carneiro</name></author><id>tag:carneiro.blog.br,2015-02-07:um/Como-criar-um-ambiente-de-desenvolvimento-python-no-Debian.html</id><summary type="html">&lt;p&gt;Estou me baseando na seguinte pergunta (e respostas) do StackOverflow
 para criar meu ambiente de desenvolvimento Python:&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://stackoverflow.com/questions/4324558/whats-the-proper-way-to-install-pip-virtualenv-and-distribute-for-python"&gt;http://stackoverflow.com/questions/4324558/whats-the-proper-way-to-install-pip-virtualenv-and-distribute-for-python&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;1) Baixar o Virtualenv:&lt;br /&gt;
@@ -169,7 +176,7 @@ desespere. O python 2.7.9 já vem com o pip. Você pode dar um "pip
 install virtualenv" e ser feliz assim que instalar. Uma hora dessas eu
 experimento e conto aqui como é.&lt;/p&gt;
 &lt;p&gt;Abraços,&lt;br /&gt;
-Otávio&lt;/p&gt;</summary></entry><entry><title>Como adicionar os repositórios contrib e non-free ao Debian 8 (Jessie)</title><link href="http://carneiro.blog.br/um/Como-adicionar-os-reposit%C3%B3rios-contrib-e-non-free-ao-Debian-8-(Jessie).html" rel="alternate"></link><updated>2015-02-07T13:40:00-02:00</updated><author><name>Otávio Carneiro</name></author><id>tag:carneiro.blog.br,2015-02-07:um/Como-adicionar-os-repositórios-contrib-e-non-free-ao-Debian-8-(Jessie).html</id><summary type="html">&lt;p&gt;Demorei um pouco para me acostumar com o Gerenciador de Pacotes
+Otávio&lt;/p&gt;</summary><category term="python"></category><category term="linux"></category><category term="debian"></category></entry><entry><title>Como adicionar os repositórios contrib e non-free ao Debian 8 (Jessie)</title><link href="http://carneiro.blog.br/um/Como-adicionar-os-reposit%C3%B3rios-contrib-e-non-free-ao-Debian-8-(Jessie).html" rel="alternate"></link><updated>2015-02-07T13:40:00-02:00</updated><author><name>Otávio Carneiro</name></author><id>tag:carneiro.blog.br,2015-02-07:um/Como-adicionar-os-repositórios-contrib-e-non-free-ao-Debian-8-(Jessie).html</id><summary type="html">&lt;p&gt;Demorei um pouco para me acostumar com o Gerenciador de Pacotes
 (Synaptic) do Debian 8 (Jessie). Minha versão do Synaptic é a 0.81.2.&lt;/p&gt;
 &lt;p&gt;Depois de apanhar um bocado, finalmente descobri como adicionar os
 repositórios contrib e non-free, necessários para a instalação do pacote
@@ -1622,7 +1629,7 @@ quase todas as situações de proposições são consideradas "Ativas",
 inclusive "Retirado pelo Autor", "Perdeu a Eficácia", "Enviada ao
 Arquivo" e "Arquivada"... Acho que terei que montar meu próprio conceito
 de "Ativa". Conto para vocês depois....&lt;/p&gt;
-&lt;p&gt;Abs.,Otávio &lt;/sigla&gt;&lt;/siglas&gt;&lt;/p&gt;</summary></entry><entry><title>Bagunça Organizada II - Oficina ou Laboratório em Casa, versão 2014</title><link href="http://carneiro.blog.br/um/Bagun%C3%A7a-Organizada-II---Oficina-ou-Laborat%C3%B3rio-em-Casa,-vers%C3%A3o-2014.html" rel="alternate"></link><updated>2014-06-09T17:15:00-03:00</updated><author><name>Otávio Carneiro</name></author><id>tag:carneiro.blog.br,2014-06-09:um/Bagunça-Organizada-II---Oficina-ou-Laboratório-em-Casa,-versão-2014.html</id><summary type="html">&lt;p&gt;Há cerca de um ano, num dos primeiros posts neste blog, mostrei &lt;a href="http://umcarneiro.blogspot.com.br/2013/07/bagunca-organizada.html"&gt;como eu
+&lt;p&gt;Abs.,Otávio &lt;/sigla&gt;&lt;/siglas&gt;&lt;/p&gt;</summary><category term="python"></category><category term="dados abertos"></category><category term="cidadania"></category></entry><entry><title>Bagunça Organizada II - Oficina ou Laboratório em Casa, versão 2014</title><link href="http://carneiro.blog.br/um/Bagun%C3%A7a-Organizada-II---Oficina-ou-Laborat%C3%B3rio-em-Casa,-vers%C3%A3o-2014.html" rel="alternate"></link><updated>2014-06-09T17:15:00-03:00</updated><author><name>Otávio Carneiro</name></author><id>tag:carneiro.blog.br,2014-06-09:um/Bagunça-Organizada-II---Oficina-ou-Laboratório-em-Casa,-versão-2014.html</id><summary type="html">&lt;p&gt;Há cerca de um ano, num dos primeiros posts neste blog, mostrei &lt;a href="http://umcarneiro.blogspot.com.br/2013/07/bagunca-organizada.html"&gt;como eu
 organizava minhas coisas de brincar com
 arduino&lt;/a&gt;.
 Basicamente, cabia tudo em um único gaveteiro.&lt;/p&gt;

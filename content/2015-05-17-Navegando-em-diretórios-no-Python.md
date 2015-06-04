@@ -1,6 +1,7 @@
 Title: Navegando em diretórios no Python
 Date: 2015-05-17 17:39
 Author: Otávio Carneiro
+Tags: python
 Slug: Navegando-em-diretórios-no-Python
 
 Para identificar o diretório atual (pwd):  

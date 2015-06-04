@@ -1,6 +1,7 @@
 Title: Como acessar os Dados Abertos da Câmara dos Deputados usando Python
 Date: 2014-06-16 21:36
 Author: Otávio Carneiro
+Tags: python, dados abertos, cidadania
 Slug: Como-acessar-os-Dados-Abertos-da-Câmara-dos-Deputados-usando-Python
 
 A Câmara dos Deputados tem um serviço muito interessante chamado [Dados

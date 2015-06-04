@@ -1,6 +1,7 @@
 Title: Como criar um ambiente de desenvolvimento python no Debian
 Date: 2015-02-07 19:55
 Author: Otávio Carneiro
+Tags: python, linux, debian
 Slug: Como-criar-um-ambiente-de-desenvolvimento-python-no-Debian
 
 Estou me baseando na seguinte pergunta (e respostas) do StackOverflow
