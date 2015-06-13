@@ -6,12 +6,16 @@ Tags: python, minecraft, cidadania, educação, raspberry pi
 
 Tive recentemente uma conversa com o André Rafael, da [Guerrilha do Servidor](http://guerrilhadoservidor.com.br/) sobre a situação da educação no Brasil e discutimos junto com a turma do [Calango](http://calango.club) e outros coletivos como poderíamos mudar este quadro.
 
+<iframe width="400" height="225" src="https://www.youtube.com/embed/7NygwG_2S9A" frameborder="0" allowfullscreen></iframe>
+
 A conversa foi muito produtiva e está registrada lá na wiki do Calango:  
 [http://calango.club/eventos:hangouts:2015:05:27](http://calango.club/eventos:hangouts:2015:05:27)
 
 Pois bem, mencionei nesta conversa e em alguns outros papos que uma maneira de interessar mais a meninada pela matemática seria criar interações com o [Minecraft](https://minecraft.net/). 
 
 Minecraft, para quem não sabe, é um jogo que virou uma verdadeira febre entre a meninada. O jogo começou independente, mas virou um sucesso tão grande que a Microsoft o comprou por [2,5 bilhões de dólares](http://g1.globo.com/tecnologia/games/noticia/2014/09/microsoft-compra-criadora-de-minecraft-por-us-25-bilhoes.html) !
+
+[<img src="{filename}/images/minecraft-xbox-360.jpg" align="right">](http://g1.globo.com/tecnologia/games/noticia/2014/09/microsoft-compra-criadora-de-minecraft-por-us-25-bilhoes.html)
 
 Eu confesso que gosto muito de Minecraft e deixo minha filha jogar bastante. O jogo tem um modo criativo onde as crianças podem criar o que quiserem usando blocos de diversos materiais. No modo de sobrevivência, a criança tem que derrubar árvores para obter madeira, matar animais para conseguir carne, quebrar pedra para encontrar metais. A partir daí, ela tem que queimar a madeira para obter o carvão que vai usar em uma fornalha para derreter o metal e assim obter ferramentas. É muito interessante, aguça a criatividade e permite à criança refletir sobre como as coisas são feitas.
 
@@ -26,7 +30,11 @@ Eu fiz algumas experiências com o Minecraft Pi. [Nesta daqui](https://github.co
 
 Outra coisa interessante é que as crianças podiam interagir com o mundo criado no Minecraft Pi a partir de dispositivos móveis. Ou seja, se a criança tinha o Minecraft no celular ou tablet (Android, iPhone ou iPad) podia conectar no Minecraft rodando na Raspberry Pi. Podia, porque neste momento eles estão incompatíveis.
 
+[<img src="{filename}/images/minecraft_pi-outdated_server.jpg" width=400">]({filename}images/minecraft_pi-outdated_server.jpg)
+
 Eu até [tweetei](https://twitter.com/so1carneiro/status/606538763167256576) para os desenvolvedores para perguntar sobre isso, vamos ver se me respondem...
+
+[![tweet para desenvolvedor do minecraft pi]({filename}/images/tweet-minecraft-pi-x-pe.png)](https://twitter.com/so1carneiro/status/606538763167256576)
 
 Enquanto a resposta não vem, sobra outra alternativa para a interação entre código e Minecraft: os mods! 
 

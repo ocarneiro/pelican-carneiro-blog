@@ -1,49 +1,19 @@
-Title: Instalando Pelican no Python 3
-Date: 2015-06-04 10:30
+Title: Estamos de mudança!!
+Date: 2015-06-04 11:56
 Author: Otávio Carneiro
-Slug: Instalando-Pelican-no-Python3
+Slug: Estamos-de-mudanca
 
-Montei todo meu ambiente pelican para poder publicar meu blog estáticamente e joguei meu código no github para facilitar a vida.
+Estamos de mudança!!
 
-A ideia era poder editar a partir do meu notebook ou do desktop indistintamente, sem nenhum problema. O procedimento seria:
+Se você chegou aqui e achou este blog muito estranho, com uns links quebrados, um template estranho, umas imagens faltando e uma cara de que ainda não estava pronto para ser publicado, então você acertou!
 
-1) Baixar o projeto do github;  
-    git clone https://github.com/ocarneiro/pelican-carneiro-blog.git
-    cd pelican-carneiro-blog
+Na verdade eu estou migrando do Blogger/Blogspot para uma hospedagem própria utilizando Pelican, baseado em Python como estrutura.
 
-2) Montar e ativar um ambiente python3:  
-    sudo apt-get install python3-pip
-    sudo pip3 install virtualenv 
-    virtualenv env
-   
-3) Ativar o ambiente  
-    source env/bin/activate
+Ainda estou aprendendo a brincar com isso tudo. Desde manter a minha própria infraestrutura, passando por como formatar os posts usando markdown, operar a geração das páginas usando o Pelican, tudo isso é novidade para mim.
 
-4) Instalar as dependências:  
-    pip3 install -r requirements.txt
+Se você quer ver uma coisa um pouco mais estruturada, mais pronta, mas meio desatualizada, você pode nos visitar no nosso endereço anterior, enquanto ele existir:
 
-Só que neste último passo, o pip falhou...
-
-A mensagem de erro era enorme, mas o final era assim:  
-    error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
-
-A [internet](http://stackoverflow.com/questions/29778715/pip-install-reportlab-error-command-x86-64-linux-gnu-gcc-failed-with-exit-sta) dizia que o problema poderia ser a falta do pacote python-dev. Então tentei:  
-    sudo apt-get install python3-dev
-    sudo apt-get install python-dev
-    
-Só que ambos estavam instalados. Fui olhar melhor a mensagem de erro e estava, bem claro:  
-\*\* make sure the development packages of **libxml2** and **libxslt** are installed \*\*
-
-Bingo?!:  
-    sudo apt-get install libxml2 libxslt
-
-Não... Não achei o libxslt... Mas existe um libxslt1-dev que depende de um libxml2-dev. Parecia promissor:  
-    sudo apt-get install libxslt1-dev
-    
-Pronto! Agora sim:  
-    pip3 install -r requirements.txt
-    
-Já posso publicar este blog de onde eu quiser!
+[http://umcarneiro.blogspot.com](http://umcarneiro.blogspot.com)
 
 Abs.,
 Otávio
