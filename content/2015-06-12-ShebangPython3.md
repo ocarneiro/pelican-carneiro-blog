@@ -1,7 +1,7 @@
 Title: Como iniciar um script em Python 3
 Date: 2015-06-12 23:52
 Author: Otávio Carneiro
-Slug: Como iniciar um script em Python 3
+Slug: Como-iniciar-um-script-em-Python-3
 Tags: python
 
     Spoiler alert! 
