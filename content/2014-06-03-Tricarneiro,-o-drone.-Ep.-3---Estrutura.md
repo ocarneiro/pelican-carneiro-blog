@@ -1,7 +1,8 @@
 Title: Tricarneiro, o drone. Ep. 3 - Estrutura
 Date: 2014-06-03 19:15
 Author: Otávio Carneiro
-Slug: Tricarneiro,-o-drone.-Ep.-3---Estrutura
+Slug: Tricarneiro-o-drone-Ep-3-Estrutura
+Tags: tricarneiro, drone, tutorial
 
 Neste vídeo, eu queria mais mostrar o processo de montagem da estrutura
 do drone do que efetivamente falar alguma coisa. Para o vídeo não ficar

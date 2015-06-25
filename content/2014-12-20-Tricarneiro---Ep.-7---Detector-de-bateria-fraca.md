@@ -1,7 +1,8 @@
 Title: Tricarneiro - Ep. 7 - Detector de bateria fraca
 Date: 2014-12-20 13:33
 Author: Otávio Carneiro
-Slug: Tricarneiro---Ep.-7---Detector-de-bateria-fraca
+Slug: Tricarneiro-Ep-7-Detector-de-bateria-fraca
+Tags: tricarneiro, drone, tutorial
 
 Dicas de como configurar o sensor de voltagem (bateria fraca) da
 controladora kk 2.1 para multirotores como o tricóptero Tricarneiro, com

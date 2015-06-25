@@ -1,7 +1,8 @@
 Title: Tricarneiro, o drone. Ep. 2 - Eletrônica Básica
 Date: 2014-05-02 18:27
 Author: Otávio Carneiro
-Slug: Tricarneiro,-o-drone.-Ep.-2---Eletrônica-Básica
+Slug: Tricarneiro-o-drone-Ep-2-Eletronica-Basica
+Tags: tricarneiro, drone, tutorial
 
 No meu [post
 anterior](http://umcarneiro.blogspot.com/2014/04/tricarneiro-o-drone-ep-1-compras_22.html)

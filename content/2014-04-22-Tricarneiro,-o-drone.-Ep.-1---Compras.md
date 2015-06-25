@@ -1,7 +1,8 @@
 Title: Tricarneiro, o drone. Ep. 1 - Compras
 Date: 2014-04-22 07:28
 Author: Otávio Carneiro
-Slug: Tricarneiro,-o-drone.-Ep.-1---Compras
+Slug: Tricarneiro-o-drone-Ep-1-Compras
+Tags: tricarneiro, drone, tutorial
 
 Comecei um projeto novo!
 

@@ -1,7 +1,8 @@
 Title: Tricarneiro, o drone - Ep. 8 - Câmeras
 Date: 2014-12-14 14:30
 Author: Otávio Carneiro
-Slug: Tricarneiro,-o-drone---Ep.-8---Câmeras
+Slug: Tricarneiro-o-drone-Ep-8-Cameras
+Tags: tricarneiro, drone, tutorial
 
 Último vídeo do Tricarneiro (será?)
 

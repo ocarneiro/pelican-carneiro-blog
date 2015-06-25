@@ -1,7 +1,8 @@
 Title: Tricarneiro, o drone - Ep. 5 - Controladora e Receptor
 Date: 2014-08-17 18:46
 Author: Otávio Carneiro
-Slug: Tricarneiro,-o-drone---Ep.-5---Controladora-e-Receptor
+Slug: Tricarneiro-o-drone-Ep-5-Controladora-e-Receptor
+Tags: tricarneiro, drone, tutorial
 
 Vídeo contendo a experiência de ligar a placa controladora (KK2.1) pela
 primeira vez.

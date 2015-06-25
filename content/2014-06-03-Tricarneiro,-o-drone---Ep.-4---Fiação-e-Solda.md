@@ -1,7 +1,8 @@
 Title: Tricarneiro, o drone - Ep. 4 - Fiação e Solda
 Date: 2014-06-03 19:21
 Author: Otávio Carneiro
-Slug: Tricarneiro,-o-drone---Ep.-4---Fiação-e-Solda
+Slug: Tricarneiro-o-drone-Ep-4-Fiacao-e-Solda
+Tags: tricarneiro, drone, tutorial
 
 Vídeo sobre a colocação dos componentes eletrônicos e fios na estrutura
 do drone.
