@@ -1,7 +1,7 @@
 Title: Como criar um componente para o Fritzing
 Date: 2014-01-10 17:12
 Author: Otávio Carneiro
-Slug: Como-criar-um-componente-para-o-Fritzing
+Slug: 2014-01-10-como-criar-um-componente-para-o-fritzing
 Tags: arduino, diy, eletrônica, fritzing, olho_de_lcd, projetos, tutorial
 
 [<img src="{filename}/images/old/displayLCDNokia5110_bb.jpg" width="480">]({filename}/images/old/displayLCDNokia5110_bb.jpg)Quando
