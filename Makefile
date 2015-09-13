@@ -12,9 +12,9 @@ FTP_HOST=localhost
 FTP_USER=anonymous
 FTP_TARGET_DIR=/
 
-SSH_HOST=carneiro.blog.br
+SSH_HOST=ssh.carneiro.blog.br
 SSH_PORT=22
-SSH_TARGET_DIR=/home/storage/d/84/75/$(SSH_USER)/public_html/um
+SSH_TARGET_DIR=/var/www/html/carneiro.blog.br/web/um
 
 
 DEBUG ?= 0

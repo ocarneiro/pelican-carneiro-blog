@@ -1,7 +1,7 @@
 Title: Olho de LCD com Arduino e Nokia 5110 - #sucesso
 Date: 2014-01-31 17:26
 Author: Otávio Carneiro
-Slug: Olho-de-LCD-com-Arduino-e-Nokia-5110-sucesso
+Slug: 2014-01-31-Olho-de-LCD-com-Arduino-e-Nokia-5110-sucesso
 Tags: arduino, diy, olho_de_lcd, projetos, robótica, tutorial
 
 E... voilá!!
@@ -669,8 +669,7 @@ Abraços!
 
 
 Você pode ver todas as etapas deste projeto usando [este
-link](http://umcarneiro.blogspot.com.br/search/label/olho_de_lcd), ou
-clicando no marcador
-"[olho\_de\_lcd](http://umcarneiro.blogspot.com.br/search/label/olho_de_lcd)",
+link](http://carneiro.blog.br/um/tag/olho_de_lcd.html), ou
+clicando na tag "[olho\_de\_lcd](http://carneiro.blog.br/um/tag/olho_de_lcd.html)",
 abaixo.
 

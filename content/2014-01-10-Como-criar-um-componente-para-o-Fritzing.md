@@ -122,13 +122,13 @@ aqui](https://github.com/ocarneiro/nokia-lcd-5110)e usar como quiser.
 
 UPDATE: No dia 16/01/2014, postei um exemplo de como colocar o display
 para funcionar, com código e tudo. [Veja
-aqui](http://umcarneiro.blogspot.com.br/2014/01/lcd-nokia-5110-com-arduino-sucesso.html).
+aqui](http://carneiro.blog.br/um/2014-01-31-Olho-de-LCD-com-Arduino-e-Nokia-5110-sucesso.html).
 
 Você pode ver todas as etapas deste projeto usando [este
-link](http://umcarneiro.blogspot.com.br/search/label/olho_de_lcd), ou
-clicando no marcador
-"[olho\_de\_lcd](http://umcarneiro.blogspot.com.br/search/label/olho_de_lcd)",
+link](http://carneiro.blog.br/um/tag/olho_de_lcd.html), ou
+clicando na tag "[olho\_de\_lcd](http://carneiro.blog.br/um/tag/olho_de_lcd.html)",
 abaixo.
+
 
 
 
