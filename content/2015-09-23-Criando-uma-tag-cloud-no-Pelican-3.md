@@ -116,7 +116,7 @@ Para resumir, os arquivos que tive que alterar (*) ou acrescentar (+) para ela f
 
 Confesso que achei mais trabalhoso do que gostaria, mas agora tenho uma nuvem bacana no blog.
 
-Abs!
+Abs!  
 Otávio
 
 
