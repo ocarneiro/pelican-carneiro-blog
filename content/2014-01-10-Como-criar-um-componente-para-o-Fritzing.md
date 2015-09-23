@@ -128,8 +128,3 @@ Você pode ver todas as etapas deste projeto usando [este
 link](http://carneiro.blog.br/um/tag/olho_de_lcd.html), ou
 clicando na tag "[olho\_de\_lcd](http://carneiro.blog.br/um/tag/olho_de_lcd.html)",
 abaixo.
-
-
-
-
-

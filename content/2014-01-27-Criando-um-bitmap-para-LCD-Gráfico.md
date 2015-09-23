@@ -1,15 +1,15 @@
 Title: Criando um bitmap para LCD Gráfico
 Date: 2014-01-27 16:23
 Author: Otávio Carneiro
-Slug: Criando-um-bitmap-para-LCD-Gráfico
+Slug: 2014-01-27-Criando-um-bitmap-para-LCD-Grafico
 Tags: arduino, diy, eletrônica, gimp, olho_de_lcd, projetos, tutorial
 
 
 Há algum tempo comecei um projeto para fazer um olho de brinquedo usando
-um LCD Gráfico Nokia 5110. A [primeira tentativa
-falhou](http://umcarneiro.blogspot.com/2014/01/olho-de-lcd-com-arduino-e-nokia-5110.html),
+um LCD Gráfico Nokia 5110. A [primeira tentativa 
+falhou](http://carneiro.blog.br/um/2014-01-07-Olho-de-LCD-com-Arduino-e-Nokia-5110-fail.html), 
 mas depois entendi [como o display
-funciona](http://umcarneiro.blogspot.com/2014/01/lcd-nokia-5110-com-arduino-sucesso.html).
+funciona](http://carneiro.blog.br/um/2014-01-16-LCD-Nokia-5110-com-Arduino-sucesso.html).
 Resta agora colocar o meu desenho nele.
 
 Mas que desenho?

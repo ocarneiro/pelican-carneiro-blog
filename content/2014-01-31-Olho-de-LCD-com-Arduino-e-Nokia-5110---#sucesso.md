@@ -11,7 +11,7 @@ E... voilá!!
 
 
 Consegui fazer o Olho de LCD usando um [display Nokia
-5110](http://umcarneiro.blogspot.com/2014/01/lcd-nokia-5110-com-arduino-sucesso.html)
+5110](http://carneiro.blog.br/um/2014-01-16-LCD-Nokia-5110-com-Arduino-sucesso.html).
 e o Arduino!!!
 
 
