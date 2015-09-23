@@ -1,7 +1,8 @@
 Title: Estamos de mudança!!
 Date: 2015-06-04 11:56
 Author: Otávio Carneiro
-Slug: Estamos-de-mudanca
+Slug: 2015-06-04-Estamos-de-mudanca
+Tags: blogs, internet, pelican
 
 Estamos de mudança!!
 

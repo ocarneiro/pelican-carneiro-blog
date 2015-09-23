@@ -16,11 +16,11 @@ print("Title: {}".format(title))
 print("Date: {}-{:02}-{:02} {:02}:{:02}".format(year,month,day,hour,minute))
 
 #cria o slug a partir do nome, trocando espaços por -
+#TODO: remover caracteres especiais do slug
 slug = "{}-{:02}-{:02}-{}".format(year,month,day,title.replace(" ", "-"))
 print("Slug: {}".format(slug))
 
-
-
+#TODO: garantir que o arquivo novo esteja na pasta content
 with open(slug + ".md", "w") as post:
     print("Title: {}".format(title), file=post)
     print("Date: {}-{:02}-{:02} {:02}:{:02}".format(year,month,day,hour,minute), file=post)
