@@ -1,7 +1,8 @@
 Title: Deixando o Debian XFCE bonito e utilizável
 Date: 2014-11-27 15:33
 Author: Otávio Carneiro
-Slug: Deixando-o-Debian-XFCE-bonito-e-utilizável
+Slug: 2014-11-27-Deixando-o-Debian-XFCE-bonito-e-utilizavel
+Tags: debian, linux, xfce, jessie, tutorial
 
 Logo que você instala o Debian 8 Jessie (ou o Debian 7 Wheezy com XFCE),
 você fica com um Linux horroroso que não dá nenhuma vontade de usar.

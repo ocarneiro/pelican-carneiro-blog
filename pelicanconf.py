@@ -49,3 +49,9 @@ THEME = "themes/carneirospill"
 
 #Habilitar quando houver páginas a mostrar
 DISPLAY_PAGES_ON_MENU = False
+
+#Ativar a tag cloud (nuvem de tags)
+PLUGIN_PATHS = ["plugins"]
+PLUGINS = ["tag_cloud"]
+TAG_CLOUD_STEPS = 4
+TAG_CLOUD_SORTING = 'alphabetically'
