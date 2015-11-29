@@ -1,9 +1,4 @@
 #! /usr/bin/env python3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c460e9c71a0715b1bdfc1a2dec0006340478c929
 import datetime, sys
 
 #obtém a hora atual e a imprime
@@ -32,10 +27,7 @@ with open(slug + ".md", "w") as post:
     print("Author: Otávio Carneiro", file=post)
     print("Slug: {}".format(slug), file=post)
     print("Tags: ", file=post)
-<<<<<<< HEAD
->>>>>>> c460e9c71a0715b1bdfc1a2dec0006340478c929
-=======
->>>>>>> c460e9c71a0715b1bdfc1a2dec0006340478c929
+
 #Title: Minecraft para a Educação - Parte 1
 #Date: 2015-06-04 15:36
 #Author: Otávio Carneiro
