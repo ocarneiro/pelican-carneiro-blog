@@ -1,4 +1,4 @@
-Title: Criando scripts com Python
+#Title: Criando scripts com Python
 Date: 2015-11-17 11:04
 Author: Otávio Carneiro
 Slug: 2015-11-17-Criando-scripts-com-Python
