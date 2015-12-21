@@ -2,12 +2,9 @@ Title: Como instalar o Manjaro 0.8.9 em um netbook
 Date: 2014-06-03 19:04
 Author: Otávio Carneiro
 Slug: Como-instalar-o-Manjaro-0.8.9-em-um-netbook
+Tags: manjaro, arch_linux, netbook
 
-<div class="separator" style="clear: both; text-align: center;">
-
-[![](http://1.bp.blogspot.com/-woTzFcFdWMY/U22e3E3I_rI/AAAAAAAAB8E/6dVSUgdr5ic/s1600/equipamento.jpg)](http://1.bp.blogspot.com/-woTzFcFdWMY/U22e3E3I_rI/AAAAAAAAB8E/6dVSUgdr5ic/s1600/equipamento.jpg)
-
-</div>
+[<img src="{filename}/images/old/equipamento.jpg" width="400">]({filename}/images/old/equipamento.jpg)
 
 Quem acompanha meu blog pode ter acompanhado a minha busca pela melhor
 distribuição Linux para um netbook velho que eu tinha aqui em casa.
@@ -42,15 +39,11 @@ Antes de tudo, você deve entrar lá na página do
 [Manjaro](http://manjaro.org/get-manjaro/) e fazer o download da versão
 que você deseja instalar..
 
-<div class="separator" style="clear: both; text-align: center;">
+[<img src="{filename}/images/old/getManjaroXFCE.png" width="400">]({filename}/images/old/getManjaroXFCE.png)
 
-[![](http://4.bp.blogspot.com/-Thqw8t0_JWU/U22RynWYY-I/AAAAAAAAB7o/0OJCp9dFFNY/s1600/getManjaroXFCE.png) ](http://4.bp.blogspot.com/-Thqw8t0_JWU/U22RynWYY-I/AAAAAAAAB7o/0OJCp9dFFNY/s1600/getManjaroXFCE.png)
+[<img src="{filename}/images/old/IMG_20140509_232108279.jpg" width="400">]({filename}/images/old/IMG_20140509_232108279.jpg)
 
-</div>
-
-<div class="separator" style="clear: both; text-align: left;">
-
-[![](http://3.bp.blogspot.com/-l4QOyV0kC78/U22e5x-myvI/AAAAAAAAB8M/rkbAIeftvMs/s1600/IMG_20140509_232108279.jpg)](http://3.bp.blogspot.com/-l4QOyV0kC78/U22e5x-myvI/AAAAAAAAB8M/rkbAIeftvMs/s1600/IMG_20140509_232108279.jpg)Desta
+Desta
 vez escolhi a versão XFCE. Na verdade, da última vez eu acho que não
 tinha escolhido essa porque o pendrive que eu tinha disponível era de
 1GB e o arquivo tinhas uns 70MB mais do que isso... Literalmente, foi
@@ -58,8 +51,6 @@ por muito pouco que não consegui usá-la... Desta vez apelei e formatei
 um pendrive de 16GB, apesar de ter um menor em alguma gaveta... Se você
 tiver um de 2GB, acho que é o tamanho ideal. Se quiser usar um pendrive
 com mais que isso (como eu fiz), fique à vontade..
-
-</div>
 
 Lembre-se de que você vai precisar de duas mídias: um cartão SD de 6GB
 (ou mais) para instalar o sistema operacional que vai rodar no netbook e
@@ -73,12 +64,6 @@ daquela vez o pendrive de 1GB serviu bem e o cartão de 4GB também.
 Aparentemente, a edição XFCE é mais "gulosa". Para essa, você vai
 precisar de um pendrive de 2GB e um cartão de 6GB.
 
-<div class="separator" style="clear: both; text-align: left;">
-
-</div>
-
-<div class="separator" style="clear: both; text-align: left;">
-
 Vamos começar pela preparação do pendrive de instalação. Toda vez que eu
 mencionar pendrive agora vai ser a mídia onde está a imagem de
 instalação, que prepararemos agora. Quando eu falar em cartão SD, estou
@@ -86,28 +71,14 @@ falando da mídia em que o Manjaro ficará instalado em definitivo, que
 vai ficar morando dentro do netbook. Se você estiver usando mídias
 diferentes, tenha isso em mente.
 
-</div>
-
-<div class="separator" style="clear: both; text-align: left;">
-
-</div>
-
-<div class="separator" style="clear: both; text-align: left;">
-
 Sugiro que a formatação do pendrive seja feita no modo FAT32, que é o
 padrão de fábrica, normalmente. Este padrão funciona bem em qualquer
 sistema operacional. É bom também dar um rótulo (label) para o pendrive,
 vai ajudar a identificá-lo durante a instalação.
 
-</div>
+[<img src="{filename}/images/old/UNetbootin-site.png" width="400">]({filename}/images/old/UNetbootin-site.png)
 
-<div class="separator" style="clear: both; text-align: left;">
-
-</div>
-
-<div style="clear: both; text-align: left;">
-
-[![](http://1.bp.blogspot.com/-PLpXZRqv_TY/U22VdcZX2fI/AAAAAAAAB70/aGoSbworV70/s1600/UNetbootin-site.png)](http://1.bp.blogspot.com/-PLpXZRqv_TY/U22VdcZX2fI/AAAAAAAAB70/aGoSbworV70/s1600/UNetbootin-site.png)Para
+Para
 gravar o disco de instalação no pendrive, você vai precisar do
 [UNetbootin](http://unetbootin.sourceforge.net/). O que o UNetbootin faz
 é gravar uma imagem ISO em um pendrive, o que corresponde a queimar um
@@ -133,15 +104,11 @@ processo de assinatura digital. A maioria dos sites que têm grandes
 arquivos para baixar disponibiliza o checksum para você conferir. No meu
 caso, usei o sha1sum.
 
-<div class="separator" style="clear: both; text-align: center;">
+[<img src="{filename}/images/old/invalid_image.jpg" width="400">]({filename}/images/old/invalid_image.jpg)
 
-[![](http://1.bp.blogspot.com/-QkH7MvjqzxI/U24_p5pMQPI/AAAAAAAAB84/2KyPh2VgQGY/s1600/invalid_image.jpg)](http://1.bp.blogspot.com/-QkH7MvjqzxI/U24_p5pMQPI/AAAAAAAAB84/2KyPh2VgQGY/s1600/invalid_image.jpg)
+[<img src="{filename}/images/old/sha1sum_v2.png" width="400">]({filename}/images/old/sha1sum_v2.png)
 
-</div>
-
-<div style="clear: both; text-align: left;">
-
-[![](http://3.bp.blogspot.com/-mkXGqY7aCqQ/U24-EGxPZLI/AAAAAAAAB8s/cyGk2GGB7zY/s1600/sha1sum_v2.png)](http://3.bp.blogspot.com/-mkXGqY7aCqQ/U24-EGxPZLI/AAAAAAAAB8s/cyGk2GGB7zY/s1600/sha1sum_v2.png)Mesmo
+Mesmo
 no Windows, eu gosto de usar terminal unix, então uso muito o
 [Cygwin](http://www.cygwin.com/). É como o "cmd" do Windows, mas você
 usa "ls" ao invés de "dir", por exemplo. Ou seja, os comandos do Linux.
@@ -150,49 +117,22 @@ lembro se o sha1sum já vem com ele ou instalei, mas rodei de lá. É só
 dar um "sha1sum arquivo.iso" que ele te mostra o checksum do arquivo. O
 comando demora um pouquinho para rodar (uns 2 minutos), não se preocupe.
 
-</div>
-
-<div style="clear: both; text-align: left;">
-
-</div>
-
-<div style="clear: both; text-align: left;">
-
 O meu checksum deu bem diferente do que dizia o site do Manjaro, então
 meu arquivo estava obviamente corrompido. Por isso tive de baixar de
 novo e conferir. Na segunda vez deu certinho, como vocês podem ver na
 imagem. O sha1sum que obtive no Cygwin foi exatamente o mesmo do arquivo
 que baixei do site.
 
-</div>
-
-<div style="clear: both; text-align: left;">
-
-</div>
-
-<div style="clear: both; text-align: left;">
-
 Hora de rodar o UNetbootin de novo. Gravei a imagem no pendrive com ele,
 ejetei o pendrive e o inseri no netbook. 
-
-</div>
-
-<div style="clear: both; text-align: left;">
-
-</div>
-
-<div style="clear: both; text-align: left;">
 
 Para dar boot pelo pendrive, meu netbook (Asus Eee PC 2G Surf) exige que
 eu use a porta USB da esquerda. Depois de inserir o pendrive, você liga
 o netbook e fica apertando ESC várias vezes, até surgir a tela de
 escolher mídia.
 </p>
-<div class="separator" style="clear: both; text-align: center;">
 
-[![](http://1.bp.blogspot.com/-CVkltJdOhKA/U45kfZDK5FI/AAAAAAAACEk/PAbT2BsNXps/s1600/eeepc_boot_device.jpg)](http://1.bp.blogspot.com/-CVkltJdOhKA/U45kfZDK5FI/AAAAAAAACEk/PAbT2BsNXps/s1600/eeepc_boot_device.jpg)
-
-</div>
+[<img src="{filename}/images/old/eeepc_boot_device.jpg" width="400">]({filename}/images/old/eeepc_boot_device.jpg)
 
  No meu netbook apareceram três opções de mídia:
 
@@ -204,11 +144,7 @@ escolher mídia.
 
  Escolha USB Drive e você vai ver a tela de boot do UNetbootin.
 
-<div class="separator" style="clear: both; text-align: center;">
-
-[![](http://2.bp.blogspot.com/-a0SG7bVvwFY/U45nK5jYFDI/AAAAAAAACEw/DdnExhF0_DY/s1600/unetbootin-grub.jpg)](http://2.bp.blogspot.com/-a0SG7bVvwFY/U45nK5jYFDI/AAAAAAAACEw/DdnExhF0_DY/s1600/unetbootin-grub.jpg)
-
-</div>
+[<img src="{filename}/images/old/unetbootin-grub.jpg" width="400">]({filename}/images/old/unetbootin-grub.jpg)
 
 Nesta tela, a opção "default" não faz nada... É a opção "start" que dá o
 boot pela imagem que está no pendrive. Vai entender... O processo de
@@ -216,20 +152,15 @@ inicialização mostra vários erros (não foi possível montar etc/sda e
 outros), mas ele inicializa mesmo assim. Levou um tempinho, mas o
 Manjaro XFCE iniciou...
 
-</div>
-
-<div style="clear: both; text-align: left;">
-
 Uma vez dentro do Manjaro, você será recebido com uma grande tela de
 boas vindas e terá a opção "Install Manjaro" disponível logo na primeira
 tela. Você poderá inclusive escolher o idioma em que quer fazer a
 instalação. E, sim, nosso "Português do Brasil" está entre as opções!
 </p>
-<div class="separator" style="clear: both; text-align: center;">
 
-[![](http://2.bp.blogspot.com/-XbfbLZg5bV0/U45rxpDLXKI/AAAAAAAACE8/HUS_q1NZ5Y4/s1600/Manjaro_Welcome.png)](http://2.bp.blogspot.com/-XbfbLZg5bV0/U45rxpDLXKI/AAAAAAAACE8/HUS_q1NZ5Y4/s1600/Manjaro_Welcome.png)[![](http://1.bp.blogspot.com/-_9HBRcx62I0/U45sKaJMw8I/AAAAAAAACFM/QIr--_U3hEc/s1600/portuguesBR.png)](http://1.bp.blogspot.com/-_9HBRcx62I0/U45sKaJMw8I/AAAAAAAACFM/QIr--_U3hEc/s1600/portuguesBR.png)
+[<img src="{filename}/images/old/Manjaro_Welcome.png" width="400">]({filename}/images/old/Manjaro_Welcome.png)
 
-</div>
+[<img src="{filename}/images/old/portuguesBR.png" width="400">]({filename}/images/old/portuguesBR.png)
 
 Ao iniciar a instalação, o Manjaro faz três verificações iniciais: se
 você tem 6GB disponíveis, se você está ligado à rede elétrica e se você
@@ -239,11 +170,7 @@ rede com um x vermelho), pude escolher a minha rede Wi-Fi e me conectar,
 sem nem sair da tela de instalação. Depois você escolhe o fuso horário
 onde está e segue para a parte que exige atenção: Tipo de Instalação.
 
-<div class="separator" style="clear: both; text-align: center;">
-
-[![](http://2.bp.blogspot.com/-kIbaujZq1GE/U45s3XeiK_I/AAAAAAAACFY/d45iq8Bzp3g/s1600/tipo_instalacao.png)](http://2.bp.blogspot.com/-kIbaujZq1GE/U45s3XeiK_I/AAAAAAAACFY/d45iq8Bzp3g/s1600/tipo_instalacao.png)
-
-</div>
+[<img src="{filename}/images/old/tipo_instalacao.png" width="400">]({filename}/images/old/tipo_instalacao.png)
 
 Eu continuo (anos depois) achando que o Linux que vem de fábrica nesses
 EeePC é bem feito e merece continuar nele. Além disso, o HD interno
@@ -285,11 +212,7 @@ A minha partição ficou como na imagem abaixo, 4MB iniciais (acho que já
 tinha esse espaço lá) e o restante todo como ponto de montagem "/"
 (root). Esta tela eu já tirei de dentro do Manjaro instalado.
 
-<div class="separator" style="clear: both; text-align: center;">
-
-[![](http://1.bp.blogspot.com/-eacwJKioe6E/U45wDwlDKqI/AAAAAAAACFk/GiZy50YMnxk/s1600/gparted.png)](http://1.bp.blogspot.com/-eacwJKioe6E/U45wDwlDKqI/AAAAAAAACFk/GiZy50YMnxk/s1600/gparted.png)
-
-</div>
+[<img src="{filename}/images/old/gparted.png" width="400">]({filename}/images/old/gparted.png)
 
 O Manjaro também pergunta onde ele deve instalar o gerenciador de
 inicialização (GRUB). Eu pedi para ele colocar no mesmo cartão SD. Isso
@@ -298,11 +221,7 @@ entrar no meu Manjaro, mas não me importo. Assim, se alguém for fuçar no
 netbook, vai cair no sistema operacional original (Xandros), enquanto eu
 e meus leitores saberemos que o Manjaro está ali escondido ; ).
 
-<div class="separator" style="clear: both; text-align: center;">
-
-[![](http://4.bp.blogspot.com/-RHOZwDC_s8k/U451ti7qVOI/AAAAAAAACF0/9iNaMcbuTP0/s1600/quemevoce.png)](http://4.bp.blogspot.com/-RHOZwDC_s8k/U451ti7qVOI/AAAAAAAACF0/9iNaMcbuTP0/s1600/quemevoce.png)
-
-</div>
+[<img src="{filename}/images/old/quemevoce.png" width="400">]({filename}/images/old/quemevoce.png)
 
 Agora, o Manjaro vai perguntar "Quem é você?". Ele quer que você defina
 seu usuário. Aparece uma caixinha "Utilize a senha do usuário root". Não
@@ -317,21 +236,11 @@ trabalhando... Ao final, ele avisa: "Instalação finalizada! Deseja
 reiniciar o sistema?". Você pode dizer que sim e correr para o abraço,
 seu Linux está instalado!
 
-<div class="separator" style="clear: both; text-align: center;">
-
-[![](http://3.bp.blogspot.com/-FgsRYyw3fxs/U453b_RFvPI/AAAAAAAACGA/fal9gcYXC64/s1600/firefox.jpg)](http://3.bp.blogspot.com/-FgsRYyw3fxs/U453b_RFvPI/AAAAAAAACGA/fal9gcYXC64/s1600/firefox.jpg)
-
-</div>
+[<img src="{filename}/images/old/firefox.jpg" width="400">]({filename}/images/old/firefox.jpg)
 
 O Manjaro já vem com o Firefox, LibreOffice e uma boa seleção de outros
 programas. Ainda não precisei instalar outras coisas, mas vi que ele tem
 uma opção "Adicionar / remover programas".
-
-</div>
-
-<div style="clear: both; text-align: left;">
-
-</div>
 
 Depois de instalar, ele ficou acusando atualizações a fazer, mas a
 janela não cabia na tela para eu aceitar. Se isso acontecer com vocês,
@@ -374,32 +283,13 @@ nos comentários. Eu escolho os temas do blog com base na popularidade
 dos posts existentes, então há boas chances de suas sugestões aparecerem
 numa próxima atualização.
 
-</div>
-
-<div style="clear: both; text-align: left;">
-
 Para ver outros posts similares, clique nas tags
-[manjaro](http://umcarneiro.blogspot.com.br/search/label/manjaro),
-[linux](http://umcarneiro.blogspot.com.br/search/label/linux) ou
-[netbook](http://umcarneiro.blogspot.com.br/search/label/netbook),
+[manjaro](http://carneiro.blog.br/um/tag/manjaro.html),
+[arch_linux](http://carneiro.blog.br/um/tag/arch_linux.html)) ou
+[netbook](http://carneiro.blog.br/um/tag/netbook.html)
 abaixo.
-
-</div>
-
-<div class="separator" style="clear: both; text-align: left;">
-
-</div>
-
-<div class="separator" style="clear: both; text-align: left;">
 
 Abs.,
 
-</div>
-
-<div class="separator" style="clear: both; text-align: left;">
-
 Otávio
-
-</div>
-
 

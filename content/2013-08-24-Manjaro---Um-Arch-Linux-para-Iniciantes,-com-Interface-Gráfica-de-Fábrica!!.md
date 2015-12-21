@@ -2,6 +2,7 @@ Title: Manjaro - Um Arch Linux para Iniciantes, com Interface Gráfica de Fábri
 Date: 2013-08-24 15:28
 Author: Otávio Carneiro
 Slug: Manjaro---Um-Arch-Linux-para-Iniciantes,-com-Interface-Gráfica-de-Fábrica!!
+Tags: manjaro, arch_linux
 
 ATUALIZAÇÃO (em 18/06/2014): sugiro olhar [meu post mais recente sobre o
 assunto](http://umcarneiro.blogspot.com.br/2014/06/como-instalar-o-manjaro-089-em-um.html),
@@ -34,11 +35,7 @@ E não é que os caras conseguiram? Claro que nem tudo são flores, se não
 eu não teria levado tanto tempo, não teria escrito este post e você não
 estaria lendo, mas vou dar o bizú completo para vocês agora.
 
-<div class="separator" style="clear: both; text-align: center;">
-
 [![](http://2.bp.blogspot.com/-TAFfNPw8eVs/UTezS5YKVzI/AAAAAAAABNM/_uMZjf47vQg/s320/06032013226.jpg)](http://2.bp.blogspot.com/-TAFfNPw8eVs/UTezS5YKVzI/AAAAAAAABNM/_uMZjf47vQg/s1600/06032013226.jpg)
-
-</div>
 
 Se vocês não leram meus posts anteriores, vou resumir. Eu já tinha
 tentado instalar o Arch Linux duas vezes. Na
@@ -106,11 +103,8 @@ inglês)](https://bbs.archlinux.org/viewtopic.php?id=154768)
 **GRUB não instala - "embedding area is unusually small, core.img won't
 fit in it":**
 
-<div class="separator" style="clear: both; text-align: center;">
 
 [![](http://4.bp.blogspot.com/-0B2I57Y03M8/UhkhRMva9kI/AAAAAAAABck/DpXmXLF6ang/s320/DSC01357.JPG)](http://4.bp.blogspot.com/-0B2I57Y03M8/UhkhRMva9kI/AAAAAAAABck/DpXmXLF6ang/s1600/DSC01357.JPG)
-
-</div>
 
 - Você precisa deixar um pequeno espaço no início do cartão SD (ou
 pendrive) para o boot loader. Se você não fez isso (eu não fiz), você

@@ -68,13 +68,7 @@
                 {% endfor %}
                 </ul>
         {% endif %}
-        <h3>Tags</h3>
-        <ul>
-        {% for tag, articles in tags|sort %}
-                <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
-        {% endfor %}
-        </ul>
-    
+   
         <h3>Assuntos</h3>
         <ul class="tagcloud">
             {% for tag in tag_cloud %}
