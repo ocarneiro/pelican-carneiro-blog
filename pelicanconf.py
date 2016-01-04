@@ -30,7 +30,7 @@ LINKS = (('Calango Hacker Clube', 'http://calango.club/'),
 
 # Social widget
 SOCIAL = (('Github', 'https://github.com/ocarneiro/'),
-          ('Twitter', 'https://twitter.com/so1carneiro'),
+          ('Twitter', 'https://twitter.com/carneiroblogbr'),
           ('YouTube', 'https://www.youtube.com/user/UmCarneiro/feed'),
          )
 
