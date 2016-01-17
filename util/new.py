@@ -1,5 +1,17 @@
 #! /usr/bin/env python3
-import datetime, sys
+import datetime, sys, os
+
+def generate_filename(slug):
+    path = os.getcwd()
+    dirs = path.split('/')
+    thisdir = dirs[-1]
+    if thisdir == 'pelican-carneiro-blog':
+        prefix = 'content/'
+    elif thisdir == 'images':
+        prefix = '../'
+    else:
+        prefix = ''
+    return prefix + slug + '.md'
 
 #obtém a hora atual e a imprime
 now = datetime.datetime.now()
@@ -20,8 +32,8 @@ print("Date: {}-{:02}-{:02} {:02}:{:02}".format(year,month,day,hour,minute))
 slug = "{}-{:02}-{:02}-{}".format(year,month,day,title.replace(" ", "-"))
 print("Slug: {}".format(slug))
 
-#TODO: garantir que o arquivo novo esteja na pasta content
-with open(slug + ".md", "w") as post:
+filename = generate_filename(slug)
+with open(filename, "w") as post:
     print("Title: {}".format(title), file=post)
     print("Date: {}-{:02}-{:02} {:02}:{:02}".format(year,month,day,hour,minute), file=post)
     print("Author: Otávio Carneiro", file=post)
