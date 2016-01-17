@@ -2,18 +2,15 @@ Title: Como legendar seu vídeo no YouTube
 Date: 2014-05-05 17:29
 Author: Otávio Carneiro
 Slug: Como-legendar-seu-vídeo-no-YouTube
+Tags: vídeo, tutorial, YouTube
 
 Nos meus vídeos sobre a [montagem do
-drone](http://umcarneiro.blogspot.com.br/search/label/tricarneiro), eu
+drone](http://www.carneiro.blog.br/tag/tricarneiro.html), eu
 resolvi colocar legendas em inglês, não sei se alguém percebeu. O
 YouTube diz que mais pessoas podem ver o seu vídeo se você colocar
 legendas e acho que é verdade...
 
-<div class="separator" style="clear: both; text-align: center;">
-
-[![](http://4.bp.blogspot.com/-KKhwIIUMyxM/U2gcmJLiY-I/AAAAAAAAB6U/zRFz00IrqRI/s1600/videoComLegenda.png)](http://4.bp.blogspot.com/-KKhwIIUMyxM/U2gcmJLiY-I/AAAAAAAAB6U/zRFz00IrqRI/s1600/videoComLegenda.png)
-
-</div>
+[<img src="{filename}/images/old/videoComLegenda.png" width=400>]({filename}/images/old/videoComLegenda.png)
 
 Este blog e [meu canal no
 YouTube](https://www.youtube.com/user/UmCarneiro/videos) não têm
@@ -41,21 +38,9 @@ texto na aba "Legendas ocultas" do Gerenciador de Vídeos do YouTube.
 Você vai ver lá que já existe uma legenda no seu vídeo, marcado como
 "legendas automáticas".
 
-<div class="separator" style="clear: both; text-align: center;">
+[<img src="{filename}/images/old/legendas_automaticas.png" width="400">]({filename}/images/old/legendas_automaticas.png)
 
-[![](http://4.bp.blogspot.com/-uw0QtieT3MQ/U2geMPV5cUI/AAAAAAAAB6c/Y41hDIFnPTI/s1600/legendas_automaticas.png) ](http://4.bp.blogspot.com/-uw0QtieT3MQ/U2geMPV5cUI/AAAAAAAAB6c/Y41hDIFnPTI/s1600/legendas_automaticas.png)
-
-</div>
-
-<div class="separator" style="clear: both; text-align: center;">
-
-</div>
-
-<div class="separator" style="clear: both; text-align: center;">
-
-[![](http://2.bp.blogspot.com/-CM8_21ukuGk/U2gfoOI-xdI/AAAAAAAAB6k/w7KGZ0uMrHg/s1600/transcricao.png)](http://2.bp.blogspot.com/-CM8_21ukuGk/U2gfoOI-xdI/AAAAAAAAB6k/w7KGZ0uMrHg/s1600/transcricao.png)
-
-</div>
+[<img src="{filename}/images/old/transcricao.png" width="400">]({filename}/images/old/transcricao.png)
 
 O software que tenta entender o seu vídeo deve ser extremamente complexo
 e faz o que pode para entender o que você está dizendo, mas erra feio na
@@ -88,7 +73,7 @@ que queria deixar mais claro no texto. Ou então resumir alguma frase em
 que você usou palavras demais durante a gravação. A ideia é transcrever
 o que foi dito, de uma forma ou de outra.
 
-[![](http://3.bp.blogspot.com/-lIZpEX2jpQw/U2gnikXeh0I/AAAAAAAAB6w/BPqYk-QWY8s/s1600/upload.png)](http://3.bp.blogspot.com/-lIZpEX2jpQw/U2gnikXeh0I/AAAAAAAAB6w/BPqYk-QWY8s/s1600/upload.png)Depois
+[<img src="{filename}/images/old/upload.png" width=400>]({filename}/images/old/upload.png)Depois
 que você acabar, você volta para o YouTube e faz o upload do arquivo.
 Ali você tem acesso ao editor para corrigir o que ainda estiver errado.
 Tem até uns atalhos para você alterar o tempo da legenda. Você tem que
@@ -108,14 +93,14 @@ Tradutor ou ferramenta que o valha. Eu gosto de escrever e estou fazendo
 isso para que as pessoas me entendam, então traduzi manualmente linha a
 linha. Se você traduzir o texto mantendo as marcações de tempo, é só
 fazer o upload de novo e indicar o idioma que utilizou.  
-[![](http://4.bp.blogspot.com/-6BxCmLa6b4Q/U2go_sizhiI/AAAAAAAAB64/Y4xrwGKirp4/s1600/opcoes.png)](http://4.bp.blogspot.com/-6BxCmLa6b4Q/U2go_sizhiI/AAAAAAAAB64/Y4xrwGKirp4/s1600/opcoes.png)  
+[<img src="{filename}/images/old/opcoes.png" width=400>]({filename}/images/old/opcoes.png)  
 Pronto! Agora seu vídeo já tem legendas em inglês. E de brinde você
 levou uma legenda em português corretíssima, revisada pelo autor!
 
 Feito isso, a legenda automática (o YouTube te entendendo errado) não
 faz mais sentido algum, então você pode desativá-la.
 
-[![](http://3.bp.blogspot.com/-0nY6LJwHrGQ/U2gqXygJjEI/AAAAAAAAB7A/1HfV5Y5SxPE/s1600/botoes_legenda.png)](http://3.bp.blogspot.com/-0nY6LJwHrGQ/U2gqXygJjEI/AAAAAAAAB7A/1HfV5Y5SxPE/s1600/botoes_legenda.png)Imagino
+[<img src="{filename}/images/old/botoes_legenda.png" width=400>]({filename}/images/old/botoes_legenda.png)Imagino
 que quem está lendo este post já saiba assistir vídeos com legenda, mas
 para facilitar, vou relembrar para você explicar para seus
 telespectadores: é só apertar aquele retangulozinho entre o relógio e a
