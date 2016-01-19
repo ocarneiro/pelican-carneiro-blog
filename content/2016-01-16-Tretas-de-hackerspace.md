@@ -4,6 +4,8 @@ Author: Otávio Carneiro
 Slug: 2016-01-16-Tretas-de-hackerspace
 Tags: hackerspaces, autoorganização, Calango
 
+[<img src="{filename}/images/cadeiras-calango.jpg" width=400>]({filename}/images/cadeiras-calango.jpg)
+
 No Calango Hacker Clube, nosso hackerspace em Brasília, as coisas acontecem assim: toda vez que surge uma necessidade, surge também uma solução. Mágica? Não. Autoorganização.
 
 Nós temos um lema no Calango: quem inicia a treta busca os meios para resolvê-la. O termo "treta" gera controvérsias. No sentido comum, treta é confusão, um mal entendido, problema. No Calango, treta é demanda. Somos todos voluntários e não existe uma divisão de tarefas clara. Tudo o que o espaço precisa tem que ser providenciado por alguém. Quem é esse "alguém?". A pessoa que enxergou a necessidade. Se você gera demanda para outra pessoa é treta (no mau sentido)! Cada um só pode arranjar demanda para si mesmo.
