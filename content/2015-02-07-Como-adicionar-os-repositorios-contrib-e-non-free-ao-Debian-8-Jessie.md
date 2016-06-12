@@ -1,3 +1,4 @@
+Tags: debian, linux, tutorial
 Title: Como adicionar os repositórios contrib e non-free ao Debian 8 (Jessie)
 Date: 2015-02-07 13:40
 Author: Otávio Carneiro

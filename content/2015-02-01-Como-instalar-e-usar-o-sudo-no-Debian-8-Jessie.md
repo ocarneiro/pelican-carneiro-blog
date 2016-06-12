@@ -1,3 +1,4 @@
+Tags: debian, linux, tutorial
 Title: Como instalar e usar o sudo no Debian 8 (Jessie)
 Date: 2015-02-01 05:07
 Author: Otávio Carneiro

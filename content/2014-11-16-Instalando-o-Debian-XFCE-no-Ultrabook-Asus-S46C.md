@@ -1,3 +1,4 @@
+Tags: debian, linux, tutorial
 Title: Instalando o Debian XFCE no Ultrabook Asus S46C
 Date: 2014-11-16 15:07
 Author: Otávio Carneiro

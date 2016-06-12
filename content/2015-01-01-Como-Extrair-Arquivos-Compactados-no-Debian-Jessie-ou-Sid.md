@@ -1,3 +1,4 @@
+Tags: debian, linux, tutorial
 Title: Como Extrair Arquivos Compactados no Debian Jessie ou Sid
 Date: 2015-01-01 11:43
 Author: Otávio Carneiro

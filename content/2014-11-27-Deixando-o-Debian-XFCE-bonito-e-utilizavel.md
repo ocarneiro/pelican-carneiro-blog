@@ -1,3 +1,4 @@
+Tags: debian, linux, tutorial
 Title: Deixando o Debian XFCE bonito e utilizável
 Date: 2014-11-27 15:33
 Author: Otávio Carneiro

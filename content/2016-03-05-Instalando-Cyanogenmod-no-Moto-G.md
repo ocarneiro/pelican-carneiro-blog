@@ -1,4 +1,4 @@
-Title: Instalando Cyanogenmod no Moto G
+ Instalando Cyanogenmod no Moto G
 Date: 2016-03-05 23:21
 Author: Otávio Carneiro
 Slug: 2016-03-05-Instalando-Cyanogenmod-no-Moto-G

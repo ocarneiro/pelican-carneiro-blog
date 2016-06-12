@@ -1,3 +1,4 @@
+Tags: debian, linux, tutorial
 Title: Deixando o Kdenlive bonito no Debian XFCE
 Date: 2014-12-14 04:43
 Author: Otávio Carneiro

@@ -1,3 +1,4 @@
+Tags: debian, linux, tutorial
 Title: Como criar um ambiente de desenvolvimento python no Debian
 Date: 2015-02-07 19:55
 Author: Otávio Carneiro

@@ -1,3 +1,4 @@
+Tags: debian, linux, tutorial
 Title: Instalando o Java e acessando o Banco do Brasil no Debian XFCE Jessie
 Date: 2015-01-04 07:03
 Author: Otávio Carneiro
