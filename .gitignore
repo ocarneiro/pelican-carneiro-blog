@@ -3,3 +3,5 @@ __pycache__
 setenv.sh
 output
 cache
+venv
+.vscode

@@ -8,13 +8,13 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-FTP_HOST=localhost
-FTP_USER=anonymous
-FTP_TARGET_DIR=/
+FTP_HOST=191.6.205.88
+FTP_USER=carneiro
+FTP_TARGET_DIR=/www/um
 
-SSH_HOST=ssh.carneiro.blog.br
+SSH_HOST=ftp.web7641.kinghost.net
 SSH_PORT=22
-SSH_TARGET_DIR=/var/www/html/carneiro.blog.br/web/um
+SSH_TARGET_DIR=/www/um
 
 
 DEBUG ?= 0
