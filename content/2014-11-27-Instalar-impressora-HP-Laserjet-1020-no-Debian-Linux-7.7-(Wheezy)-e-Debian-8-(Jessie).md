@@ -2,7 +2,7 @@ Tags: debian, linux, tutorial
 Title: Instalar impressora HP Laserjet 1020 no Debian Linux 7.7 (Wheezy) e Debian 8 (Jessie)
 Date: 2014-11-27 17:35
 Author: Otávio Carneiro
-Slug: Instalar-impressora-HP-Laserjet-1020-no-Debian-Linux-7.7-(Wheezy)-e-Debian-8-(Jessie)
+Slug: 2014-11-27-Instalar-impressora-HP-Laserjet-1020-no-Debian-Linux-7.7-(Wheezy)-e-Debian-8-(Jessie)
 
 (Atualizado em 07/12/2014 para incluir configuração no Jessie)
 
